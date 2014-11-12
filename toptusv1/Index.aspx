@@ -14,7 +14,7 @@
                <div class="col-md-4">
                    <h1>Title B</h1>
                    <p>
-                       Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.
+                       Nuncamente viverra imperdiet enim. Fusce est. Vivamus a tellus.
                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
                    </p>
                </div>
