@@ -1,0 +1,18 @@
+[
+  {
+    "producto_id": 2,
+    "producto": "Balón de fubtol",
+    "producto_descr": "Balón profesional de futbol",
+    "foto": "balon.jpg",
+    "vendedor_id": 1,
+    "subcategoria_id": 1
+  },
+  {
+    "producto_id": 3,
+    "producto": "Anaqueles",
+    "producto_descr": "Anaqueles para baño",
+    "foto": "anaquel.jpg",
+    "vendedor_id": 1,
+    "subcategoria_id": 3
+  }
+]
