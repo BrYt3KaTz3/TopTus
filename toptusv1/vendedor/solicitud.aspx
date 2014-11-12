@@ -59,7 +59,7 @@
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                       
-                        <asp:Button ID="btn_enviar_solicitud" CssClass="btn btn-default" runat="server" Text="Enviar" OnClick="btn_enviar_solicitud_Click" />
+                        <asp:Button  ClientIDMode="Static" ID="btn_enviar_solicitud" CssClass="btn btn-default" runat="server" Text="Enviar" OnClick="btn_enviar_solicitud_Click" />
                     </div>
                   </div>
 
@@ -92,5 +92,10 @@
         }); con esto sirve local, o sea con el código aquí
 
     </script> --%>
+    <div id="loader">
+        <label>Procesando solicitud</label>
+    <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>
     
+   
+</div>
 </asp:Content>

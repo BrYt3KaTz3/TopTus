@@ -11,12 +11,13 @@ namespace toptusv1.vendedor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btn_enviar_solicitud_Click(object sender, EventArgs e)
         {
             vendedor obj = new vendedor();
+
 
             try
             {
@@ -24,13 +25,30 @@ namespace toptusv1.vendedor
                 string apellidop = sol_apellidop.Text;
                 string apellidom = sol_apellidom.Text;
                 string email = sol_email.Text;
+                var existe = obj.existe_vendedor(email);//verifica si hay un email registrado
                 DateTime fechasol = DateTime.Today;
-               // obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol);
+                if (existe.Rows.Count==0)
+                {
+                    string res = obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol);
+                    if (res == "1")
+                    {
+                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "confirmacion_solicitud()", true);
+                    }
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud()", true);
+                    }
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "mail_ya_registrado()", true);
+                }
+              
             }
-            catch (Exception)
+            catch (Exception error)
             {
                 
-                throw;
+                throw error;
             }
         }
     }

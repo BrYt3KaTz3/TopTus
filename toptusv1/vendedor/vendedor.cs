@@ -22,7 +22,25 @@ namespace toptusv1.vendedor
 
 
         #region solicitudes
+        //verificar que no exista solicitud
 
+        public DataTable existe_vendedor(string email)
+        {
+            try
+            {
+                conexion.Open();
+                dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + email + "' and tipovendedor_id=4").Tables[0];
+                return dt_vendedor;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        //insertar solicitud
         public string insertar_solicitud(string nombre,  string apellidop,string apellidom, string email, DateTime fechasolicitud)
         {
             try
@@ -43,7 +61,7 @@ namespace toptusv1.vendedor
                     cmd.Parameters.AddWithValue("@email", email);
                     cmd.Parameters.AddWithValue("@fecha_solicitud", fechasolicitud);
                     cmd.Parameters.AddWithValue("@id", 4);
-                     string a = "hola";
+
                     cmd.ExecuteNonQuery();
                     conn.Close();
                     return "1";
@@ -54,6 +72,7 @@ namespace toptusv1.vendedor
                 return e.Message;
 
             }
+            finally { conexion.Close(); }
         }
 
         #endregion

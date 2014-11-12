@@ -67,6 +67,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\cssgeneral.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="imagenes\ajax-loader.gif" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="base.Master" />

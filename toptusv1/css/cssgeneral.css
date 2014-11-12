@@ -6,3 +6,19 @@
 {
     color:red;
 }
+
+
+#loader
+{
+    background: whitesmoke;
+    height: 100%;
+    left: 0px;
+    opacity: 0.8;
+    position: fixed;
+    text-align: center;
+    padding-top: 20%;
+    top: 0%;
+    width: 100%;
+    z-index: 10002;
+    display: none;
+}
