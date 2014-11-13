@@ -68,6 +68,7 @@
     <Content Include="css\cssgeneral.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\ajax-loader.gif" />
+    <Content Include="imagenes\prelogo.png" />
     <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="base.Master" />
@@ -77,8 +78,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="productos\jsproductosjson.json" />
-    <Content Include="base_solicitud.Master" />
-    <Content Include="base_vendedor.Master" />
+    <Content Include="vendedor\base_solicitud.Master" />
+    <Content Include="vendedor\base_vendedor.Master" />
     <Content Include="base_comprador.Master" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
@@ -101,7 +102,11 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="vendedor\js\solicitud.js" />
+    <Content Include="vendedor\js\vendedor.js" />
+    <Content Include="vendedor\products.aspx" />
+    <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="vendedor\solicitud.aspx" />
+    <Content Include="vendedor\vendedor_perfil.aspx" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
@@ -120,18 +125,18 @@
     <Compile Include="base_comprador.Master.designer.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
     </Compile>
-    <Compile Include="base_solicitud.Master.cs">
+    <Compile Include="vendedor\base_solicitud.Master.cs">
       <DependentUpon>base_solicitud.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="base_solicitud.Master.designer.cs">
+    <Compile Include="vendedor\base_solicitud.Master.designer.cs">
       <DependentUpon>base_solicitud.Master</DependentUpon>
     </Compile>
-    <Compile Include="base_vendedor.Master.cs">
+    <Compile Include="vendedor\base_vendedor.Master.cs">
       <DependentUpon>base_vendedor.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="base_vendedor.Master.designer.cs">
+    <Compile Include="vendedor\base_vendedor.Master.designer.cs">
       <DependentUpon>base_vendedor.Master</DependentUpon>
     </Compile>
     <Compile Include="datos\DataProvider.cs" />
@@ -158,6 +163,20 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="vendedor\products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendedor\socialmedia.aspx.cs">
+      <DependentUpon>socialmedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\socialmedia.aspx.designer.cs">
+      <DependentUpon>socialmedia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vendedor\solicitud.aspx.cs">
       <DependentUpon>solicitud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -166,6 +185,13 @@
       <DependentUpon>solicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\vendedor.cs" />
+    <Compile Include="vendedor\vendedor_perfil.aspx.cs">
+      <DependentUpon>vendedor_perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\vendedor_perfil.aspx.designer.cs">
+      <DependentUpon>vendedor_perfil.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />

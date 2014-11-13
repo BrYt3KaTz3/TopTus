@@ -1,16 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/base_solicitud.Master" AutoEventWireup="true" CodeBehind="solicitud.aspx.cs" Inherits="toptusv1.vendedor.solicitud" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vendedor/base_solicitud.Master" AutoEventWireup="true" CodeBehind="solicitud.aspx.cs" Inherits="toptusv1.vendedor.solicitud" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="../Scripts/jquery-2.1.1.js"></script>
-    <script src="../Scripts/jquery.validate.js"></script>
-    <script src="../Scripts/jquery.validate-vsdoc.js"></script>
+   
     
     <script src="js/solicitud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
-    <div class="container" id="div_solicitud">
+    <div  id="div_solicitud">
           <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 col-md-offset-2">
                    <h1>Solicitud de Ingreso</h1>
                    <p>
                     Favor de llenar los campos siguientes para comenzar el proceso de solicitud.
@@ -21,7 +19,7 @@
               
            </div>
         <div class="row">
-            <div class="col-md-12" id="formulario_solicitud">
+            <div class="col-md-12 col-md-offset-2" id="formulario_solicitud">
 
                 <div class="form-group">
                     <label for="sol_nombre" class="col-lg-2 control-label">Nombre(s):</label>
