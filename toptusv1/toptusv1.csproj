@@ -77,10 +77,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
-    <Content Include="productos\jsproductosjson.json" />
+    <Content Include="productlist.aspx" />
+    <Content Include="Scripts\generales.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="tl.aspx" />
     <Content Include="vendedor\base_solicitud.Master" />
     <Content Include="vendedor\base_vendedor.Master" />
-    <Content Include="base_comprador.Master" />
+    <Content Include="comprador\base_comprador.Master" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -89,7 +92,6 @@
     </Content>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="productos\js\productos.js" />
-    <Content Include="productos\productos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
@@ -102,7 +104,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="vendedor\js\solicitud.js" />
-    <Content Include="vendedor\js\vendedor.js" />
+    <Content Include="vendedor\js\vendedor_generales.js" />
     <Content Include="vendedor\products.aspx" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="vendedor\solicitud.aspx" />
@@ -118,12 +120,26 @@
     <Compile Include="base.Master.designer.cs">
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
-    <Compile Include="base_comprador.Master.cs">
+    <Compile Include="comprador\base_comprador.Master.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="base_comprador.Master.designer.cs">
+    <Compile Include="comprador\base_comprador.Master.designer.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="productlist.aspx.cs">
+      <DependentUpon>productlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productlist.aspx.designer.cs">
+      <DependentUpon>productlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tl.aspx.cs">
+      <DependentUpon>tl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tl.aspx.designer.cs">
+      <DependentUpon>tl.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\base_solicitud.Master.cs">
       <DependentUpon>base_solicitud.Master</DependentUpon>
@@ -149,13 +165,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="productos\productos.aspx.cs">
-      <DependentUpon>productos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="productos\productos.aspx.designer.cs">
-      <DependentUpon>productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -203,7 +212,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="comprador\" />
     <Folder Include="SuperAdmin\" />
   </ItemGroup>
   <PropertyGroup>

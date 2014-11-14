@@ -8,7 +8,8 @@
     <script src="../Scripts/jquery.validate.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
-    <script src="js/vendedor.js"></script>
+    <script src="js/vendedor_generales.js"></script>
+    <script src="../Scripts/generales.js"></script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title></title>
@@ -18,7 +19,8 @@
 <body>
     <form id="form1" runat="server">
     <div class="container">
-        <nav class="navbar navbar-default col-md-offset-2" role="navigation">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class=" col-md-offset-2">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -29,7 +31,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#" id="logo_menu"><img src="../imagenes/prelogo.png"  /></a>
+    <a class="navbar-brand" href="../Index.aspx" id="logo_menu"><img src="../imagenes/prelogo.png"  /></a>
   </div>
  
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -55,6 +57,7 @@
       </li>
     </ul>
    </div>
+                </div>
 </nav>
 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder_Vendedor" runat="server">

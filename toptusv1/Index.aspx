@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="/base.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="toptusv1.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="Scripts/index.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -28,7 +29,7 @@
            </div>
          <div class="col-md-12">
 
-             <a href="productos/productos.aspx">Lista de productos</a>
+             <a href="productlist.aspx">Lista de productos</a>
 
          </div>
 

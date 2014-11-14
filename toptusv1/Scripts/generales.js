@@ -1,10 +1,7 @@
-﻿
-$(document).ready(function () {
-
+﻿$(document).ready(function () {
     menu_class_change();
-       
-    });
-
+}
+);
 
 
 function menu_class_change() //cambiar la clase activa del men+u al ser seleccionado

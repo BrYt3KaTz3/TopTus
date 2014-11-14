@@ -10,6 +10,6 @@
 namespace toptusv1.productos {
     
     
-    public partial class productos {
+    public partial class productlist {
     }
 }
