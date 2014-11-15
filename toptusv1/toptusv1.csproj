@@ -70,6 +70,9 @@
     <Content Include="imagenes\ajax-loader.gif" />
     <Content Include="imagenes\prelogo.png" />
     <Content Include="Index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="Login\login.css" />
+    <Content Include="Login\login.js" />
     <Content Include="packages.config" />
     <Content Include="base.Master" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -127,6 +130,14 @@
     <Compile Include="comprador\base_comprador.Master.designer.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\login_vendedor.cs" />
     <Compile Include="productlist.aspx.cs">
       <DependentUpon>productlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

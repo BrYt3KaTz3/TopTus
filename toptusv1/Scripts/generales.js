@@ -17,3 +17,4 @@ function menu_class_change() //cambiar la clase activa del men+u al ser seleccio
         $('.nav li:first').addClass("active");
     }
 }
+
