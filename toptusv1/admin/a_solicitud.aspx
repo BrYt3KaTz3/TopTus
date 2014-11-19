@@ -7,7 +7,7 @@
 
         <div class ="row">
 
-            <h3 class="col-md-12">Solicitudes de Ingreso a TopTus</h3>
+            <h3 class="col-md-offset-4 col-md-8">Solicitudes de Ingreso a TopTus</h3>
         </div>
         
         <div class="row">
@@ -42,6 +42,22 @@
 
             </div>
 
+        </div>
+        <div class="row">
+             
+                      <div class="col-md-6">
+                         
+                         <asp:Panel ID="panel_solicitudes" runat="server">
+
+                         </asp:Panel>
+
+                      </div>
+                     <div class="col-md-6">
+                        
+                         </div>
+                
+
+             
         </div>
 
     </div>

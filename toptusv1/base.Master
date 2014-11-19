@@ -42,22 +42,9 @@
     <ul class="nav navbar-nav">
       <li><a href="Index.aspx">Home</a></li>
       <li><a href="productlist.aspx">Products</a></li>
-      <li><a href="#">Timeline</a></li>
+      <li><a href="tl.aspx">Timeline</a></li>
        
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-          Menú #1 <b class="caret"></b>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Acción #1</a></li>
-          <li><a href="#">Acción #2</a></li>
-          <li><a href="#">Acción #3</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Acción #4</a></li>
-          <li class="divider"></li>
-          <li><a href="#"">Acción #5</a></li>
-        </ul>
-      </li>
+      
     </ul>
           <div id="logeado" class="pull-right" runat="server">
           <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>

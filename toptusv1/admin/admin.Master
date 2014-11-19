@@ -50,7 +50,7 @@
       </div>
                 </div>
 </nav>
-        <h1 id="titulo_admin">Sistema Administrador TopTus</h1>
+        <h1 id="titulo_admin" class="text-center">Sistema Administrador TopTus</h1>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder_Admin" runat="server">
         
         </asp:ContentPlaceHolder>

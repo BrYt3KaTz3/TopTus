@@ -8,8 +8,8 @@
    
     <div  id="div_solicitud">
           <div class="row">
-              <div class="col-md-12 col-md-offset-2">
-                   <h1>Solicitud de Ingreso</h1>
+              <div class="col-md-10 col-md-offset-2">
+                   <h3>Solicitud de Ingreso</h3>
                    <p>
                     Favor de llenar los campos siguientes para comenzar el proceso de solicitud.
                    </p>

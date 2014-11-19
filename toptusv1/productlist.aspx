@@ -4,5 +4,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    productos
+    <h3 class="text-center">Products</h3>
 </asp:Content>
