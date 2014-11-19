@@ -64,7 +64,7 @@
           <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
           </div>
 
-      <a href="login.aspx" id="login" class="button-link pull-right"  runat="server">Login</a>
+           <a href="login.aspx" id="login" class="button-link pull-right"  runat="server">Login</a>
       
    </div>
             </div>

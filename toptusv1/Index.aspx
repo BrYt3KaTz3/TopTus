@@ -27,10 +27,12 @@
                    </p>
                </div>
            </div>
-         <div class="col-md-12">
-
+         <div class="row">
+             <div class="col-md-12">
              <a href="productlist.aspx">Lista de productos</a>
-
+             <br />
+             ¿Quieres ser parte de TopTus?... entra <a href="vendedor/solicitud.aspx" target="_blank">aquí</a>
+                 </div>
          </div>
 
        </div>    

@@ -34,7 +34,7 @@
                         <asp:RadioButtonList ID="radiovendedor" runat="server">
                         
                             <asp:ListItem  Selected="True" Value="1" >Seller</asp:ListItem>
-                            <asp:ListItem  Value="2">Buy</asp:ListItem>
+                            <asp:ListItem  Value="2">Buyer</asp:ListItem>
 
 
                             

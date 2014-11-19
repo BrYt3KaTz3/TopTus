@@ -61,6 +61,12 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\admin_generales.js" />
+    <Content Include="admin\a_info.aspx" />
+    <Content Include="admin\a_login.js" />
+    <Content Include="admin\a_solicitud.aspx" />
+    <Content Include="admin\a_vendedores.aspx" />
+    <Content Include="admin\login_a.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -87,6 +93,7 @@
     <Content Include="vendedor\base_solicitud.Master" />
     <Content Include="vendedor\base_vendedor.Master" />
     <Content Include="comprador\base_comprador.Master" />
+    <Content Include="admin\admin.Master" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -116,6 +123,43 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin_general.cs" />
+    <Compile Include="admin\a_info.aspx.cs">
+      <DependentUpon>a_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\a_info.aspx.designer.cs">
+      <DependentUpon>a_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\a_solicitud.aspx.cs">
+      <DependentUpon>a_solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\a_solicitud.aspx.designer.cs">
+      <DependentUpon>a_solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\a_vendedores.aspx.cs">
+      <DependentUpon>a_vendedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\a_vendedores.aspx.designer.cs">
+      <DependentUpon>a_vendedores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login_a.aspx.cs">
+      <DependentUpon>login_a.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\login_a.aspx.designer.cs">
+      <DependentUpon>login_a.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\login_admin.cs" />
     <Compile Include="base.Master.cs">
       <DependentUpon>base.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,9 +266,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SuperAdmin\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
