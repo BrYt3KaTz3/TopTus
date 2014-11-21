@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using toptusv1.Login;
+using System.Data;
 
 namespace toptusv1
 {
@@ -32,7 +33,7 @@ namespace toptusv1
                if (tipovendedor == 1)
                {
                    #region vendedor
-                   var validar = obj.validar_usuario(mail, pass); //vendedor
+                   DataTable validar = obj.validar_usuario(mail, pass); //vendedor
 
                    if (validar.Rows.Count == 0)
                    {
@@ -40,20 +41,9 @@ namespace toptusv1
                    }
                    else
                    {
-                       //inicializar session
-                       ArrayList usuario = new ArrayList();
-                      
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(0));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(1));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(2));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(3));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(4));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(5));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(6));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(7));
-                       usuario.Add(validar.Rows[0].ItemArray.ElementAt(8));
+                       //inicializar session 
                        Session["valido"] = true;
-                       Session["usuario"] = usuario;
+                       Session["usuario"] = validar;
                        Response.Redirect("vendedor/vendedor_perfil.aspx");
                    }//fin else
                    #endregion

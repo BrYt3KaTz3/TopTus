@@ -46,8 +46,9 @@ namespace toptusv1.vendedor
             try
             {
 
-
-                using (SqlConnection conn = new SqlConnection("Data Source=GHIA\\FERSQL;Initial Catalog=TopTusDB;User ID=feri;Password=feri"))
+              //  Data Source=198.38.94.104;Initial Catalog=ferchoMF_TopTusDBuno
+               // using (SqlConnection conn = new SqlConnection("Data Source=GHIA\\FERSQL;Initial Catalog=TopTusDB;User ID=feri;Password=feri"))
+                using (SqlConnection conn = new SqlConnection("Data Source=198.38.94.104;Initial Catalog=ferchoMF_TopTusDBuno;User ID=ferchoMF_fer;Password=ferchodc1"))
                 {
 
                     string sql = @"insert into Vendedor (nombre, apellido_p,apellido_m,email, fecha_solicitud, tipovendedor_id) 

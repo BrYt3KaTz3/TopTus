@@ -20,7 +20,7 @@ namespace toptusv1
             //else.... usuario válido
             else
             {
-                var usuario = HttpContext.Current.Session["usuario"];
+               // var usuario = HttpContext.Current.Session["usuario"];
                 cargar_datos();
                 string a;
             }
@@ -35,9 +35,11 @@ namespace toptusv1
 
         public void cargar_datos() // a la pestaña de login
         {
-            var sesion = Session["usuario"];
-            ArrayList usuario = (ArrayList)sesion;
-            string nombre = usuario[1].ToString();
+            var sesion = HttpContext.Current.Session["usuario"];
+            DataTable usuario = (DataTable)sesion;
+
+            string a;
+            string nombre = usuario.Rows[0]["nombre"].ToString();
             enlace_vendedor.InnerText = nombre;
 
         }

@@ -3,3 +3,10 @@ C:\Users\FER\Desktop\tecnopreur\mis proyectos\toptus\visual\toptusv1\toptusv1\bi
 C:\Users\FER\Desktop\tecnopreur\mis proyectos\toptus\visual\toptusv1\toptusv1\obj\Release\toptusv1.dll
 C:\Users\FER\Desktop\tecnopreur\mis proyectos\toptus\visual\toptusv1\toptusv1\obj\Release\toptusv1.pdb
 C:\Users\FER\Desktop\tecnopreur\mis proyectos\toptus\visual\toptusv1\toptusv1\obj\Release\toptusv1.csprojResolveAssemblyReference.cache
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\bin\toptusv1.dll
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\bin\toptusv1.pdb
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\bin\Newtonsoft.Json.dll
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\bin\Newtonsoft.Json.xml
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\obj\Release\toptusv1.csprojResolveAssemblyReference.cache
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\obj\Release\toptusv1.dll
+C:\Users\FER\Documents\GitHub\TopTus\toptusv1\obj\Release\toptusv1.pdb

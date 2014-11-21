@@ -10,65 +10,173 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="admin/admin.Master">
+      <publishTime>11/19/2014 17:51:29</publishTime>
+    </File>
+    <File Include="admin/admin_generales.js">
+      <publishTime>11/18/2014 18:57:04</publishTime>
+    </File>
+    <File Include="admin/a_info.aspx">
+      <publishTime>11/18/2014 18:34:59</publishTime>
+    </File>
+    <File Include="admin/a_login.js">
+      <publishTime>11/18/2014 19:27:49</publishTime>
+    </File>
+    <File Include="admin/a_solicitud.aspx">
+      <publishTime>11/18/2014 23:57:25</publishTime>
+    </File>
+    <File Include="admin/a_vendedores.aspx">
+      <publishTime>11/18/2014 18:35:25</publishTime>
+    </File>
+    <File Include="admin/login_a.aspx">
+      <publishTime>11/18/2014 19:35:24</publishTime>
+    </File>
     <File Include="base.Master">
-      <publishTime>11/09/2014 12:45:21</publishTime>
+      <publishTime>11/19/2014 17:51:19</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>11/09/2014 13:00:06</publishTime>
+      <publishTime>11/19/2014 18:26:58</publishTime>
+    </File>
+    <File Include="comprador/base_comprador.Master">
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/18/2014 23:55:27</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="css/cssgeneral.css">
+      <publishTime>11/15/2014 16:40:06</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="imagenes/ajax-loader.gif">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="imagenes/prelogo.png">
+      <publishTime>11/13/2014 11:52:28</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>11/09/2014 13:08:56</publishTime>
+      <publishTime>11/19/2014 00:03:58</publishTime>
+    </File>
+    <File Include="login.aspx">
+      <publishTime>11/19/2014 18:15:48</publishTime>
+    </File>
+    <File Include="Login/login.css">
+      <publishTime>11/15/2014 16:40:06</publishTime>
+    </File>
+    <File Include="Login/login.js">
+      <publishTime>11/15/2014 16:40:06</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="productlist.aspx">
+      <publishTime>11/19/2014 00:03:12</publishTime>
+    </File>
+    <File Include="productos/js/productos.js">
+      <publishTime>11/13/2014 15:28:07</publishTime>
+    </File>
+    <File Include="Properties/Settings.settings">
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>11/09/2014 12:41:32</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/generales.js">
+      <publishTime>11/15/2014 16:40:06</publishTime>
+    </File>
+    <File Include="Scripts/index.js">
+      <publishTime>11/13/2014 15:25:56</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.js">
-      <publishTime>11/09/2014 12:36:44</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.min.js">
-      <publishTime>11/09/2014 12:36:44</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.min.map">
-      <publishTime>11/09/2014 12:36:44</publishTime>
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.bootstrap.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.bootstrap.min.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.bootstrap.min.js.map">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>11/13/2014 00:30:45</publishTime>
+    </File>
+    <File Include="tl.aspx">
+      <publishTime>11/19/2014 00:03:15</publishTime>
+    </File>
+    <File Include="vendedor/base_solicitud.Master">
+      <publishTime>11/19/2014 17:51:11</publishTime>
+    </File>
+    <File Include="vendedor/base_vendedor.Master">
+      <publishTime>11/15/2014 16:40:06</publishTime>
+    </File>
+    <File Include="vendedor/js/solicitud.js">
+      <publishTime>11/13/2014 00:30:46</publishTime>
+    </File>
+    <File Include="vendedor/js/vendedor_generales.js">
+      <publishTime>11/13/2014 15:29:11</publishTime>
+    </File>
+    <File Include="vendedor/products.aspx">
+      <publishTime>11/13/2014 11:38:26</publishTime>
+    </File>
+    <File Include="vendedor/socialmedia.aspx">
+      <publishTime>11/13/2014 11:37:58</publishTime>
+    </File>
+    <File Include="vendedor/solicitud.aspx">
+      <publishTime>11/19/2014 00:04:22</publishTime>
+    </File>
+    <File Include="vendedor/vendedor_perfil.aspx">
+      <publishTime>11/13/2014 11:33:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/09/2014 13:09:14</publishTime>
+      <publishTime>11/19/2014 18:26:59</publishTime>
     </File>
   </ItemGroup>
 </Project>
