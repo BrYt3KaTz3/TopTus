@@ -11,7 +11,7 @@ function main() {
 
 function validateForm(){
 
-     $("[id*='form_solicitud']").validate({
+    $("[id*='form1']").validate({ // se cambio el nombre delform, ya pertenece a la base
          rules: {
              ctl00$ContentPlaceHolder1$sol_apellidop:
                  {
@@ -45,7 +45,8 @@ function validateForm(){
 
          submitHandler: function (form) { // esta estructura hace postback 
              $("#loader").slideDown('1000');
-             form.submit().delay('8000');
+            
+             form.submit();
              return;
          }
      });
@@ -56,7 +57,14 @@ function validateForm(){
 function confirmacion_solicitud()
 {
    
-    alert('solicitud procesada con éxito');
+    $("#dialog").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                window.location.replace("Index.aspx");
+            }
+        }
+    });
     
 
 }

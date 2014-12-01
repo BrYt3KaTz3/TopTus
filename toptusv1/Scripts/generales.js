@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     menu_class_change();
+    $('.dropdown-toggle').dropdown();
 }
 );
 

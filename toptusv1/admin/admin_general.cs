@@ -33,5 +33,36 @@ namespace toptusv1.admin
                 throw;
             }
         }
+
+        public DataTable datos_vendedor(int id) //cargar datos de la solicitud x
+        {
+            try
+            {
+                conexion.Open();
+                dt_solicitud = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where vendedor_id="+id).Tables[0];
+                return dt_solicitud;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public string update_solicitud(int id, int paquete)
+        {
+            try
+            {
+                conexion.Open();
+                conexion.ExecuteNonQuery(CommandType.Text, "update Vendedor set tipovendedor_id="+paquete+" where vendedor_id="+id);
+                return "1";
+            }
+            catch (Exception e)
+            {
+
+                return e.Message;
+            }
+        }
     }
 }

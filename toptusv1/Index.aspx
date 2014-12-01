@@ -31,7 +31,7 @@
              <div class="col-md-12">
             
              <br />
-             ¿Quieres ser parte de TopTus?... entra <a href="vendedor/solicitud.aspx" target="_blank">aquí</a>
+             ¿Quieres ser parte de TopTus?... entra <a href="solicitud.aspx" >aquí</a>
                  </div>
          </div>
 

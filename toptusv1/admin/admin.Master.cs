@@ -21,7 +21,7 @@ namespace toptusv1.admin
             {
                 var usuario_admin = HttpContext.Current.Session["usuario_admin"];
                 cargar_datos();
-                string a;
+               
             }
         }
 

@@ -3,6 +3,7 @@
 function main() {
 
     $("#menu_general").hide();
+    $("#header").hide();
     validateForm();
 }
 

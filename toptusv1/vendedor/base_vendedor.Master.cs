@@ -22,7 +22,7 @@ namespace toptusv1
             {
                // var usuario = HttpContext.Current.Session["usuario"];
                 cargar_datos();
-                string a;
+               
             }
         }
 
@@ -38,7 +38,7 @@ namespace toptusv1
             var sesion = HttpContext.Current.Session["usuario"];
             DataTable usuario = (DataTable)sesion;
 
-            string a;
+            
             string nombre = usuario.Rows[0]["nombre"].ToString();
             enlace_vendedor.InnerText = nombre;
 

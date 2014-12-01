@@ -6,6 +6,9 @@
 <head id="Head1" runat="server">
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="admin_generales.js"></script>

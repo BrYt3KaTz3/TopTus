@@ -74,6 +74,8 @@
     <Content Include="css\cssgeneral.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\ajax-loader.gif" />
+    <Content Include="imagenes\logo.jpg" />
+    <Content Include="imagenes\logo.png" />
     <Content Include="imagenes\prelogo.png" />
     <Content Include="Index.aspx" />
     <Content Include="login.aspx" />
@@ -113,13 +115,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="vendedor\js\solicitud.js" />
+    <Content Include="Scripts\solicitud.js" />
     <Content Include="vendedor\js\vendedor_generales.js" />
     <Content Include="vendedor\products.aspx" />
     <Content Include="vendedor\socialmedia.aspx" />
-    <Content Include="vendedor\solicitud.aspx" />
+    <Content Include="solicitud.aspx" />
     <Content Include="vendedor\vendedor_perfil.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
@@ -242,11 +246,11 @@
     <Compile Include="vendedor\socialmedia.aspx.designer.cs">
       <DependentUpon>socialmedia.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vendedor\solicitud.aspx.cs">
+    <Compile Include="solicitud.aspx.cs">
       <DependentUpon>solicitud.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vendedor\solicitud.aspx.designer.cs">
+    <Compile Include="solicitud.aspx.designer.cs">
       <DependentUpon>solicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\vendedor.cs" />
