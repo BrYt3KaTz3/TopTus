@@ -7,7 +7,11 @@
     color:red;
 }
 
-
+#header
+{
+    margin-top:5px;
+    margin-bottom:15px;
+}
 #loader
 {
     background: whitesmoke;

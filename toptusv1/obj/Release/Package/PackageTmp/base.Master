@@ -8,6 +8,9 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/generales.js"></script>
@@ -20,9 +23,33 @@
    
 
     <form id="form1" runat="server">
+        <div class="container" id="header">
+            <a class="navbar-brand" href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
+          <div id="logeado" class="pull-right" runat="server">
+          <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
+          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
+          </div>
+            
+            <div id="log" class="pull-right col-md-3">
+            <div class="row">
+            <a href="login.aspx" id="login"   runat="server">Login</a> | 
+            <a href="solicitud.aspx" >Register</a>
+            </div>
+                <div class="row">
+                    <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Buscar</button>
+            </span>
+          </div></div>
+            </div>
+
+            
+
+        </div>
     <div class="container">
          <nav class="navbar navbar-default " id="menu_general" role="navigation">
-            <div class=" col-md-offset-2">
+            <div class=" col-md-12">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -33,7 +60,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="Index.aspx" id="logo_menu"><img src="../imagenes/prelogo.png"  /></a>
+    
   </div>
  
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -43,15 +70,15 @@
       <li><a href="Index.aspx">Home</a></li>
       <li><a href="productlist.aspx">Products</a></li>
       <li><a href="tl.aspx">Timeline</a></li>
-       
+       <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      Menú desplegable <span class="caret"></span>
+    </a>
+  
+  </li>
       
     </ul>
-          <div id="logeado" class="pull-right" runat="server">
-          <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
-          </div>
-
-           <a href="login.aspx" id="login" class="button-link pull-right"  runat="server">Login</a>
+         
       
    </div>
             </div>

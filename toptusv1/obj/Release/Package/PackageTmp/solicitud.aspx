@@ -1,8 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vendedor/base_solicitud.Master" AutoEventWireup="true" CodeBehind="solicitud.aspx.cs" Inherits="toptusv1.vendedor.solicitud" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/base.Master" AutoEventWireup="true" CodeBehind="solicitud.aspx.cs" Inherits="toptusv1.vendedor.solicitud" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     
-    <script src="js/solicitud.js"></script>
+    <script src="Scripts/solicitud.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
@@ -90,6 +90,10 @@
         }); con esto sirve local, o sea con el código aquí
 
     </script> --%>
+    
+    <div id="dialog" title="Confirmación" style="display:none">
+  <p> La solicitud ha sido procesada correctamente, se ha enviado un email al correo registrado</p>
+</div>
     <div id="loader">
         <label>Procesando solicitud</label>
     <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>

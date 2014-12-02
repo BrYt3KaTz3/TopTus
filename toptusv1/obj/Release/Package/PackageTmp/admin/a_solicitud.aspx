@@ -5,60 +5,64 @@
     
     <div class="container panel">
 
-        <div class ="row">
+        <div class ="row" style="background-color:#4479BA; color:white">
 
-            <h3 class="col-md-offset-4 col-md-8">Solicitudes de Ingreso a TopTus</h3>
+            <h3 class="col-md-offset-4" ">Solicitudes de Ingreso a TopTus</h3>
         </div>
         
+
         <div class="row">
-            <div class="col-lg-push-6">
+           
+            <div class="col-md-12" >
+                <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+                      <ItemTemplate>
+                             <div class="list-group text-center" >
+                                 <h4 class="list-group-item"><%# Eval("nombre_completo") %></h4>
+                                <p class="list-group-item-text">Email: <%# Eval("email") %> </p><br /> 
+                                 <asp:LinkButton ID="lk_detalle" runat="server" CommandName="ver_detalle" CssClass="btn-link"  ClientIDMode="Static">View Details</asp:LinkButton>
+                               
+                                 <asp:HiddenField  ID="hidden_detalle" runat="server" Value='<%# Eval("vendedor_id") %>' ClientIDMode="Static" />
 
-                <asp:GridView ID="gv_solicitudes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
-                    <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                    <Columns>
-                        <asp:BoundField DataField="nombre" HeaderText="Nombre">
-                        <ItemStyle  />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="apellido_p" HeaderText="Apellido Paterno">
-                        <ControlStyle  />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="apellido_m" HeaderText="Apellido Materno">
-                        <ControlStyle  />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="email" HeaderText="Correo" />
-                        <asp:BoundField DataField="fecha_solicitud" DataFormatString="{0:d}" HeaderText="Fecha Solicitud" />
-                    </Columns>
-                    <EditRowStyle BackColor="#999999" />
-                    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                    <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                    <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                    <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
-                </asp:GridView>
+                             </div>
+                         </ItemTemplate>
+                </asp:Repeater>
 
-            </div>
-
-        </div>
-        <div class="row">
-             
-                      <div class="col-md-6">
-                         
-                         <asp:Panel ID="panel_solicitudes" runat="server">
-
-                         </asp:Panel>
-
-                      </div>
-                     <div class="col-md-6">
-                        
-                         </div>
                 
 
-             
+            </div>
+             <div class="col-md-12" id="div_datos_solicitud" runat="server">
+
+                 
+                     <div class="form-group">
+                         <asp:Label ID="Label1" runat="server" Text="Nombre Completo" CssClass="col-md-2 col-md-offset-4"></asp:Label>
+                         <asp:Label ID="lbl_Nombre_Completo" runat="server" Text="" CssClass="col-md-6"></asp:Label>
+                        
+                     </div>
+                 <br />
+                 <div class="form-group">
+                         <asp:Label ID="Label3" runat="server" Text="Correo:" CssClass="col-md-2 col-md-offset-4"></asp:Label>
+                         <asp:Label ID="lbl_correo" runat="server" Text="" CssClass="col-md-6"></asp:Label>
+                        
+                     </div>
+                 <br />
+                 <div class="form-group">
+                         <asp:Label ID="Label5" runat="server" Text="Fecha de Solicitud:" CssClass="col-md-2 col-md-offset-4"></asp:Label>
+                         <asp:Label ID="lbl_fecha" runat="server" Text="" CssClass="col-md-6"></asp:Label>
+                     <asp:HiddenField ID="hd_id" runat="server"  />
+                     </div>
+                <div class="form-group text-center">
+                    <asp:Button ID="btn_aceptar_solicitud" runat="server" Text="Aceptar Solicitud" OnClick="btn_aceptar_solicitud_Click" ClientIDMode="Static" />
+                </div>
+                
+
+             </div>
+
         </div>
+       
 
     </div>
+
+    <div id="dialog" title="Confirmación" style="display:none">
+  <p> La solicitud ha sido procesada correctamente</p>
+</div>
 </asp:Content>
