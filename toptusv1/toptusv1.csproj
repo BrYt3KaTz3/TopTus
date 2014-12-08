@@ -93,9 +93,16 @@
     <Content Include="images\7.jpg" />
     <Content Include="images\8.jpg" />
     <Content Include="images\9.jpg" />
+    <Content Include="images\products\montreal.jpg" />
+    <Content Include="images\products\montreal_mini.jpg" />
+    <Content Include="images\products\new-york.jpg" />
+    <Content Include="images\products\paris.jpg" />
+    <Content Include="images\products\shanghai.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="jsgaleria\jquery.catslider.js" />
     <Content Include="jsgaleria\modernizr.custom.63321.js" />
+    <Content Include="css\pgwslider.css" />
+    <Content Include="jsgaleria\pgwslider.js" />
     <Content Include="login.aspx" />
     <Content Include="Login\login.css" />
     <Content Include="Login\login.js" />

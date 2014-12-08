@@ -32,13 +32,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/20/2014 18:55:23</publishTime>
     </File>
     <File Include="base.Master">
-      <publishTime>11/30/2014 21:16:28</publishTime>
+      <publishTime>12/03/2014 18:39:59</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>12/02/2014 01:10:57</publishTime>
+      <publishTime>12/03/2014 18:40:37</publishTime>
     </File>
     <File Include="comprador/base_comprador.Master">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -62,10 +62,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="css/cssgeneral.css">
-      <publishTime>11/30/2014 20:42:15</publishTime>
+      <publishTime>12/03/2014 18:00:36</publishTime>
+    </File>
+    <File Include="css/pgwslider.css">
+      <publishTime>12/03/2014 18:14:47</publishTime>
     </File>
     <File Include="css/style.css">
-      <publishTime>12/02/2014 01:09:46</publishTime>
+      <publishTime>12/03/2014 18:38:09</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -139,14 +142,32 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="images/9.jpg">
       <publishTime>12/02/2014 01:09:46</publishTime>
     </File>
+    <File Include="images/products/montreal.jpg">
+      <publishTime>12/03/2014 18:17:02</publishTime>
+    </File>
+    <File Include="images/products/montreal_mini.jpg">
+      <publishTime>12/03/2014 18:16:51</publishTime>
+    </File>
+    <File Include="images/products/new-york.jpg">
+      <publishTime>12/03/2014 18:17:12</publishTime>
+    </File>
+    <File Include="images/products/paris.jpg">
+      <publishTime>12/03/2014 18:17:25</publishTime>
+    </File>
+    <File Include="images/products/shanghai.jpg">
+      <publishTime>12/03/2014 18:17:32</publishTime>
+    </File>
     <File Include="Index.aspx">
-      <publishTime>12/02/2014 01:09:46</publishTime>
+      <publishTime>12/03/2014 18:29:56</publishTime>
     </File>
     <File Include="jsgaleria/jquery.catslider.js">
       <publishTime>12/02/2014 01:09:46</publishTime>
     </File>
     <File Include="jsgaleria/modernizr.custom.63321.js">
       <publishTime>12/02/2014 01:09:46</publishTime>
+    </File>
+    <File Include="jsgaleria/pgwslider.js">
+      <publishTime>12/03/2014 18:14:47</publishTime>
     </File>
     <File Include="login.aspx">
       <publishTime>11/21/2014 00:23:16</publishTime>
@@ -179,7 +200,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/30/2014 21:30:21</publishTime>
     </File>
     <File Include="Scripts/index.js">
-      <publishTime>11/13/2014 15:25:56</publishTime>
+      <publishTime>12/03/2014 18:35:28</publishTime>
     </File>
     <File Include="Scripts/jquery-2.1.1.js">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -245,7 +266,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 11:33:21</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/02/2014 01:31:09</publishTime>
+      <publishTime>12/03/2014 18:40:38</publishTime>
     </File>
   </ItemGroup>
 </Project>

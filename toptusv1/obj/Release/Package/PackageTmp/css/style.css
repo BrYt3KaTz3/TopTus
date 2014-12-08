@@ -1,4 +1,4 @@
-@import url('demo.css');
+
 
 .mi-slider {
 	position: relative;
@@ -80,7 +80,7 @@
 	text-align: center;
 
 	margin: 0 auto;
-	border-top: 5px solid #333;
+	border-top: 5px solid #BC2516;
 }
 
 .no-js nav {
@@ -126,7 +126,7 @@
 
 .mi-slider nav a.mi-selected:before {
 	border-color: transparent;
-	border-top-color: #333;
+	border-top-color: #BC2516;
 	border-width: 27px;
 	left: 50%;
 	margin-left: -27px;

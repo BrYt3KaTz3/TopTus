@@ -2,12 +2,43 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Scripts/index.js"></script>
    <script src="jsgaleria/modernizr.custom.63321.js"></script>
+    <script src="jsgaleria/pgwslider.js"></script>
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/pgwslider.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
      <div class="container">
-         <div class="row">
+         <div class="row top-buffer"> <!--galeria -->
+             <div class="col-md-12">
+
+                 <ul class="pgwSlider">
+    <li><img src="images/products/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
+    <li><img src="images/products/montreal_mini.jpg" alt="Montréal, QC, Canada" data-large-src="images/products/montreal.jpg"></li>
+    <li>
+        <img src="images/products/shanghai.jpg">
+        <span>Shanghai, China</span>
+    </li>
+    <li>
+        <a href="http://www.nyc.gov" target="_blank">
+            <img src="images/products/new-york.jpg">
+	    <span>New York, NY, USA</span>
+        </a>
+    </li>
+</ul>
+
+             </div>
+         </div> 
+
+         <div class="row top-buffer ">
+             <div class="col-md-6"><h3 class="text-center">Wanna Sell?</h3>
+                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+             </div>
+             <div class="col-md-6"><h3 class="text-center">Wanna Buy?</h3>
+                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+             </div>
+         </div>
+         <div class="row top-buffer">
              <div class="col-md-12">
 
 
@@ -49,7 +80,7 @@
          </div>
          <br />
          <br />
-          <div class="row">
+          <div class="row top-buffer">
               <div class="col-md-4">
                    <h3>Title A</h3>
                    <p>
