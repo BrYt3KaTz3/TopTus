@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -27,9 +28,11 @@ namespace toptusv1.admin
 
         public void cargar_datos() // a la pestaña de login
         {
-            var sesion = Session["usuario_admin"];
-            ArrayList a_usuario = (ArrayList)sesion;
-            string nombre = a_usuario[6].ToString();
+            var sesion = HttpContext.Current.Session["usuario_admin"];
+            DataTable usuario = (DataTable)sesion;
+
+
+            string nombre = usuario.Rows[0]["nombre"].ToString();
             enlace_vendedor.InnerText = nombre;
 
         }

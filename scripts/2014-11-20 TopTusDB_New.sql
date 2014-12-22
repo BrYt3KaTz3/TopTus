@@ -41,9 +41,9 @@ CREATE TABLE TipoVendedor(
 	tipovendedor_descr NVARCHAR(40) NOT NULL,
 );
 GO
-INSERT INTO TipoVendedor VALUES ('Oro');
-INSERT INTO TipoVendedor VALUES ('Plata');
-INSERT INTO TipoVendedor VALUES ('Bronce');
+INSERT INTO TipoVendedor VALUES ('Premium');
+INSERT INTO TipoVendedor VALUES ('Light');
+INSERT INTO TipoVendedor VALUES ('Libre');
 INSERT INTO TipoVendedor VALUES ('Solicitud');
 GO
 -------------------------------------------------Vendedor

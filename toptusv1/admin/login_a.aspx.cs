@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -22,7 +23,7 @@ namespace toptusv1.admin
             {
                 string usuario = a_usuario.Text;
                 string pass = a_password.Text;
-                var validar = obj.validar_admin(usuario, pass); // validar super admin
+                DataTable validar = obj.validar_admin(usuario, pass); // validar super admin
                 if (validar.Rows.Count == 0)
                 {
                     a_password.Text = string.Empty;
@@ -34,15 +35,11 @@ namespace toptusv1.admin
                 else
                 {
                     //inicializar session
-                    ArrayList a_admin = new ArrayList();
-                    for (int i = 0; i < validar.Columns.Count; i++) //regresaría todas las columnas 
-                    {
-                        a_admin.Add(validar.Rows[0].ItemArray.ElementAt(i));
-                    }
+     
 
 
                     Session["valido_admin"] = true;
-                    Session["usuario_admin"] = a_admin;
+                    Session["usuario_admin"] = validar;
                     Response.Redirect("a_info.aspx");
                 }//fin else
             }

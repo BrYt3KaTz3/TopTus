@@ -197,6 +197,7 @@
     <Compile Include="base.Master.designer.cs">
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
+    <Compile Include="categorias_menu.cs" />
     <Compile Include="comprador\base_comprador.Master.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

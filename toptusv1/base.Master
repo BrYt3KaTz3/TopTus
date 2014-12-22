@@ -31,7 +31,7 @@
           </div>
             
             <div id="log" class="pull-right col-md-3">
-            <div class="row">
+            <div class="row" id="capa_login" runat="server">
             <a href="login.aspx" id="login"   runat="server">Login</a> | 
             <a href="solicitud.aspx" >Register</a>
             </div>
@@ -68,12 +68,32 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
       <li><a href="Index.aspx">Home</a></li>
-      <li><a href="productlist.aspx">Products</a></li>
-      <li><a href="tl.aspx">Timeline</a></li>
-      <li class="dropdown">
+     
+     <!-- <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú desplegable <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu"><li><a href="index.aspx">Categoría</a></li></ul>
-  </li>
+        <ul class="dropdown-menu" role="menu"><li><a href="index.aspx">Categoría</a></li></ul>
+     </li>-->
+
+        <asp:Repeater runat="server" ID="repeater_categorias" OnItemDataBound="repeater_categorias_ItemDataBound" >
+
+            <ItemTemplate>
+                  
+                 
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%# Eval("categoria_descr") %> <span class="caret"></span></a>
+        <asp:HiddenField  ID="hidden_categoria" runat="server" Value='<%# Eval("categoria_id") %>' ClientIDMode="Static" />
+
+        <ul class="dropdown-menu" role="menu">
+            <asp:Repeater runat="server" ID="repeater_subcategorias">
+                <ItemTemplate>
+            <li><a href="productlist.aspx"><%# Eval("subcategoria_descr") %></a></li>
+                    </ItemTemplate>
+            </asp:Repeater>
+
+        </ul>
+        </li>
+            </ItemTemplate>
+        </asp:Repeater>
       
     </ul>
          

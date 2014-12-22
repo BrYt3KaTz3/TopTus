@@ -7,7 +7,7 @@
 
 function menu_class_change() //cambiar la clase activa del men+u al ser seleccionado
 {
-    var cambio = false;
+  /*  var cambio = false;
     $('.nav li a').each(function (index) {
         if (this.href.trim() == window.location) {
             $(this).parent().addClass("active");
@@ -16,6 +16,6 @@ function menu_class_change() //cambiar la clase activa del men+u al ser seleccio
     });
     if (!cambio) {
         $('.nav li:first').addClass("active");
-    }
+    }*/
 }
 

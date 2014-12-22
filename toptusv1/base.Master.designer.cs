@@ -67,6 +67,15 @@ namespace toptusv1 {
         protected global::System.Web.UI.WebControls.Button cerrar_sesion;
         
         /// <summary>
+        /// Control capa_login.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl capa_login;
+        
+        /// <summary>
         /// Control login.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace toptusv1 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor login;
+        
+        /// <summary>
+        /// Control repeater_categorias.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater repeater_categorias;
         
         /// <summary>
         /// Control ContentPlaceHolder1.
