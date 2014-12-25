@@ -11,7 +11,24 @@ namespace toptusv1.productos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString.ToString() != "") // cuando si hay parámetros, sea 1 o 2
+            {
 
+                string categoria = Request.QueryString["cat"].ToString() ;
+                string subcategoria = Request.QueryString["sub"].ToString();
+                
+
+
+
+                lblcat.Text = categoria;
+                lblsub.Text = subcategoria;
+
+
+            } //fin de , si hay parámetros
+            else
+            {
+                //cuando no hay parámetros, cargar toooodooooooooooooos los productos
+            }
         }
     }
 }

@@ -21,7 +21,7 @@
     </li>
     <li>
         <a href="http://www.nyc.gov" target="_blank">
-            <img src="images/products/new-york.jpg">
+            <img src="images/products/new-york.jpg" />
 	    <span>New York, NY, USA</span>
         </a>
     </li>

@@ -1,8 +1,17 @@
 ﻿$(document).ready(function () {
     menu_class_change();
-    $('.dropdown-toggle').dropdown();
+    // Add slideDown animation to dropdown
+    $('.dropdown').on('show.bs.dropdown', function (e) {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+    });
+
+    // Add slideUp animation to dropdown
+    $('.dropdown').on('hide.bs.dropdown', function (e) {
+        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+    });
 }
 );
+
 
 
 function menu_class_change() //cambiar la clase activa del men+u al ser seleccionado

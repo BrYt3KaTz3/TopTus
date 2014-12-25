@@ -86,7 +86,8 @@
         <ul class="dropdown-menu" role="menu">
             <asp:Repeater runat="server" ID="repeater_subcategorias">
                 <ItemTemplate>
-            <li><a href="productlist.aspx"><%# Eval("subcategoria_descr") %></a></li>
+            <li><a href="productlist.aspx?cat=<%# Eval("categoria_id") %>&sub=<%# Eval("subcategoria_id") %>"><%# Eval("subcategoria_descr") %></a></li>
+                    
                     </ItemTemplate>
             </asp:Repeater>
 

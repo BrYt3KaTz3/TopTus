@@ -5,4 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <h3 class="text-center">Products</h3>
+
+    Categoria: <asp:Label ID="lblcat" runat="server" ></asp:Label>
+    <br />
+     subCategoria: <asp:Label ID="lblsub" runat="server" ></asp:Label>
 </asp:Content>
