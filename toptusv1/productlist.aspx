@@ -9,4 +9,7 @@
     Categoria: <asp:Label ID="lblcat" runat="server" ></asp:Label>
     <br />
      subCategoria: <asp:Label ID="lblsub" runat="server" ></asp:Label>
+    <br />
+
+    <asp:GridView ID="gvwproductos" runat="server"></asp:GridView>
 </asp:Content>

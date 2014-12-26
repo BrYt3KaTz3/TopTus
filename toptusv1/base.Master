@@ -67,7 +67,7 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="Index.aspx">Home</a></li>
+      <li class="subcategoria"><a href="Index.aspx">Home</a></li>
      
      <!-- <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú desplegable <span class="caret"></span></a>
@@ -86,7 +86,7 @@
         <ul class="dropdown-menu" role="menu">
             <asp:Repeater runat="server" ID="repeater_subcategorias">
                 <ItemTemplate>
-            <li><a href="productlist.aspx?cat=<%# Eval("categoria_id") %>&sub=<%# Eval("subcategoria_id") %>"><%# Eval("subcategoria_descr") %></a></li>
+            <li class="subcategoria"><a href="productlist.aspx?cat=<%# Eval("categoria_id") %>&sub=<%# Eval("subcategoria_id") %>"><%# Eval("subcategoria_descr") %></a></li>
                     
                     </ItemTemplate>
             </asp:Repeater>
@@ -107,7 +107,10 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    
+     <div id="loader">
+        <label>Cargando...</label>
+    <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>
+        </div>
      <script src="../Scripts/bootstrap.js"></script>
 </body>
 </html>

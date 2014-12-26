@@ -221,6 +221,7 @@
     <Compile Include="productlist.aspx.designer.cs">
       <DependentUpon>productlist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="productos_clase.cs" />
     <Compile Include="tl.aspx.cs">
       <DependentUpon>tl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

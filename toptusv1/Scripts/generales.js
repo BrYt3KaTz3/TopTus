@@ -9,7 +9,26 @@
     $('.dropdown').on('hide.bs.dropdown', function (e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
     });
-}
+
+  
+
+    $('.subcategoria').click(function () {
+        $("#loader").slideDown('1000');
+    });
+
+
+    // código para active en los li de bootstrap
+    var url = window.location;
+    // Will only work if string in href matches with location
+    $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+
+    // Will also work for relative and absolute hrefs
+    $('ul.nav a').filter(function () {
+        return this.href == url;
+    }).parent().addClass('active');
+    // fin código para active en los li de bootstrap
+
+}   
 );
 
 
