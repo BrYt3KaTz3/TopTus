@@ -1,18 +1,38 @@
 ﻿body {
 }
+.activemenu
+{
+    background-color:#CF3034;
+}
 
-
+#buscador
+{
+    margin-top:8px;margin-bottom:2px;
+}
+#input_buscar
+{
+   margin-left: 5px;
+width: 100%;
+}
+#log
+{
+    margin-top:10px;
+}
 .error
 {
     color:red;
 }
-
+#menu_contenedor
+{
+    background-color:black;
+    padding-left: 0px;
+}
 #header
 {
     margin-top:5px;
     margin-bottom:15px;
 }
-.top-buffer { margin-top:20px; }
+.top-buffer { }
 #loader
 {
     background: whitesmoke;
@@ -66,3 +86,4 @@
     background: #2E5481;
     border: solid 1px #203E5F;
 }
+

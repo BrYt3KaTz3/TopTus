@@ -49,6 +49,15 @@ namespace toptusv1.vendedor {
         protected global::System.Web.UI.WebControls.TextBox sol_email;
         
         /// <summary>
+        /// Control sol_pass.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox sol_pass;
+        
+        /// <summary>
         /// Control btn_enviar_solicitud.
         /// </summary>
         /// <remarks>

@@ -27,7 +27,7 @@
             <a  href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
           <div id="logeado" class="pull-right" runat="server">
           <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
+          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="btn" OnClick="cerrar_sesion_Click" />
           </div>
             
             <div id="log" class="pull-right col-md-3">

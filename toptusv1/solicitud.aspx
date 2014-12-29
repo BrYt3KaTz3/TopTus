@@ -6,6 +6,72 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    
+   
+	<div class="row">
+        	<div class="col-md-6">
+				
+					<!-- PRICE ITEM -->
+					<div class="panel price panel-grey">
+						<div class="panel-heading arrow_box text-center">
+						<h3>PLAN LIGHT</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead" style="font-size:40px"><strong>$0 / mes</strong></p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><i class="icon-ok text-success"></i> Hasta 5 productos a ofrecer</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> 2 fotos por producto</li>
+							<li class="list-group-item"><i class="icon-ok text-success"></i> Hasta 3 categorías por producto</li>
+                            <li class="list-group-item"><i class="icon-ok text-danger"></i>Completamente gratis</li>
+						</ul>
+						<div class="panel-footer">
+							<a class="btn  btn-block btn-danger" href="#">OBTENER</a>
+						</div>
+					</div>
+					<!-- /PRICE ITEM -->
+					
+					
+				</div>
+
+    			<div class="col-md-6">
+				
+					<!-- PRICE ITEM -->
+					<div class="panel price panel-red">
+						<div class="panel-heading  text-center">
+						<h3>PLAN PREMIUM</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead" style="font-size:40px"><strong>$99 / mes</strong></p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><i class="icon-ok text-danger"></i> Sin límite de productos</li>
+							<li class="list-group-item"><i class="icon-ok text-danger"></i> Sin límite de categorías</li>
+							<li class="list-group-item"><i class="icon-ok text-danger"></i> Hasta 5 fotos por producto</li>
+                            <li class="list-group-item"><i class="icon-ok text-danger"></i> Chat de negocios</li>
+						</ul>
+						<div class="panel-footer">
+							<a class="btn  btn-block btn-danger" href="#">OBTENERLO YA</a>
+						</div>
+					</div>
+					<!-- /PRICE ITEM -->
+					
+					
+				</div>
+				
+			
+				
+				
+				
+			
+				
+				
+				
+			</div>
+            
+
+
+
+
     <div  id="div_solicitud">
           <div class="row">
               <div class="col-md-10 col-md-offset-2">
@@ -49,6 +115,14 @@
                     <label for="sol_email" class="col-lg-2 control-label">Email:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="sol_email" type="email" CssClass ="form-control"  placeholder="Email " runat="server"></asp:TextBox>
+                      
+                    </div>
+                </div>
+                 <br />
+                <div class="form-group">
+                    <label for="sol_email" class="col-lg-2 control-label">Contraseña:</label>
+                    <div class="col-lg-6">
+                      <asp:TextBox ID="sol_pass" type="email" CssClass ="form-control"  placeholder="Contraseña " runat="server"></asp:TextBox>
                       
                     </div>
                 </div>

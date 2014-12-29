@@ -8,24 +8,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-     <div class="container">
+     
          <div class="row top-buffer"> <!--galeria -->
              <div class="col-md-12">
 
-                 <ul class="pgwSlider">
-    <li><img src="images/products/paris.jpg" alt="Paris, France" data-description="Eiffel Tower and Champ de Mars"></li>
-    <li><img src="images/products/montreal_mini.jpg" alt="Montréal, QC, Canada" data-large-src="images/products/montreal.jpg"></li>
-    <li>
-        <img src="images/products/shanghai.jpg">
-        <span>Shanghai, China</span>
-    </li>
-    <li>
-        <a href="http://www.nyc.gov" target="_blank">
-            <img src="images/products/new-york.jpg">
-	    <span>New York, NY, USA</span>
-        </a>
-    </li>
-</ul>
+                <ul class="pgwSlider">
+                <li><img src="images/products/app.jpg"><span>Las mejores aplicaciones móviles del momento</span></li>
+                <li><img src="images/products/chamarra.jpg" alt="Sudaderas para damas" data-description="Bonitos diseños para este invierno"></li>
+                <li><img src="images/products/bolsas.jpg" alt="¿Qué tal una bonita bolsa para tu pareja?" data-large-src="images/products/bolsas.jpg"></li>
+                <li><img src="images/products/colores.jpg"><span>Regalale a tus hijos estos bonitos colores</span></li>
+                <li><a href="http://www.nyc.gov" target="_blank"><img src="images/products/reloj.jpg" /><span>Nunca llegues tarde con estos bonitos relojes</span></a></li>
+                </ul>
 
              </div>
          </div> 
@@ -110,7 +103,7 @@
                  </div>
          </div>
 
-       </div>    
+         
     <script src="jsgaleria/jquery.catslider.js"></script>
 		<script>
 		    $(function () {
