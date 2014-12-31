@@ -41,14 +41,14 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="vendedor_perfil.aspx">Basic information</a></li>
-      <li><a href="socialmedia.aspx">Social Media</a></li>
-      <li><a href="products.aspx">Products</a></li>
+      <li class="subcategoria"><a href="vendedor_perfil.aspx">Basic information</a></li>
+      <li class="subcategoria"><a href="socialmedia.aspx">Social Media</a></li>
+      <li class="subcategoria"><a href="products.aspx">Products</a></l>
      
     </ul>
           <div class="pull-right">
         <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" OnClick="cerrar_sesion_Click" runat="server" Text="Close sesion" CssClass="button-link" />
+          <asp:Button ID="cerrar_sesion" OnClick="cerrar_sesion_Click" runat="server" Text="Close sesion" CssClass="btn" />
           </div>
       </div>
                 </div>
