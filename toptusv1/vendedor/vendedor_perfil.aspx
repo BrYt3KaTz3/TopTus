@@ -42,11 +42,18 @@
                   <div class="form-group">
                     <label for="ven_email" class="col-lg-2 control-label">Email:</label>
                     <div class="col-lg-6">
-                      <asp:TextBox ID="ven_email" type="email" CssClass ="form-control"  placeholder="Email " runat="server"></asp:TextBox>
+                      <asp:TextBox ID="ven_email"  type="email" CssClass ="form-control"  placeholder="Email " runat="server" Enabled="False"></asp:TextBox>
                       
                     </div>
                 </div>
-
+                 <br />
+                  <div class="form-group">
+                    <label for="ven_email" class="col-lg-2 control-label">Miembro desde:</label>
+                    <div class="col-lg-6">
+                      <asp:TextBox ID="ven_fechaingreso"  type="email" CssClass ="form-control"  placeholder="Fecha de ingreso " runat="server" Enabled="False"></asp:TextBox>
+                      
+                    </div>
+                </div>
                  <br />
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">

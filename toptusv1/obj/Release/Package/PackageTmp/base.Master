@@ -24,24 +24,26 @@
 
     <form id="form1" runat="server">
         <div class="container" id="header">
-            <a class="navbar-brand" href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
+            <a  href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
           <div id="logeado" class="pull-right" runat="server">
           <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
+          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="btn" OnClick="cerrar_sesion_Click" />
           </div>
             
             <div id="log" class="pull-right col-md-3">
-            <div class="row">
+               
+            <div class="row pull-right" id="capa_login" runat="server">
             <a href="login.aspx" id="login"   runat="server">Login</a> | 
             <a href="solicitud.aspx" >Register</a>
             </div>
-                <div class="row">
-                    <div class="input-group">
+                 <div class="pull-right  id="buscador">
+        <div class="input-group" id="input_buscar">
             <input type="text" class="form-control">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button">Buscar</button>
             </span>
-          </div></div>
+          </div>
+         </div>
             </div>
 
             
@@ -49,7 +51,7 @@
         </div>
     <div class="container">
          <nav class="navbar navbar-default " id="menu_general" role="navigation">
-            <div class=" col-md-12">
+            <div class=" col-md-12" id="menu_contenedor">
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">
@@ -67,19 +69,37 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="Index.aspx">Home</a></li>
-      <li><a href="productlist.aspx">Products</a></li>
-      <li><a href="tl.aspx">Timeline</a></li>
-       <li class="dropdown">
-   <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-      Menú desplegable <span class="caret"></span>
-    </a>
-  
-  </li>-->
+      <li class="subcategoria"><a href="Index.aspx">Home</a></li>
+     
+     <!-- <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú desplegable <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu"><li><a href="index.aspx">Categoría</a></li></ul>
+     </li>-->
+
+        <asp:Repeater runat="server" ID="repeater_categorias" OnItemDataBound="repeater_categorias_ItemDataBound" >
+
+            <ItemTemplate>
+                  
+                 
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%# Eval("categoria_descr") %> <span class="caret"></span></a>
+        <asp:HiddenField  ID="hidden_categoria" runat="server" Value='<%# Eval("categoria_id") %>' ClientIDMode="Static" />
+
+        <ul class="dropdown-menu" role="menu">
+            <asp:Repeater runat="server" ID="repeater_subcategorias">
+                <ItemTemplate>
+            <li class="subcategoria"><a href="productlist.aspx?cat=<%# Eval("categoria_id") %>&sub=<%# Eval("subcategoria_id") %>"><%# Eval("subcategoria_descr") %></a></li>
+                    
+                    </ItemTemplate>
+            </asp:Repeater>
+
+        </ul>
+        </li>
+            </ItemTemplate>
+        </asp:Repeater>
       
     </ul>
          
-      
    </div>
             </div>
 </nav>
@@ -88,7 +108,10 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
-    
+     <div id="loader">
+        <label>Cargando...</label>
+    <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>
+        </div>
      <script src="../Scripts/bootstrap.js"></script>
 </body>
 </html>

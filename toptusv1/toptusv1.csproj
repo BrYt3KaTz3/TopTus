@@ -93,10 +93,15 @@
     <Content Include="images\7.jpg" />
     <Content Include="images\8.jpg" />
     <Content Include="images\9.jpg" />
+    <Content Include="images\products\app.jpg" />
+    <Content Include="images\products\bolsas.jpg" />
+    <Content Include="images\products\chamarra.jpg" />
+    <Content Include="images\products\colores.jpg" />
     <Content Include="images\products\montreal.jpg" />
     <Content Include="images\products\montreal_mini.jpg" />
     <Content Include="images\products\new-york.jpg" />
     <Content Include="images\products\paris.jpg" />
+    <Content Include="images\products\reloj.jpg" />
     <Content Include="images\products\shanghai.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="jsgaleria\jquery.catslider.js" />
