@@ -16,12 +16,15 @@ GO
 CREATE TABLE TipoVendedor(
 	tipovendedor_id INT PRIMARY KEY IDENTITY NOT NULL,
 	tipovendedor_descr NVARCHAR(40) NOT NULL,
+	categorias INT NOT NULL,
+	prodcutos INT NOT NULL,
+	img_prod INT NOT NULL,
+	chat_negocios BIT NOT NULL
 );
-GO
-INSERT INTO TipoVendedor VALUES ('Premium');
-INSERT INTO TipoVendedor VALUES ('Light');
-INSERT INTO TipoVendedor VALUES ('Free');
-INSERT INTO TipoVendedor VALUES ('Request');
+INSERT INTO TipoVendedor VALUES ('Premium',3,5,5,1);
+INSERT INTO TipoVendedor VALUES ('Light',2,3,3,1);
+INSERT INTO TipoVendedor VALUES ('Free',1,2,2,0);
+INSERT INTO TipoVendedor VALUES ('Request',0,0,0,0);
 GO
 -------------------------------------------------Vendedor
 CREATE TABLE Vendedor(
@@ -36,8 +39,8 @@ CREATE TABLE Vendedor(
 	tipovendedor_id INT NOT NULL REFERENCES TipoVendedor(tipovendedor_id),
 	rfc NVARCHAR(14) NOT NULL,
 	empresa NVARCHAR(100) NOT NULL,
-	pais_id INT NOT NULL,
-	estado_id INT NOT NULL,
+	pais_id INT NOT NULL REFERENCES paises(CountryId),
+	estado_id INT NOT NULL REFERENCES region(RegionId),
 	ciudad NVARCHAR(60) NOT NULL,
 	colonia NVARCHAR(60) NOT NULL,
 	calle NVARCHAR(60) NOT NULL,
@@ -55,6 +58,18 @@ INSERT INTO Vendedor VALUES ('Sergio', 'Amaya', 'Montoya', 'sa.amayamontoya@gmai
 INSERT INTO Vendedor VALUES ('Carlos', 'Peinado', 'Buenrrostro', 'carlitos@hotmail.com', 'carlos', '2014-08-01', '2014-09-01', 3, 'QWER123456DE3', 'Carlos', 1, 1, 'Celaya', 'Centro', 'Calle', '105', 'A', 52, 461, '1231231', NULL, NULL);
 INSERT INTO Vendedor VALUES ('Pedro', 'Velez', 'Del Campo', 'pedrovelez@hotmail.com', 'pedro', '2014-09-01', '2014-09-2', 3, 'GHJK785689FR5', 'Pedro', 1, 1, 'Celaya', 'Centro', 'Calle', '105', 'A', 52, 461, '1231231', NULL, NULL);
 INSERT INTO Vendedor VALUES ('Alberto', 'Materno', 'Paterno', 'alberto123@hotmail.com', 'alberto', '2014-08-01', NULL, 4, 'ZXCV121212JU7', 'Alberto', 1, 1, 'Celaya', 'Centro', 'Calle', '105', 'A', 52, 461, '1231231', NULL, NULL);
+GO
+-------------------------------------------------Redes Sociales
+CREATE TABLE Redes_Sociales(
+	redes_id INT PRIMARY KEY IDENTITY NOT NULL,
+	vendedor_id INT NOT NULL REFERENCES vendedor(vendedor_id),
+	facebook NVARCHAR(128),
+	twitter NVARCHAR(128),
+	googleplus NVARCHAR(128),
+	instagram NVARCHAR(128),
+	linkedin NVARCHAR(128),
+	otra NVARCHAR(128)
+);
 GO
 -------------------------------------------------Categoria
 CREATE TABLE Categoria(
@@ -95,8 +110,6 @@ CREATE TABLE Producto(
 	disponible BIT NOT NULL,
 );
 GO
--- nombre de foto = [vendedor_id]_[prodducto_id].extension
--- Eatmos en Oferta todoa a $99.99 XD
 INSERT INTO Producto VALUES ('Cortina', 'Cortina de tela 3m x 4m', 1,  $99.99, 0, 0, NULL, 1);
 INSERT INTO Producto VALUES ('Balon Soccer', 'Balon Soccer', 2, $99.99, 0, 0, NULL, 1);
 INSERT INTO Producto VALUES ('Balon Futbol', 'Balon Futbol', 2, $99.99, 0, 0, NULL, 1);
@@ -112,10 +125,31 @@ GO
 CREATE TABLE prod_cate(
 	producto_id INT NOT NULL REFERENCES Producto(producto_id),
 	categoria_id INT NOT NULL REFERENCES Categoria(categoria_id),
-	subcategoria_id INT REFERENCES SubCategoria(subcategoria_id),
+	subcategoria_id INT NOT NULL REFERENCES SubCategoria(subcategoria_id),
 	PRIMARY KEY	(producto_id, categoria_id, subcategoria_id)
 );
 GO
+INSERT INTO prod_cate VALUES(1,1,1);
+INSERT INTO prod_cate VALUES(2,2,3);
+INSERT INTO prod_cate VALUES(3,2,5);
+INSERT INTO prod_cate VALUES(4,2,4);
+INSERT INTO prod_cate VALUES(5,3,6);
+INSERT INTO prod_cate VALUES(6,3,7);
+INSERT INTO prod_cate VALUES(7,3,7);
+INSERT INTO prod_cate VALUES(8,3,7);
+INSERT INTO prod_cate VALUES(9,3,8);
+INSERT INTO prod_cate VALUES(10,3,8);
+GO
+-------------------------------------------------Imagenes de cada producto (acepta variasimagenes por cada producto)
+-- img_ruta = [vendedor_id]_[prodducto_id]_[img_prod_detail_id].extension ej. 2_12_1.jpg (vendedor 2, producto 12, imagen 1)
+CREATE TABLE img_prod_detail(
+	img_prod_detail_id INT PRIMARY KEY IDENTITY NOT NULL,
+	producto_id INT NOT NULL REFERENCES Producto(producto_id),
+	vendedor_id INT NOT NULL REFERENCES vendedor(vendedor_id),
+	img_ruta NVARCHAR(10) NOT NULL,
+	img_title NVARCHAR(50) NOT NULL,
+	img_descr NVARCHAR(250) NOT NULL
+);
 -------------------------------------------------Comprador
 CREATE TABLE Comprador(
 	comprador_id INT PRIMARY KEY IDENTITY NOT NULL,
@@ -143,6 +177,3 @@ CREATE TABLE Timeline(
 	comprador_id INT NOT NULL REFERENCES Comprador(comprador_id)
 );
 GO
-
--- Nombre completo de vendedor debe calcularse
--- Afecta el hacer una linking table para poner varias categorias a un producto o una subcategoria en varias categorias?
