@@ -29,7 +29,7 @@ namespace toptusv1.vendedor
             try
             {
                 conexion.Open();
-                dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + email + "' and tipovendedor_id=4").Tables[0];
+                dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + email + "'").Tables[0];
                 return dt_vendedor;
 
             }

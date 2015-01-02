@@ -28,6 +28,7 @@ namespace toptusv1.vendedor
                 string apellidop = sol_apellidop.Text;
                 string apellidom = sol_apellidom.Text;
                 string email = sol_email.Text;
+                string pass = sol_pass.Text;
                 var existe = obj.existe_vendedor(email);//verifica si hay un email registrado
                 DateTime fechasol = DateTime.Today;
                 if (existe.Rows.Count == 0)
@@ -35,6 +36,7 @@ namespace toptusv1.vendedor
 
                     string res = obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol);
                    // string res = "1";
+                    Console.Write(res);
                     if (res == "1")
                     {
                         try
@@ -72,11 +74,11 @@ namespace toptusv1.vendedor
                         }
                         
                     }
-                    else
+                    else //if res
                     {
                         ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud()", true);
                     }
-                }
+                } //if existe
                 else
                 {
                     ClientScript.RegisterStartupScript(GetType(), "mensaje", "mail_ya_registrado()", true);

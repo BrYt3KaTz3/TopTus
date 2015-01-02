@@ -4,7 +4,10 @@
 {
     background-color:#CF3034;
 }
-
+.texto_pequeño
+{
+    font-size: 40%;
+}
 #buscador
 {
     margin-top:8px;margin-bottom:2px;

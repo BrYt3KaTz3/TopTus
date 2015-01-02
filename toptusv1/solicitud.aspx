@@ -16,7 +16,7 @@
 						<h3>PLAN LIGHT</h3>
 						</div>
 						<div class="panel-body text-center">
-							<p class="lead" style="font-size:40px"><strong>$0 / mes</strong></p>
+							<p class="lead" style="font-size:40px"><strong>$0<br /> <span class="text-muted texto_pequeño">pesos mexicanos</span><br /> mes</strong></p>
 						</div>
 						<ul class="list-group list-group-flush text-center">
 							<li class="list-group-item"><i class="icon-ok text-success"></i> Hasta 5 productos a ofrecer</li>
@@ -41,7 +41,7 @@
 						<h3>PLAN PREMIUM</h3>
 						</div>
 						<div class="panel-body text-center">
-							<p class="lead" style="font-size:40px"><strong>$99 / mes</strong></p>
+							<p class="lead" style="font-size:40px"><strong>$99.99<br /> <span class="text-muted texto_pequeño">pesos mexicanos</span> <br /> mes</strong></p>
 						</div>
 						<ul class="list-group list-group-flush text-center">
 							<li class="list-group-item"><i class="icon-ok text-danger"></i> Sin límite de productos</li>
@@ -122,7 +122,7 @@
                 <div class="form-group">
                     <label for="sol_email" class="col-lg-2 control-label">Contraseña:</label>
                     <div class="col-lg-6">
-                      <asp:TextBox ID="sol_pass" type="email" CssClass ="form-control"  placeholder="Contraseña " runat="server"></asp:TextBox>
+                      <asp:TextBox ID="sol_pass" type="password" CssClass ="form-control"  placeholder="Contraseña " runat="server"></asp:TextBox>
                       
                     </div>
                 </div>
