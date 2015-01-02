@@ -4,10 +4,7 @@
 {
     background-color:#CF3034;
 }
-.texto_pequeño
-{
-    font-size: 40%;
-}
+
 #buscador
 {
     margin-top:8px;margin-bottom:2px;
@@ -27,7 +24,7 @@ width: 100%;
 }
 #menu_contenedor
 {
-    background-color:black;
+    background-color:#CF3034;
     padding-left: 0px;
 }
 #header

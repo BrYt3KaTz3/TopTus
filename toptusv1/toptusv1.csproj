@@ -42,7 +42,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
@@ -67,6 +67,10 @@
     <Content Include="admin\a_solicitud.aspx" />
     <Content Include="admin\a_vendedores.aspx" />
     <Content Include="admin\login_a.aspx" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\toptusv1.dll" />
+    <Content Include="bin\toptusv1.pdb" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -108,6 +112,7 @@
     <Content Include="jsgaleria\modernizr.custom.63321.js" />
     <Content Include="css\pgwslider.css" />
     <Content Include="jsgaleria\pgwslider.js" />
+    <Content Include="json.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Login\login.css" />
     <Content Include="Login\login.js" />
@@ -211,6 +216,13 @@
       <DependentUpon>base_comprador.Master</DependentUpon>
     </Compile>
     <Compile Include="Datatable.cs" />
+    <Compile Include="json.aspx.cs">
+      <DependentUpon>json.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="json.aspx.designer.cs">
+      <DependentUpon>json.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -227,6 +239,7 @@
       <DependentUpon>productlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="productos_clase.cs" />
+    <Compile Include="prueba_json.cs" />
     <Compile Include="tl.aspx.cs">
       <DependentUpon>tl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -304,7 +317,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="json\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

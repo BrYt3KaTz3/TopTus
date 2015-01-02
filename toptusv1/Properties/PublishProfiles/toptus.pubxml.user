@@ -38,7 +38,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>12/31/2014 02:08:33</publishTime>
+      <publishTime>01/02/2015 02:09:59</publishTime>
     </File>
     <File Include="comprador/base_comprador.Master">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -62,7 +62,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="css/cssgeneral.css">
-      <publishTime>12/31/2014 02:10:27</publishTime>
+      <publishTime>01/01/2015 20:25:10</publishTime>
     </File>
     <File Include="css/pgwslider.css">
       <publishTime>12/03/2014 18:14:47</publishTime>
@@ -184,6 +184,9 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
     <File Include="jsgaleria/pgwslider.js">
       <publishTime>12/03/2014 18:14:47</publishTime>
     </File>
+    <File Include="json.aspx">
+      <publishTime>01/02/2015 01:38:59</publishTime>
+    </File>
     <File Include="login.aspx">
       <publishTime>11/21/2014 00:23:16</publishTime>
     </File>
@@ -194,7 +197,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/30/2014 20:23:28</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>11/13/2014 00:30:45</publishTime>
+      <publishTime>01/01/2015 23:37:32</publishTime>
     </File>
     <File Include="productlist.aspx">
       <publishTime>12/25/2014 23:12:16</publishTime>
@@ -281,7 +284,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>12/29/2014 00:41:50</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/31/2014 02:10:31</publishTime>
+      <publishTime>01/02/2015 02:10:00</publishTime>
     </File>
   </ItemGroup>
 </Project>
