@@ -27,23 +27,15 @@
             <a  href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
           <div id="logeado" class="pull-right" runat="server">
           <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="btn" OnClick="cerrar_sesion_Click" />
+          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="button-link" OnClick="cerrar_sesion_Click" />
           </div>
             
             <div id="log" class="pull-right col-md-3">
-               
-            <div class="row pull-right" id="capa_login" runat="server">
+            <div class="row" id="capa_login" runat="server">
             <a href="login.aspx" id="login"   runat="server">Login</a> | 
             <a href="solicitud.aspx" >Register</a>
             </div>
-                 <div class="pull-right  id="buscador">
-        <div class="input-group" id="input_buscar">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Buscar</button>
-            </span>
-          </div>
-         </div>
+                
             </div>
 
             
@@ -99,7 +91,14 @@
         </asp:Repeater>
       
     </ul>
-         
+         <div class="pull-right col-md-3" id="buscador">
+        <div class="input-group" id="input_buscar">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Buscar</button>
+            </span>
+          </div>
+         </div>
    </div>
             </div>
 </nav>

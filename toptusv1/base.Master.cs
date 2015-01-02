@@ -60,7 +60,6 @@ namespace toptusv1
         {
             Session.Abandon();
             Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-            Session["valido"] = false;
             Response.Redirect("Index.aspx");
         }
 
