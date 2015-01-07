@@ -52,5 +52,21 @@ namespace toptusv1
                 throw;
             }
         }
+
+        public DataTable subcategoriasjson() //método para prueba de json
+        {
+            try
+            {
+                conexion.Open();
+                dt_subcategorias = conexion.ExecuteDataSet(CommandType.Text, "Select * from SubCategoria order by categoria_id").Tables[0];
+                return dt_subcategorias;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

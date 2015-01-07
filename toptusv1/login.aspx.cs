@@ -44,7 +44,7 @@ namespace toptusv1
                        //inicializar session 
                        Session["valido"] = true;
                        Session["usuario"] = validar;
-                       Response.Redirect("vendedor/vendedor_perfil.aspx");
+                       Response.Redirect("vendedor/fotoperfil.aspx");
                    }//fin else
                    #endregion
                }

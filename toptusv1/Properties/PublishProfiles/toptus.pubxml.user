@@ -38,7 +38,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>01/02/2015 02:09:59</publishTime>
+      <publishTime>01/07/2015 03:00:29</publishTime>
     </File>
     <File Include="comprador/base_comprador.Master">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -53,7 +53,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>12/29/2014 00:39:17</publishTime>
+      <publishTime>01/06/2015 13:17:51</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -185,10 +185,22 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>12/03/2014 18:14:47</publishTime>
     </File>
     <File Include="json.aspx">
-      <publishTime>01/02/2015 01:38:59</publishTime>
+      <publishTime>01/02/2015 12:47:55</publishTime>
+    </File>
+    <File Include="json/categorias.json">
+      <publishTime>01/02/2015 12:01:28</publishTime>
+    </File>
+    <File Include="json/paises.json">
+      <publishTime>01/05/2015 18:16:38</publishTime>
+    </File>
+    <File Include="json/region.json">
+      <publishTime>01/05/2015 18:16:42</publishTime>
+    </File>
+    <File Include="json/subcategorias.json">
+      <publishTime>01/02/2015 12:01:29</publishTime>
     </File>
     <File Include="login.aspx">
-      <publishTime>11/21/2014 00:23:16</publishTime>
+      <publishTime>01/05/2015 00:20:09</publishTime>
     </File>
     <File Include="Login/login.css">
       <publishTime>11/15/2014 16:40:06</publishTime>
@@ -263,13 +275,19 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/21/2014 00:23:16</publishTime>
     </File>
     <File Include="vendedor/base_vendedor.Master">
-      <publishTime>12/29/2014 00:48:51</publishTime>
+      <publishTime>01/06/2015 18:52:46</publishTime>
+    </File>
+    <File Include="vendedor/fotoperfil.aspx">
+      <publishTime>01/06/2015 18:55:26</publishTime>
     </File>
     <File Include="vendedor/js/solicitud.js">
       <publishTime>11/13/2014 00:30:46</publishTime>
     </File>
     <File Include="vendedor/js/vendedor_generales.js">
-      <publishTime>12/29/2014 00:34:11</publishTime>
+      <publishTime>01/07/2015 02:42:22</publishTime>
+    </File>
+    <File Include="vendedor/perfil/1.jpg">
+      <publishTime>01/07/2015 02:47:22</publishTime>
     </File>
     <File Include="vendedor/products.aspx">
       <publishTime>11/13/2014 11:38:26</publishTime>
@@ -281,10 +299,10 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/19/2014 00:04:22</publishTime>
     </File>
     <File Include="vendedor/vendedor_perfil.aspx">
-      <publishTime>12/29/2014 00:41:50</publishTime>
+      <publishTime>01/06/2015 17:44:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/02/2015 02:10:00</publishTime>
+      <publishTime>01/07/2015 03:00:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

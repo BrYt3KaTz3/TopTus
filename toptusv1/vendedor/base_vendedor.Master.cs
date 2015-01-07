@@ -40,6 +40,8 @@ namespace toptusv1
 
             
             string nombre = usuario.Rows[0]["nombre"].ToString();
+            string id_vendedor = usuario.Rows[0]["vendedor_id"].ToString();
+          
             enlace_vendedor.InnerText = nombre;
 
         }

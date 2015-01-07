@@ -10,4 +10,11 @@ namespace toptusv1
         public int categoria_id { get; set; }
         public string categoria_descr { get; set; }
     }
+
+    public class sub_json
+    {
+        public int subcategoria_id { get; set; }
+        public string subcategoria_descr { get; set; }
+        public int categoria_id { get; set; }
+    }
 }

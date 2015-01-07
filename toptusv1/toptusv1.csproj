@@ -132,7 +132,10 @@
     <Content Include="comprador\base_comprador.Master" />
     <Content Include="admin\admin.Master" />
     <Content Include="images\.DS_Store" />
-    <Content Include="json\json.json" />
+    <Content Include="json\categorias.json" />
+    <Content Include="json\subcategorias.json" />
+    <Content Include="json\paises.json" />
+    <Content Include="json\region.json" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -153,7 +156,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\solicitud.js" />
+    <Content Include="vendedor\fotoperfil.aspx" />
     <Content Include="vendedor\js\vendedor_generales.js" />
+    <Content Include="vendedor\perfil\1.jpg" />
     <Content Include="vendedor\products.aspx" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="solicitud.aspx" />
@@ -217,6 +222,7 @@
       <DependentUpon>base_comprador.Master</DependentUpon>
     </Compile>
     <Compile Include="Datatable.cs" />
+    <Compile Include="Datatable_2.cs" />
     <Compile Include="json.aspx.cs">
       <DependentUpon>json.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -232,6 +238,8 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\login_vendedor.cs" />
+    <Compile Include="paises_cl.cs" />
+    <Compile Include="paises_json.cs" />
     <Compile Include="productlist.aspx.cs">
       <DependentUpon>productlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,6 +286,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="vendedor\fotoperfil.aspx.cs">
+      <DependentUpon>fotoperfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\fotoperfil.aspx.designer.cs">
+      <DependentUpon>fotoperfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\products.aspx.cs">
       <DependentUpon>products.aspx</DependentUpon>
