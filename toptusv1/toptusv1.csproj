@@ -61,6 +61,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="acerca.aspx" />
     <Content Include="admin\admin_generales.js" />
     <Content Include="admin\a_info.aspx" />
     <Content Include="admin\a_login.js" />
@@ -71,16 +72,35 @@
     <Content Include="bin\Newtonsoft.Json.xml" />
     <Content Include="bin\toptusv1.dll" />
     <Content Include="bin\toptusv1.pdb" />
+    <Content Include="comentarios.aspx" />
+    <Content Include="contacto.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="css\cssgeneral.css" />
+    <Content Include="css\footer.css" />
     <Content Include="css\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\ajax-loader.gif" />
+    <Content Include="imagenes\calidad.jpg" />
+    <Content Include="imagenes\contacto.jpg" />
+    <Content Include="imagenes\icono.ico" />
+    <Content Include="imagenes\icono.png" />
+    <Content Include="imagenes\iconos\calidad.png" />
+    <Content Include="imagenes\iconos\clientes.png" />
+    <Content Include="imagenes\iconos\facebook.png" />
+    <Content Include="imagenes\iconos\google.png" />
+    <Content Include="imagenes\iconos\instagram.png" />
+    <Content Include="imagenes\iconos\linked.png" />
+    <Content Include="imagenes\iconos\porque.png" />
+    <Content Include="imagenes\iconos\twitter.png" />
+    <Content Include="imagenes\iconos\vanguardia.png" />
+    <Content Include="imagenes\iconos\youtube.png" />
+    <Content Include="imagenes\inova.jpg" />
     <Content Include="imagenes\logo.jpg" />
     <Content Include="imagenes\logo.png" />
+    <Content Include="imagenes\opciones.png" />
     <Content Include="imagenes\prelogo.png" />
     <Content Include="images\1.jpg" />
     <Content Include="images\10.jpg" />
@@ -97,15 +117,37 @@
     <Content Include="images\7.jpg" />
     <Content Include="images\8.jpg" />
     <Content Include="images\9.jpg" />
+    <Content Include="images\products\1.jpg" />
+    <Content Include="images\products\10.jpg" />
+    <Content Include="images\products\2.jpg" />
+    <Content Include="images\products\3.jpg" />
+    <Content Include="images\products\4.jpg" />
+    <Content Include="images\products\5.jpg" />
+    <Content Include="images\products\6.jpg" />
+    <Content Include="images\products\7.png" />
+    <Content Include="images\products\8.jpg" />
+    <Content Include="images\products\9.png" />
     <Content Include="images\products\app.jpg" />
     <Content Include="images\products\bolsas.jpg" />
+    <Content Include="images\products\bolsas2.jpg" />
     <Content Include="images\products\chamarra.jpg" />
+    <Content Include="images\products\chamarra2.jpg" />
     <Content Include="images\products\colores.jpg" />
+    <Content Include="images\products\colores2.jpg" />
+    <Content Include="images\products\disponible.gif" />
+    <Content Include="images\products\m1.jpg" />
+    <Content Include="images\products\m2.jpg" />
+    <Content Include="images\products\m3.jpg" />
+    <Content Include="images\products\m4.jpg" />
+    <Content Include="images\products\m5.jpg" />
     <Content Include="images\products\montreal.jpg" />
     <Content Include="images\products\montreal_mini.jpg" />
     <Content Include="images\products\new-york.jpg" />
     <Content Include="images\products\paris.jpg" />
+    <Content Include="images\products\publi1.jpg" />
+    <Content Include="images\products\publi2.jpg" />
     <Content Include="images\products\reloj.jpg" />
+    <Content Include="images\products\reloj2.jpg" />
     <Content Include="images\products\shanghai.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="jsgaleria\jquery.catslider.js" />
@@ -126,6 +168,7 @@
     <Content Include="productlist.aspx" />
     <Content Include="Scripts\generales.js" />
     <Content Include="Scripts\index.js" />
+    <Content Include="servicio.aspx" />
     <Content Include="tl.aspx" />
     <Content Include="vendedor\base_solicitud.Master" />
     <Content Include="vendedor\base_vendedor.Master" />
@@ -133,9 +176,10 @@
     <Content Include="admin\admin.Master" />
     <Content Include="images\.DS_Store" />
     <Content Include="json\categorias.json" />
-    <Content Include="json\subcategorias.json" />
+    <Content Include="json\subcategorias_.json" />
     <Content Include="json\paises.json" />
     <Content Include="json\region.json" />
+    <Content Include="json\subcategorias.json" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -156,10 +200,13 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\solicitud.js" />
+    <Content Include="vendedor\catprod.aspx" />
+    <Content Include="vendedor\css\generales_vendedor.css" />
     <Content Include="vendedor\fotoperfil.aspx" />
     <Content Include="vendedor\js\vendedor_generales.js" />
     <Content Include="vendedor\perfil\1.jpg" />
-    <Content Include="vendedor\products.aspx" />
+    <Content Include="vendedor\productos.aspx" />
+    <Content Include="vendedor\prod_fotos\default.png" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="solicitud.aspx" />
     <Content Include="vendedor\vendedor_perfil.aspx" />
@@ -169,6 +216,13 @@
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="acerca.aspx.cs">
+      <DependentUpon>acerca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="acerca.aspx.designer.cs">
+      <DependentUpon>acerca.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,12 +268,26 @@
       <DependentUpon>base.Master</DependentUpon>
     </Compile>
     <Compile Include="categorias_menu.cs" />
+    <Compile Include="comentarios.aspx.cs">
+      <DependentUpon>comentarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="comentarios.aspx.designer.cs">
+      <DependentUpon>comentarios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="comprador\base_comprador.Master.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="comprador\base_comprador.Master.designer.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="contacto.aspx.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contacto.aspx.designer.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Datatable.cs" />
     <Compile Include="Datatable_2.cs" />
@@ -249,6 +317,13 @@
     </Compile>
     <Compile Include="productos_clase.cs" />
     <Compile Include="prueba_json.cs" />
+    <Compile Include="servicio.aspx.cs">
+      <DependentUpon>servicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="servicio.aspx.designer.cs">
+      <DependentUpon>servicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tl.aspx.cs">
       <DependentUpon>tl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,6 +362,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="vendedor\catprod.aspx.cs">
+      <DependentUpon>catprod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\catprod.aspx.designer.cs">
+      <DependentUpon>catprod.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vendedor\fotoperfil.aspx.cs">
       <DependentUpon>fotoperfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -294,13 +376,14 @@
     <Compile Include="vendedor\fotoperfil.aspx.designer.cs">
       <DependentUpon>fotoperfil.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vendedor\products.aspx.cs">
-      <DependentUpon>products.aspx</DependentUpon>
+    <Compile Include="vendedor\productos.aspx.cs">
+      <DependentUpon>productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vendedor\products.aspx.designer.cs">
-      <DependentUpon>products.aspx</DependentUpon>
+    <Compile Include="vendedor\productos.aspx.designer.cs">
+      <DependentUpon>productos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vendedor\seguridad.cs" />
     <Compile Include="vendedor\socialmedia.aspx.cs">
       <DependentUpon>socialmedia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

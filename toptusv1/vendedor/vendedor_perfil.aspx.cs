@@ -12,8 +12,13 @@ namespace toptusv1.vendedor
 {
     public partial class vendedor_perfil : System.Web.UI.Page
     {
+       
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            
+            
             if (!Page.IsPostBack) { 
             if (Session["valido"] == null)
             {
@@ -22,7 +27,12 @@ namespace toptusv1.vendedor
             //else.... usuario válido
             else
             {
-                // var usuario = HttpContext.Current.Session["usuario"];
+                //var usuario = HttpContext.Current.Session["usuario"];
+                //var ajlk = (TextBox)Master.FindControl("usuario_id_master");
+                //TextBox hdnID = Page.Master.FindControl("usuario_id_master") as TextBox;
+                //string user = hdnID.Text;
+                //var usueraio = ((base_vendedor)Master).usuario_id;
+                
                 cargar_datos();
                 
 
@@ -149,6 +159,7 @@ namespace toptusv1.vendedor
             
             DataTable usuario = (DataTable)sesion;
             int id_usuario = int.Parse(usuario.Rows[0]["vendedor_id"].ToString());
+            
             vendedor obj = new vendedor();
             
             string nombre = ven_nombre.Text;

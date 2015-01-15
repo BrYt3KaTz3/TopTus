@@ -4,6 +4,8 @@ function main() {
 
     $("#menu_general").hide();
     $("#header").hide();
+    $("#footer").hide();
+    $(".footer-bottom").hide();
     validateForm();
 }
 

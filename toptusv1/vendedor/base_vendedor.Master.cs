@@ -9,8 +9,16 @@ using System.Web.UI.WebControls;
 
 namespace toptusv1
 {
+   
     public partial class base_vendedor : System.Web.UI.MasterPage
     {
+       public TextBox usuario_id
+        {
+            get { return this.usuario_id_master; }
+        }
+
+      
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["valido"] == null)
@@ -41,10 +49,12 @@ namespace toptusv1
             
             string nombre = usuario.Rows[0]["nombre"].ToString();
             string id_vendedor = usuario.Rows[0]["vendedor_id"].ToString();
-          
+            usuario_id_master.Text = id_vendedor;
             enlace_vendedor.InnerText = nombre;
 
         }
     }
+
+   
 }
 

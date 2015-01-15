@@ -3925,13 +3925,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav {
   margin: 7.5px -15px;
-  background-color:black;
+  background-color:#CF3034;
 }
+
+.navbar-nav {
+  margin: 7.5px -15px;
+  background-color:#CF3034;
+}
+
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
   background-color:#CF3034;
+}
+.navbar-nav > li:hover {
+ 
+  background-color:black;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {

@@ -4,15 +4,17 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <link rel="shortcut icon" href="imagenes/icono.ico">
     <link href="css/cssgeneral.css" rel="stylesheet" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
      <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-  
+    <link href="css/footer.css" rel="stylesheet" />
   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
+
     <script src="Scripts/generales.js"></script>
     <title>TopTus</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -21,34 +23,43 @@
 <body>
 
    
+   
 
     <form id="form1" runat="server">
-        <div class="container" id="header">
-            <a  href="Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
+        <div id="header" class="container">
+            <div class="row col-md-12">
+                <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
+
+                </div>
+                <div class="col-md-7">
+              
+                   
+                      <div class="input-group" id="buscador">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                      </div>
+                  </div>
+                  
+                <div class="col-md-3">  
           <div id="logeado" class="pull-right" runat="server">
-          <p class="navbar-text" style="float:left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
-          <asp:Button ID="cerrar_sesion" runat="server" Text="Close sesion" CssClass="btn" OnClick="cerrar_sesion_Click" />
+          <p  style="float:left" id="status_login_vendedor"  runat="server">Hola, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
+          <asp:Button ID="cerrar_sesion" runat="server" Text="Cerrar sesión." CssClass="btn pull-right" OnClick="cerrar_sesion_Click" />
           </div>
             
-            <div id="log" class="pull-right col-md-3">
+            <div id="log" class="">
                
-            <div class="row pull-right" id="capa_login" runat="server">
+            <div class="pull-right" id="capa_login" runat="server">
             <a href="login.aspx" id="login"   runat="server">Login</a> | 
             <a href="solicitud.aspx" >Register</a>
             </div>
-                 <div class="pull-right  id="buscador">
-        <div class="input-group" id="input_buscar">
-            <input type="text" class="form-control">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Buscar</button>
-            </span>
-          </div>
-         </div>
+                
             </div>
 
-            
+                </div>
+          </div><!--fin row -->
 
-        </div>
+        </div> <!--fin header-->
+        <!--fin -->
     <div class="container">
          <nav class="navbar navbar-default " id="menu_general" role="navigation">
             <div class=" col-md-12" id="menu_contenedor">
@@ -107,6 +118,76 @@
         
         </asp:ContentPlaceHolder>
     </div>
+
+
+
+         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                    <h3> Información general de TopTus </h3>
+                    <ul>
+                        <li> <a href="acerca.aspx"> Acerca de TopTus  </a> </li>
+                        <li> <a href="servicio.aspx"> Servicio TopTus </a> </li>
+                        <li> <a href="comentarios.aspx"> Comentarios </a> </li>
+                        <li> <a href="contacto.aspx"> Contacto </a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                    <h3> Preguntas frecuentes  </h3>
+                    <ul>
+                        <li> <a href="#"> ¿A qué tienen derecho los visitantes? </a> </li>
+                        <li> <a href="#"> ¿Cómo obtengo la membrecía light y como funciona? </a> </li>
+                        <li> <a href="#"> ¿Cómo obtengo la membrecía Premium y como funciona? </a> </li>
+                        <li> <a href="#"> ¿Puedo pagar por publicidad en el sitio? </a> </li>
+                        <li><a href="#">¿Tiene algún costo la membrecía light?</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12 ">
+                    <h3> Redes Sociales </h3>
+                    <!--<ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> Lorem ipsum <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul> -->
+                    <ul class="social">
+                        <li> <a href="https://www.facebook.com/" target="_blank"><img src="imagenes/iconos/facebook.png" /> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="https://www.twitter.com/"  target="_blank"><img src="imagenes/iconos/twitter.png" /> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="https://plus.google.com"  target="_blank"><img src="imagenes/iconos/google.png" /><i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="https://www.youtube.com/"  target="_blank"><img src="imagenes/iconos/youtube.png" /> <i class="fa fa-youtube">   </i> </a> </li>
+                        <li> <a href="https://www.linkedin.com/"  target="_blank"><img src="imagenes/iconos/linked.png" /> <i class="fa fa-linkedin">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © TopTus 2015. All right reserved. </p>
+            <div class="pull-right">
+                <ul class="nav nav-pills payments">
+                	  <!--/.footer<li><i class="fa fa-cc-visa"></i></li>
+                    <li><i class="fa fa-cc-mastercard"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>-->
+                    <li><i class="fa fa-cc-paypal"></i></li>
+                </ul> 
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
+
+
     </form>
      <div id="loader">
         <label>Cargando...</label>

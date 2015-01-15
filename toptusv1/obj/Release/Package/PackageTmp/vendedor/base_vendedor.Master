@@ -1,18 +1,23 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="base_vendedor.master.cs" Inherits="toptusv1.base_vendedor" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
+     <link rel="shortcut icon" href="../imagenes/icono.ico">
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
-     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
   
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="js/vendedor_generales.js"></script>
     <script src="../Scripts/generales.js"></script>
+    <link href="css/generales_vendedor.css" rel="stylesheet" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <title></title>
@@ -34,7 +39,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="../Index.aspx" id="logo_menu"><img src="../imagenes/logo.png"  /></a>
+    <a class="navbar-brand" href="../Index.aspx" id="logo_menu"><img width="150px" height="50px" src="../imagenes/logo.png"  /></a>
   </div>
  
   <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -44,7 +49,7 @@
         <li class="subcategoria"><a href="fotoperfil.aspx">Foto de Perfil</a></li>
       <li class="subcategoria"><a href="vendedor_perfil.aspx">Información Básica</a></li>
       <li class="subcategoria"><a href="socialmedia.aspx">Redes Sociales</a></li>
-      <li class="subcategoria"><a href="products.aspx">Productos</a></li>
+      <li class="subcategoria"><a href="productos.aspx">Productos</a></li>
      
     </ul>
           <div class="pull-right">
@@ -60,11 +65,24 @@
         </asp:ContentPlaceHolder>
       
     </div>
+        <div style="display:none">
+        <asp:TextBox ID="usuario_id_master" runat="server" Enabled="false" ></asp:TextBox>
+        </div>
     </form>
      <div id="loader">
         <label>Cargando...</label>
     <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>
         </div>
    <script src="../Scripts/bootstrap.js"></script>
+
+    <div id="dialog-message" title="Éxito" style="display:none;">
+  <p>
+    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0; "></span>
+    Información Guardada con éxito
+  </p>
+  <p>
+    <b>Presione "Ok" para continuar.</b>.
+  </p>
+</div>
 </body>
 </html>

@@ -5,15 +5,11 @@
     background-color:#CF3034;
 }
 
-#buscador
+#buscador,#logeado
 {
-    margin-top:8px;margin-bottom:2px;
+    margin-top:18px;
 }
-#input_buscar
-{
-   margin-left: 15px;
-width: 100%;
-}
+
 #log
 {
     margin-top:10px;
@@ -21,6 +17,11 @@ width: 100%;
 .error
 {
     color:red;
+}
+
+#status_login_vendedor
+{
+    margin-top:5px;
 }
 #menu_contenedor
 {
@@ -30,7 +31,7 @@ width: 100%;
 #header
 {
     margin-top:5px;
-    margin-bottom:15px;
+    margin-bottom:5px;
 }
 .top-buffer { }
 #loader
@@ -51,6 +52,7 @@ width: 100%;
 #logo_menu
 {
    margin-top: -10px;
+   margin-right: 30px;
     
 }
 
@@ -87,3 +89,38 @@ width: 100%;
     border: solid 1px #203E5F;
 }
 
+#redes_facebook,#redes_twitter,#redes_google,#redes_linked,#redes_instagram
+{
+    
+    background-position:right;
+    background-repeat:no-repeat;
+    background-size:contain;
+    margin-bottom:10px;
+}
+
+#redes_facebook
+{
+    background-image:url("../imagenes/iconos/facebook.png");
+}
+#redes_twitter
+{
+    background-image:url("../imagenes/iconos/twitter.png");
+}
+#redes_google
+{
+    background-image:url("../imagenes/iconos/google.png");
+}
+#redes_instagram
+{
+    background-image:url("../imagenes/iconos/instagram.png");
+}
+#redes_linked
+{
+    background-image:url("../imagenes/iconos/linked.png");
+}
+
+.cuatro_puntos
+{
+    font-size:11px !important;
+    font-style:italic !important;
+}

@@ -3,14 +3,36 @@
     $("#btnUpload").click(function () {
         $("#loader").slideDown('1000');
     });
-
+    
     $("#btn_actualizar_vendedor_basico").click(function () {
         $("#loader").slideDown('1000');
     });
+    $("#btnRedes").click(function () {
+        $("#loader").slideDown('1000');
+    });
+
+    $("#btnAgregarCategoria").click(function () {
+        $("#loader").slideDown('1000');
+    });
+
+    $("#add_product").hide();
+
+    $("#link_add_product").click(function () {
+        $("#add_product").toggle("slow");
+    });
+    
+    $("#btnAgregarProducto").click(function () {
+        $("#loader").slideDown('1000');
+    });
+
+
+
 
 });
 
-   
+
+
+
 
 function error_insertar(error)
 {
@@ -22,5 +44,17 @@ function error_insertar_foto(error) {
 }
 
 function success_insertar() {
-    alert("Información actualizada con éxito");
+  
+         $(function () {
+             $("#dialog-message").dialog({
+                 modal: true,
+                 buttons: {
+                     Ok: function () {
+                         var url = window.location.href;
+                         window.location.replace(url);
+                     }
+                 }
+             });
+         });
+    
 }

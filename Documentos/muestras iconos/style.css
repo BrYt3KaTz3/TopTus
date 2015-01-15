@@ -1,0 +1,25 @@
+.icon {
+	display: inline-block;
+	color: #444444;
+	fill: currentColor;
+}
+.icon-tree {
+	width: 32px;
+	height: 32px;
+}
+.icon-star-empty {
+	width: 32px;
+	height: 32px;
+}
+.icon-wink {
+	width: 32px;
+	height: 32px;
+}
+.icon-cool {
+	width: 32px;
+	height: 32px;
+}
+.icon-enter {
+	width: 32px;
+	height: 32px;
+}

@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vendedor/base_vendedor.Master" AutoEventWireup="true" CodeBehind="vendedor_perfil.aspx.cs" Inherits="toptusv1.vendedor.vendedor_perfil" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
     
