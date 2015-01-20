@@ -13,30 +13,30 @@ namespace toptusv1.productos {
     public partial class productlist {
         
         /// <summary>
-        /// Control lblcat.
+        /// Control li_categoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcat;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_categoria;
         
         /// <summary>
-        /// Control lblsub.
+        /// Control li_subcategoria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblsub;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_subcategoria;
         
         /// <summary>
-        /// Control gvwproductos.
+        /// Control rptProductosList.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvwproductos;
+        protected global::System.Web.UI.WebControls.Repeater rptProductosList;
     }
 }

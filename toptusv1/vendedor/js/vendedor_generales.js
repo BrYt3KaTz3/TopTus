@@ -58,3 +58,19 @@ function success_insertar() {
          });
     
 }
+
+function success_insertar_producto(producto) {
+
+    $(function () {
+        $("#dialog-message-producto").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace("catprod.aspx?prod="+producto);
+                }
+            }
+        });
+    });
+
+}

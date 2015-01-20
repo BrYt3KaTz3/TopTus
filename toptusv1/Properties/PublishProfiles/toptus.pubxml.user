@@ -35,13 +35,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/20/2014 18:55:23</publishTime>
     </File>
     <File Include="base.Master">
-      <publishTime>01/14/2015 19:21:36</publishTime>
+      <publishTime>01/20/2015 14:40:47</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>01/14/2015 19:22:10</publishTime>
+      <publishTime>01/20/2015 14:45:54</publishTime>
     </File>
     <File Include="comentarios.aspx">
       <publishTime>01/07/2015 16:35:05</publishTime>
@@ -62,7 +62,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>01/14/2015 18:04:46</publishTime>
+      <publishTime>01/20/2015 12:45:50</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -71,7 +71,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="css/cssgeneral.css">
-      <publishTime>01/14/2015 15:49:07</publishTime>
+      <publishTime>01/20/2015 14:40:21</publishTime>
     </File>
     <File Include="css/footer.css">
       <publishTime>01/14/2015 18:32:52</publishTime>
@@ -299,7 +299,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>12/03/2014 18:17:32</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>01/14/2015 18:17:16</publishTime>
+      <publishTime>01/16/2015 15:34:08</publishTime>
     </File>
     <File Include="jsgaleria/jquery.catslider.js">
       <publishTime>12/02/2014 01:09:46</publishTime>
@@ -341,7 +341,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/01/2015 23:37:32</publishTime>
     </File>
     <File Include="productlist.aspx">
-      <publishTime>12/25/2014 23:12:16</publishTime>
+      <publishTime>01/20/2015 13:51:17</publishTime>
     </File>
     <File Include="productos/js/productos.js">
       <publishTime>11/13/2014 15:28:07</publishTime>
@@ -407,7 +407,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/21/2014 00:23:16</publishTime>
     </File>
     <File Include="vendedor/base_vendedor.Master">
-      <publishTime>01/14/2015 19:25:21</publishTime>
+      <publishTime>01/20/2015 14:43:30</publishTime>
     </File>
     <File Include="vendedor/catprod.aspx">
       <publishTime>01/14/2015 14:58:12</publishTime>
@@ -422,13 +422,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:46</publishTime>
     </File>
     <File Include="vendedor/js/vendedor_generales.js">
-      <publishTime>01/14/2015 18:35:26</publishTime>
+      <publishTime>01/19/2015 13:59:10</publishTime>
     </File>
     <File Include="vendedor/perfil/1.jpg">
       <publishTime>01/11/2015 23:49:00</publishTime>
     </File>
     <File Include="vendedor/productos.aspx">
-      <publishTime>01/14/2015 18:34:58</publishTime>
+      <publishTime>01/20/2015 12:57:06</publishTime>
     </File>
     <File Include="vendedor/products.aspx">
       <publishTime>01/07/2015 15:32:16</publishTime>
@@ -446,7 +446,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/07/2015 13:09:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/14/2015 19:25:28</publishTime>
+      <publishTime>01/20/2015 14:45:57</publishTime>
     </File>
   </ItemGroup>
 </Project>

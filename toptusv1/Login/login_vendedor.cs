@@ -28,12 +28,13 @@ namespace toptusv1.Login
                 conexion.Open();
                 dt_login = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + usuario + "' and pass='"+pass+"'").Tables[0];
                 string a;
+                conexion.Close();
                 return dt_login;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }

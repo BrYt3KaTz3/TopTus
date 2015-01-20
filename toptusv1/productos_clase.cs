@@ -24,13 +24,14 @@ namespace toptusv1
             try
             {
                 conexion.Open();
-                dt_productos = conexion.ExecuteDataSet(CommandType.Text, "select * from productos_lista where categoria_id ="+cate+"  and subcategoria_id ="+sub+" ").Tables[0];
+                dt_productos = conexion.ExecuteDataSet(CommandType.Text, "Select p.producto_id , producto , producto_descr,vendedor_id,precio,img_principal,pc.producto_id, pc.categoria_id, pc.subcategoria_id from Producto p join prod_cate pc on p.producto_id = pc.producto_id where pc.categoria_id ="+cate+" and pc.subcategoria_id="+sub+"").Tables[0];
+                conexion.Close();
                 return dt_productos;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -59,12 +60,14 @@ namespace toptusv1
             try
             {
                 conexion.ExecuteNonQuery(CommandType.Text, "insert into Producto (producto,producto_descr,vendedor_id,precio,img_principal) values ('"+nombre_producto+"','"+descr_producto+"','"+id+"','"+precio+"','"+img_principal+"')");
-                return "1";
+               string id_insertado= conexion.ExecuteScalar(CommandType.Text, "Select SCOPE_IDENTITY()").ToString();
+               conexion.Close();
+                return id_insertado;
             }
             catch (Exception e)
             {
-
-                return e.Message;
+                conexion.Close();
+                return "error";
             }
         }
     }

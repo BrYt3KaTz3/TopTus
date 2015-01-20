@@ -30,12 +30,13 @@ namespace toptusv1.vendedor
             {
                 conexion.Open();
                 dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + email + "'").Tables[0];
+                conexion.Close();
                 return dt_vendedor;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -142,11 +143,12 @@ namespace toptusv1.vendedor
             try
             {
                 conexion.ExecuteNonQuery(CommandType.Text, "update Vendedor set imagen='"+imagen+"' where vendedor_id="+id);
+                conexion.Close();
                 return "1";
             }
             catch (Exception)
             {
-                
+                conexion.Close();
                 throw;
             }
         }
@@ -161,13 +163,13 @@ namespace toptusv1.vendedor
             {
             conexion.Open();
             dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "Select * from Redes_Sociales where vendedor_id="+id).Tables[0];
-            
+            conexion.Close();
             return dt_vendedor;
             
             }
             catch (Exception)
             {
-                
+                conexion.Close();
                 throw;
             }
             
@@ -183,11 +185,13 @@ namespace toptusv1.vendedor
                 if (accion == "insertar")
                 {
                     conexion.ExecuteNonQuery(CommandType.Text, "insert into Redes_Sociales (vendedor_id,facebook,twitter,googleplus,instagram,linkedin) values (" + id + ",'" + face + "','" + tw + "','" + gg + "','" + ins + "','" + lk + "')");
+                    conexion.Close();
                     return "1";
                 }
                 else
                 {
                     conexion.ExecuteNonQuery(CommandType.Text, "update Redes_Sociales set facebook='" + face + "' , twitter='" + tw + "', googleplus='" + gg + "',instagram='" + ins + "',linkedin='" + lk + "' where vendedor_id=" + id);
+                    conexion.Close();
                     return "1";
                 }
 
@@ -195,7 +199,7 @@ namespace toptusv1.vendedor
             }
             catch (Exception e)
             {
-
+                conexion.Close();
                 return e.Message;
 
             }
@@ -212,13 +216,13 @@ namespace toptusv1.vendedor
             {
                 conexion.Open();
                 dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from v_prod_cate where producto_id =" + id_prod).Tables[0];
-
+                conexion.Close();
                 return dt_vendedor;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -232,11 +236,13 @@ namespace toptusv1.vendedor
                 var existe=conexion.ExecuteDataSet(CommandType.Text, "select * from prod_cate where producto_id = "+id_prod+" and categoria_id ="+id_cat+" and subcategoria_id="+id_subcat+"").Tables[0];
                 if (existe.Rows.Count >= 1)
                 {
+                    conexion.Close();
                     return "ya has agregado esta subcategoría";
                 }
                 else // si no existe
                 {
                     conexion.ExecuteNonQuery(CommandType.Text, "insert into prod_cate (producto_id,categoria_id,subcategoria_id) values (" + id_prod + "," + id_cat + "," + id_subcat + ")");
+                    conexion.Close();
                     return "1";
                 }
                 
@@ -262,13 +268,13 @@ namespace toptusv1.vendedor
             {
                 conexion.Open();
                 dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select * from tipoVendedor where tipovendedor_id =" + id_tipo).Tables[0];
-
+                conexion.Close();
                 return dt_vendedor;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
 

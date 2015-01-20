@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace toptusv1.vendedor
 {
@@ -57,23 +59,57 @@ namespace toptusv1.vendedor
         string precio_producto = prod_precio.Text;
         string img_producto = "prod_fotos/default.png";
 
-        string res = obj.instertar_producto_vendedor(usuario, nombre_producto, descr_producto, precio_producto, img_producto);
-        if (res == "1")
+        var res = obj.instertar_producto_vendedor(usuario, nombre_producto, descr_producto, precio_producto, img_producto);
+        string a;
+        if (res!= "error")
         {
-            ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_insertar()", true);
+           string id_producto = encriptar_url(res);
+           Response.Redirect("catprod.aspx?prod="+id_producto);
         }
         else
         {
-            ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar_foto('" + res + "')", true);
+            ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar_foto('" + res + "');", true);
                            
         }
     }
 
+        
     public string encriptar_url(string id_producto)
     {
         string encriptado = seguridad.Encriptar(id_producto);
         return encriptado;
     }
-    
+
+    protected void rptProductos_ItemDataBound(object sender, RepeaterItemEventArgs e)
+    {
+        var hidden = e.Item.FindControl("hidden_product") as HiddenField;
+        var subc = lecturasub(HttpContext.Current.Server.MapPath("~/json/subcategorias.json"));
+        Repeater r = e.Item.FindControl("rptcatsub") as Repeater;
+
+        int id_prod = int.Parse(hidden.Value);
+        vendedor obj = new vendedor();
+        if (r != null)
+        {
+            var listacatsub = obj.prod_cat_produco(id_prod); 
+            r.DataSource = listacatsub;
+            r.DataBind();
+
+
+        }
+    }
+
+    public List<sub_json> lecturasub(string path) //estados
+    {
+        //pa leer desde archivo
+        StreamReader r = new StreamReader(path);
+
+        string file = r.ReadToEnd();
+        List<sub_json> sub_json = JsonConvert.DeserializeObject<List<sub_json>>(file);
+
+        r.Close();
+        return sub_json;
+        //termina lectura de json
+    }
+
     }
 }

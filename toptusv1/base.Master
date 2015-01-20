@@ -26,21 +26,8 @@
    
 
     <form id="form1" runat="server">
-        <div id="header" class="container">
-            <div class="row col-md-12">
-                <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
-
-                </div>
-                <div class="col-md-7">
-              
-                   
-                      <div class="input-group" id="buscador">
-                        <input type="text" class="form-control">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-                      </div>
-                  </div>
-                  
-                <div class="col-md-3">  
+        <div class="container">
+              <div class="pull-right col-md-12"> 
           <div id="logeado" class="pull-right" runat="server">
           <p  style="float:left" id="status_login_vendedor"  runat="server">Hola, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
           <asp:Button ID="cerrar_sesion" runat="server" Text="Cerrar sesión." CssClass="btn pull-right" OnClick="cerrar_sesion_Click" />
@@ -54,15 +41,31 @@
             </div>
                 
             </div>
+                    </div>
+        <div id="header" class="container">
+            <div class="row col-md-12">
+                <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
 
                 </div>
+                <div class="col-md-10">
+              
+                   
+                      <div class="input-group" id="buscador">
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                      </div>
+                  </div>
+               
+              
           </div><!--fin row -->
 
         </div> <!--fin header-->
         <!--fin -->
+        </div>
+       
     <div class="container">
          <nav class="navbar navbar-default " id="menu_general" role="navigation">
-            <div class=" col-md-12" id="menu_contenedor">
+            <div class=" col-md-12 menu_contenedor" >
   <!-- El logotipo y el icono que despliega el menú se agrupan
        para mostrarlos mejor en los dispositivos móviles -->
   <div class="navbar-header">

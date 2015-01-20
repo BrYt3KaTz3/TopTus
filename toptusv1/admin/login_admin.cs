@@ -27,12 +27,13 @@ namespace toptusv1.admin
                 conexion.Open();
                 dt_admin = conexion.ExecuteDataSet(CommandType.Text, "select * from SuperAdmin where usuario='" + usuario + "' and pass='" + pass + "'").Tables[0];
                 string a;
+                conexion.Close();
                 return dt_admin;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }

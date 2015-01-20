@@ -29,12 +29,13 @@ namespace toptusv1
             {
                 conexion.Open();
                 dt_paises = conexion.ExecuteDataSet(CommandType.Text, "Select * from paises").Tables[0];
+                conexion.Close();
                 return dt_paises;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -45,12 +46,13 @@ namespace toptusv1
             {
                 conexion.Open();
                 dt_estados = conexion.ExecuteDataSet(CommandType.Text, "Select * from region").Tables[0];
+                conexion.Close();
                 return dt_estados;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }

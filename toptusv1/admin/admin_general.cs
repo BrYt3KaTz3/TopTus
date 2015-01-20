@@ -24,12 +24,13 @@ namespace toptusv1.admin
             {
                 conexion.Open();
                 dt_solicitud = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where tipovendedor_id=4").Tables[0];
+                conexion.Close();
                 return dt_solicitud;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -40,12 +41,13 @@ namespace toptusv1.admin
             {
                 conexion.Open();
                 dt_solicitud = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where vendedor_id="+id).Tables[0];
+                conexion.Close();
                 return dt_solicitud;
 
             }
             catch (Exception)
             {
-
+                conexion.Close();
                 throw;
             }
         }
@@ -56,11 +58,12 @@ namespace toptusv1.admin
             {
                 conexion.Open();
                 conexion.ExecuteNonQuery(CommandType.Text, "update Vendedor set tipovendedor_id="+paquete+" where vendedor_id="+id);
+                conexion.Close();
                 return "1";
             }
             catch (Exception e)
             {
-
+                conexion.Close();
                 return e.Message;
             }
         }

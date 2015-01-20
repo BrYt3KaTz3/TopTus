@@ -4,10 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Vendedor" runat="server">
      <div class="row">
        
-       <div class="col-md-4 col-md-offset-4"><h3>Productos</h3></div>
+       <div class="col-md-4 col-md-offset-4"><h3 class="text-center">Productos</h3></div>
          </div> 
-    <div class="row">
-        <div class="text-info col-md-6">Nota: después de agregar un producto, asegurate de agregar sus categorías y sus fotografías, de otra manera no aparecerá publicado</div>
+    <div class="row notas">
+        <h3 class="text-center"><span>Nota: Después de agregar un producto, asegurate de agregar sus categorías y sus fotografías, de otra manera no aparecerá publicado</span></h3>
  <br />
     </div>
     <br />
@@ -54,18 +54,18 @@
     <br/>
     <div class="container-pad" id="property-listings">
          <!-- REPEAETTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRR -->
-        <asp:Repeater ID="rptProductos" runat="server">
+        <asp:Repeater ID="rptProductos" OnItemDataBound="rptProductos_ItemDataBound" runat="server">
             <ItemTemplate>
                  <div class="row">
-        <div class="col-md-12">
+        <div class="col-sm-12">
            <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
                <asp:HiddenField runat="server" ID="hidden_product" Value='<%# Eval("producto_id") %>' ClientIDMode="Static" />
                         <div class="media">
                             <a class="pull-left" href="#" target="_parent">
                             <img alt="image" class="img-responsive" src="<%# Eval("img_principal") %>"></a>
 
-                            <div class="clearfix visible-sm"></div>
-
+                            <div class="clearfix visible-sm visible-xs"></div>
+                            
                             <div class="media-body fnt-smaller">
                                 <a href="#" target="_parent"></a>
 
@@ -74,15 +74,16 @@
 
 
                                 <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
-                                    <li>Vendedor</li>
+                                    <asp:Repeater ID="rptcatsub" runat="server">
+                                        <ItemTemplate>
 
-                                    <li style="list-style: none">|</li>
+                                             <li><%# Eval("categoria_descr") %>  - <%#Eval ("subcategoria_descr") %>.</li>
 
-                                    <li>5 Beds</li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                   
 
-                                    <li style="list-style: none">|</li>
-
-                                    <li>5 Baths</li>
+                                 
                                 </ul>
 
                                 <p class="hidden-xs"><%# Eval("producto_descr") %></p>
@@ -106,4 +107,7 @@
    
 
 </div>
+
+    
+    
 </asp:Content>
