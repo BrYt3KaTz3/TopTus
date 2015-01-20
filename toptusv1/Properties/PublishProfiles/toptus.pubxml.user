@@ -407,7 +407,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/21/2014 00:23:16</publishTime>
     </File>
     <File Include="vendedor/base_vendedor.Master">
-      <publishTime>01/20/2015 14:43:30</publishTime>
+      <publishTime>01/20/2015 14:49:53</publishTime>
     </File>
     <File Include="vendedor/catprod.aspx">
       <publishTime>01/14/2015 14:58:12</publishTime>
@@ -446,7 +446,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/07/2015 13:09:53</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/20/2015 14:45:57</publishTime>
+      <publishTime>01/20/2015 14:50:13</publishTime>
     </File>
   </ItemGroup>
 </Project>
