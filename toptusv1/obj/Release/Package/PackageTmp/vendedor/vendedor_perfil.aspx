@@ -13,9 +13,17 @@
        
    </div>
 
-
-     <div class="row">
+      <asp:Panel ID="Panel1" runat="server" DefaultButton="btn_actualizar_vendedor_basico">
+     <div class="row" >
             <div class="col-md-10 col-md-offset-2" id="formulario_vendedor_basico">
+                <div class="form-group">
+                    <label for="ven_nombre" class="col-lg-2 control-label">Nickname:</label>
+                    <div class="col-lg-6">
+                      <asp:TextBox ID="ven_nick" type="text" CssClass="form-control input_form"  placeholder="Nickname" runat="server" ></asp:TextBox>
+                      
+                    </div>
+                </div>
+                <br />
 
                 <div class="form-group">
                     <label for="ven_nombre" class="col-lg-2 control-label">Nombre(s):</label>
@@ -167,14 +175,16 @@
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                       
-                        <asp:Button  ClientIDMode="Static" ID="btn_actualizar_vendedor_basico" CssClass="btn btn-default" runat="server" Text="Actualizar Información" OnClick="btn_actualizar_vendedor_basico_Click" />
+                            <asp:Button  ClientIDMode="Static" ID="btn_actualizar_vendedor_basico" CssClass="btn btn-default" runat="server" Text="Actualizar Información" OnClick="btn_actualizar_vendedor_basico_Click" />
+                        
+                        
                     </div>
                   </div>
 
             </div>
         </div>
 
-
+</asp:Panel>
 
     
     

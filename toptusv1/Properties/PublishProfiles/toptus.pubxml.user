@@ -35,13 +35,13 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/20/2014 18:55:23</publishTime>
     </File>
     <File Include="base.Master">
-      <publishTime>01/20/2015 14:40:47</publishTime>
+      <publishTime>02/03/2015 23:06:40</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="bin/toptusv1.dll">
-      <publishTime>01/20/2015 14:45:54</publishTime>
+      <publishTime>02/04/2015 14:55:30</publishTime>
     </File>
     <File Include="comentarios.aspx">
       <publishTime>01/07/2015 16:35:05</publishTime>
@@ -62,7 +62,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>01/20/2015 12:45:50</publishTime>
+      <publishTime>01/21/2015 15:37:13</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
       <publishTime>11/13/2014 00:30:45</publishTime>
@@ -71,7 +71,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/13/2014 00:30:45</publishTime>
     </File>
     <File Include="css/cssgeneral.css">
-      <publishTime>01/20/2015 14:40:21</publishTime>
+      <publishTime>01/21/2015 16:12:13</publishTime>
     </File>
     <File Include="css/footer.css">
       <publishTime>01/14/2015 18:32:52</publishTime>
@@ -299,7 +299,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>12/03/2014 18:17:32</publishTime>
     </File>
     <File Include="Index.aspx">
-      <publishTime>01/16/2015 15:34:08</publishTime>
+      <publishTime>01/21/2015 12:28:40</publishTime>
     </File>
     <File Include="jsgaleria/jquery.catslider.js">
       <publishTime>12/02/2014 01:09:46</publishTime>
@@ -335,13 +335,28 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>11/15/2014 16:40:06</publishTime>
     </File>
     <File Include="Login/login.js">
-      <publishTime>01/07/2015 17:14:39</publishTime>
+      <publishTime>01/20/2015 15:11:41</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>01/01/2015 23:37:32</publishTime>
     </File>
+    <File Include="perfilvendedor.aspx">
+      <publishTime>02/04/2015 12:45:03</publishTime>
+    </File>
+    <File Include="productdetail.aspx">
+      <publishTime>02/04/2015 14:54:12</publishTime>
+    </File>
     <File Include="productlist.aspx">
-      <publishTime>01/20/2015 13:51:17</publishTime>
+      <publishTime>02/03/2015 19:04:35</publishTime>
+    </File>
+    <File Include="productos/css/app.css">
+      <publishTime>01/21/2015 15:58:26</publishTime>
+    </File>
+    <File Include="productos/css/glisse.css">
+      <publishTime>01/21/2015 15:47:44</publishTime>
+    </File>
+    <File Include="productos/js/glisse.js">
+      <publishTime>01/21/2015 15:34:33</publishTime>
     </File>
     <File Include="productos/js/productos.js">
       <publishTime>11/13/2014 15:28:07</publishTime>
@@ -398,7 +413,7 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/07/2015 16:35:01</publishTime>
     </File>
     <File Include="solicitud.aspx">
-      <publishTime>12/28/2014 22:43:54</publishTime>
+      <publishTime>01/21/2015 12:39:31</publishTime>
     </File>
     <File Include="tl.aspx">
       <publishTime>11/19/2014 00:03:15</publishTime>
@@ -425,28 +440,34 @@ editando este archivo MSBuild. Para conocer más acerca de esto, visite http://g
       <publishTime>01/19/2015 13:59:10</publishTime>
     </File>
     <File Include="vendedor/perfil/1.jpg">
-      <publishTime>01/11/2015 23:49:00</publishTime>
+      <publishTime>02/04/2015 00:59:07</publishTime>
+    </File>
+    <File Include="vendedor/perfil/2.jpg">
+      <publishTime>01/07/2015 03:00:13</publishTime>
     </File>
     <File Include="vendedor/productos.aspx">
-      <publishTime>01/20/2015 12:57:06</publishTime>
+      <publishTime>02/03/2015 09:24:32</publishTime>
     </File>
     <File Include="vendedor/products.aspx">
       <publishTime>01/07/2015 15:32:16</publishTime>
+    </File>
+    <File Include="vendedor/prod_fotos/2.jpg">
+      <publishTime>01/21/2015 16:10:32</publishTime>
     </File>
     <File Include="vendedor/prod_fotos/default.png">
       <publishTime>01/12/2015 23:38:20</publishTime>
     </File>
     <File Include="vendedor/socialmedia.aspx">
-      <publishTime>01/07/2015 15:23:02</publishTime>
+      <publishTime>02/03/2015 09:19:51</publishTime>
     </File>
     <File Include="vendedor/solicitud.aspx">
       <publishTime>11/19/2014 00:04:22</publishTime>
     </File>
     <File Include="vendedor/vendedor_perfil.aspx">
-      <publishTime>01/07/2015 13:09:53</publishTime>
+      <publishTime>02/03/2015 13:59:23</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>01/20/2015 14:50:13</publishTime>
+      <publishTime>02/04/2015 14:55:35</publishTime>
     </File>
   </ItemGroup>
 </Project>

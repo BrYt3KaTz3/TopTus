@@ -6,6 +6,7 @@ function main() {
     $("#header").hide();
     $("#footer").hide();
     $(".footer-bottom").hide();
+    $("#logindiv").hide();
     validateForm();
 }
 

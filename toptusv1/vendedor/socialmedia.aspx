@@ -3,6 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Vendedor" runat="server">
 
+    <asp:Panel ID="Panel1" runat="server" DefaultButton="btnRedes">
     <div class="row">
        
        <div class="col-md-8 col-md-offset-4"><h3>Redes Sociales</h3></div>
@@ -40,5 +41,5 @@
     <div class="row col-md-offset-3 col-md-4">
         <asp:Button ID="btnRedes" runat="server" Text="Guardar" OnClick="btnRedes_Click"  ClientIDMode="Static"/>
     </div>
-
+</asp:Panel>
 </asp:Content>

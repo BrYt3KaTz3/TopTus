@@ -85,6 +85,42 @@ namespace toptusv1.vendedor
             return dt_vendedor;
           
         }
+
+         public DataTable datos_vendedor(int id) // recibimos el id del vendedor
+        {
+            conexion.Open();
+            dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "SELECT *  FROM Vendedor v join TipoVendedor tv on v.tipovendedor_id=tv.tipovendedor_id where vendedor_id=" + id).Tables[0];
+            conexion.Close();
+            return dt_vendedor;
+          
+        }
+
+         public DataTable productos_por_vendedor(int id)
+         {
+             conexion.Open();
+             dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select distinct p.producto_id,p.producto   from producto p join prod_cate pc on pc.producto_id=p.producto_id where vendedor_id=" + id).Tables[0];
+             conexion.Close();
+             return dt_vendedor;
+         }
+
+        public String verificar_nick(int id,string nick)
+        {
+            conexion.Open();
+            dt_vendedor = conexion.ExecuteDataSet(CommandType.Text, "select nick from vendedor where nick='"+nick+"' and vendedor_id !=" + id).Tables[0];
+            conexion.Close();
+            if (dt_vendedor.Rows.Count == 0)
+            {
+                string res = "1";
+                return res;
+            }
+            else
+            {
+                string res = "0";
+                return res;
+            }
+            
+
+        }
            
        
         #endregion
@@ -93,7 +129,7 @@ namespace toptusv1.vendedor
       
 
         #region inserciones_updates
-        public string update_basicos(int id,string nombre, string apellido_p, string apellido_m,string rfc, string empresa, int pais_id, int estado_ed , string ciudad , string colonia, string calle, string calle_num, string calle_num_int , string lada_pais,string lada_ciudad, string telefono , string extension)
+        public string update_basicos(int id,string nombre, string nick,string apellido_p, string apellido_m,string rfc, string empresa, int pais_id, int estado_ed ,string pais, string estado, string ciudad , string colonia, string calle, string calle_num, string calle_num_int , string lada_pais,string lada_ciudad, string telefono , string extension)
         {
             try
             {
@@ -103,16 +139,19 @@ namespace toptusv1.vendedor
                 using (SqlConnection conn = new SqlConnection("Data Source=198.38.94.104;Initial Catalog=ferchoMF_TopTusDBuno;User ID=ferchoMF_fer;Password=ferchodc1"))
                 {
 
-                    string sql = @"update Vendedor set nombre = @nombre, apellido_p = @apellido_p,apellido_m=@apellido_m , rfc=@rfc,empresa=@empresa, pais_id=@pais_id , estado_id=@estado_id, ciudad=@ciudad, colonia=@colonia,calle=@calle, calle_num=@calle_num,calle_num_int=@calle_num_int,lada_pais=@lada_pais,lada_ciudad=@lada_ciudad, telefono=@telefono, extension=@extension where vendedor_id=" + id;
+                    string sql = @"update Vendedor set nombre = @nombre,nick = @nick, apellido_p = @apellido_p,apellido_m=@apellido_m , rfc=@rfc,empresa=@empresa, pais_id=@pais_id , estado_id=@estado_id,pais=@pais, estado=@estado ,ciudad=@ciudad, colonia=@colonia,calle=@calle, calle_num=@calle_num,calle_num_int=@calle_num_int,lada_pais=@lada_pais,lada_ciudad=@lada_ciudad, telefono=@telefono, extension=@extension where vendedor_id=" + id;
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("@nombre", nombre);
+                    cmd.Parameters.AddWithValue("@nick", nick);
                     cmd.Parameters.AddWithValue("@apellido_p", apellido_p);
                     cmd.Parameters.AddWithValue("@apellido_m", apellido_m);
                     cmd.Parameters.AddWithValue("@rfc", rfc);
                     cmd.Parameters.AddWithValue("@empresa", empresa);
                     cmd.Parameters.AddWithValue("@pais_id", pais_id);
                     cmd.Parameters.AddWithValue("@estado_id", estado_ed);
+                    cmd.Parameters.AddWithValue("@pais", pais);
+                    cmd.Parameters.AddWithValue("@estado", estado);
                     cmd.Parameters.AddWithValue("@ciudad", ciudad);
                     cmd.Parameters.AddWithValue("@colonia", colonia);
                     cmd.Parameters.AddWithValue("@calle",calle);

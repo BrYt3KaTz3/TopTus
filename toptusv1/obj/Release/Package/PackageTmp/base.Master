@@ -27,7 +27,7 @@
 
     <form id="form1" runat="server">
         <div class="container">
-              <div class="pull-right col-md-12"> 
+              <div class="pull-right col-md-12" id="logindiv"> 
           <div id="logeado" class="pull-right" runat="server">
           <p  style="float:left" id="status_login_vendedor"  runat="server">Hola, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
           <asp:Button ID="cerrar_sesion" runat="server" Text="Cerrar sesión." CssClass="btn pull-right" OnClick="cerrar_sesion_Click" />
@@ -47,7 +47,7 @@
                 <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
 
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-10" id="div_buscador">
               
                    
                       <div class="input-group" id="buscador">
@@ -173,7 +173,7 @@
         <!--/.container--> 
     </div>
     <!--/.footer-->
-    
+    <br />
     <div class="footer-bottom">
         <div class="container">
             <p class="pull-left"> Copyright © TopTus 2015. All right reserved. </p>

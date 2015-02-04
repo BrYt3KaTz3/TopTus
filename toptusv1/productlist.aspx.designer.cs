@@ -31,6 +31,15 @@ namespace toptusv1.productos {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl li_subcategoria;
         
         /// <summary>
+        /// Control no_hay_productos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label no_hay_productos;
+        
+        /// <summary>
         /// Control rptProductosList.
         /// </summary>
         /// <remarks>

@@ -165,7 +165,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="perfilvendedor.aspx" />
+    <Content Include="productdetail.aspx" />
     <Content Include="productlist.aspx" />
+    <Content Include="productos\css\app.css" />
+    <Content Include="productos\css\glisse.css" />
+    <Content Include="productos\js\glisse.js" />
     <Content Include="Scripts\generales.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="servicio.aspx" />
@@ -205,7 +210,9 @@
     <Content Include="vendedor\fotoperfil.aspx" />
     <Content Include="vendedor\js\vendedor_generales.js" />
     <Content Include="vendedor\perfil\1.jpg" />
+    <Content Include="vendedor\perfil\2.jpg" />
     <Content Include="vendedor\productos.aspx" />
+    <Content Include="vendedor\prod_fotos\2.jpg" />
     <Content Include="vendedor\prod_fotos\default.png" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="solicitud.aspx" />
@@ -308,6 +315,20 @@
     <Compile Include="Login\login_vendedor.cs" />
     <Compile Include="paises_cl.cs" />
     <Compile Include="paises_json.cs" />
+    <Compile Include="perfilvendedor.aspx.cs">
+      <DependentUpon>perfilvendedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="perfilvendedor.aspx.designer.cs">
+      <DependentUpon>perfilvendedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="productdetail.aspx.cs">
+      <DependentUpon>productdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="productdetail.aspx.designer.cs">
+      <DependentUpon>productdetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="productlist.aspx.cs">
       <DependentUpon>productlist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

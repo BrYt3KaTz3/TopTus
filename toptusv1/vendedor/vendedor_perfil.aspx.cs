@@ -16,8 +16,8 @@ namespace toptusv1.vendedor
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
+
+                 
             
             if (!Page.IsPostBack) { 
             if (Session["valido"] == null)
@@ -80,6 +80,7 @@ namespace toptusv1.vendedor
             
            // pasar sesion usuario a variables
             string nombre = usuario.Rows[0]["nombre"].ToString();
+            string nick = usuario.Rows[0]["nick"].ToString();
             string apellido_m = usuario.Rows[0]["apellido_m"].ToString();
             string apellido_p = usuario.Rows[0]["apellido_p"].ToString();
             string email = usuario.Rows[0]["email"].ToString();
@@ -112,6 +113,7 @@ namespace toptusv1.vendedor
 
             //cargar txtbox
             ven_nombre.Text = nombre;
+            ven_nick.Text = nick;
             ven_apellidop.Text = apellido_p;
             ven_apellidom.Text = apellido_m;
             ven_email.Text = email;
@@ -163,12 +165,15 @@ namespace toptusv1.vendedor
             vendedor obj = new vendedor();
             
             string nombre = ven_nombre.Text;
+            string nick = ven_nick.Text;
             string apellido_p = ven_apellidop.Text;
             string apellido_m = ven_apellidom.Text;
             string rfc = ven_rfc.Text;
             string empresa= ven_empresa.Text;
             int pais_id = int.Parse(ddlpais.SelectedValue.ToString()); ;
             int estado_id = int.Parse(ddlestado.SelectedValue.ToString());
+            string pais = ddlpais.SelectedItem.Text;
+            string estado = ddlestado.SelectedItem.Text;
             string ciudad = ven_ciudad.Text;
             string colonia = ven_colonia.Text;
             string calle = ven_calle.Text;
@@ -178,21 +183,33 @@ namespace toptusv1.vendedor
             string lada_ciudad = ven_lada_ciudad.Text;
             string telefono = ven_telefono.Text;
             string extension = ven_extension.Text;
-            string res = obj.update_basicos(id_usuario,nombre,apellido_p,apellido_m,rfc,empresa,pais_id,estado_id,ciudad,colonia,calle,calle_num,calle_num_int,lada_pais,lada_ciudad,telefono,extension);
+            string nickresult = obj.verificar_nick(id_usuario,nick);
+            if (nickresult == "1")
+            { //if verificar nick
+                string res = obj.update_basicos(id_usuario, nombre, nick, apellido_p, apellido_m, rfc, empresa,pais_id,estado_id,pais, estado, ciudad, colonia, calle, calle_num, calle_num_int, lada_pais, lada_ciudad, telefono, extension);
 
-            if (res == "1")
-            {
-                Session.Clear();
-                // Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
-                Session["usuario"] = obj.usuario_actualizado(id_usuario);
-                Session["valido"] = true;
-                cargar_datos();
-                ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_insertar()", true);
-                //Response.Redirect(Server.MapPath("vendedor_perfil.aspx"));
-            }
-            else {
-                ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('"+res+"')", true);
+                if (res == "1")
+                {
+                    Session.Clear();
+                    // Response.Cookies.Add(new HttpCookie("ASP.NET_SessionId", ""));
+                    Session["usuario"] = obj.usuario_actualizado(id_usuario);
+                    Session["valido"] = true;
+                    cargar_datos();
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_insertar()", true);
+                    //Response.Redirect(Server.MapPath("vendedor_perfil.aspx"));
                 }
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('Ocurrio un error al insertar, consule al administrador del sistema')", true);
+                }
+            } //if verificar nick
+            else 
+            { //else verificar
+                string res = "Ya existe un usuario con ese nickname dado de alta, favor de cambiarlo";
+                ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('" + res + "')", true);
+                
+            }
+           
         }
 
         //JSONS

@@ -18,7 +18,10 @@
 {
     color:red;
 }
-
+#div_buscador
+{
+    padding-right:0px;
+}
 #status_login_vendedor
 {
     margin-top:5px;
@@ -169,4 +172,10 @@ background-color: #fff!important;
    list-style-type: none;
    display: inline;
    padding-right: 5px;
+}
+
+.max_fotos_list
+{
+    max-height:128px;
+    max-width:128px;
 }

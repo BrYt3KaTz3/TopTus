@@ -39,9 +39,18 @@ namespace toptusv1
             var sesion = HttpContext.Current.Session["usuario"];
             DataTable usuario = (DataTable)sesion;
 
+            if (usuario.Rows[0]["nick"].ToString() != "")
+            {
+                string nick = usuario.Rows[0]["nick"].ToString();
+                enlace_vendedor.InnerText = nick;
+            }
+            else
+            {
+                string nombre = usuario.Rows[0]["nombre"].ToString();
+                enlace_vendedor.InnerText = nombre;
+            }
 
-            string nombre = usuario.Rows[0]["nombre"].ToString();
-            enlace_vendedor.InnerText = nombre;
+
 
         
             

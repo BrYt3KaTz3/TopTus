@@ -124,14 +124,12 @@
         <div class="col-md-12 cuatro_puntos">
             <div class="col-md-3">
                 <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/porque.png" />Por qué ser miembro de TopTus? </h4></div>
+                    <img src="imagenes/iconos/porque.png" />Hazte miembro. </h4></div>
                 <div class="row"><div class="col-md-12"> 
                     <p class="text-justify">
                       Más Opciones para satisfacer tus necesidades y hacer crecer tu negocio.
                      </p>
-                  <p class="text-justify">
-                      TopTus.com es una empresa de comercio online que pone en contacto a compradores y vendedores de  artículos y servicios  los cuales difícilmente se encuentran en el mercado. Artículos de Moda, Salud y Belleza, Electrónica y Hogar, todos pueden ser encontrados en cualquier parte del país a precios inmejorables con solo recibir los datos del contacto de forma rápida y sencilla. Si quiere hacer crecer su negocio haga que TopTus sea una parte de su vida.
-                  </p>
+                  
                   <p class="text-justify">
                      Toptus te ofrece los mejores artículos y servicios del mercado. Con solo un click podrás ponerte en contacto con empresarios y podrás ofrecer tu producto a millones de clientes.
                   </p></div></div>
@@ -139,29 +137,29 @@
             </div>
             <div class="col-md-3">
                 <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/calidad.png" />Alta Calidad </h4></div><br/>
+                    <img src="imagenes/iconos/calidad.png" />Alta Calidad. </h4></div><br/>
                 <div class="row"><div class="col-md-12"> 
                     <ul>
-                       <li>Estamos en constante monitoreo para que los usuarios ofrezcan productos de la más alta calidad.</li>
+                      
                        <li>Los Mejores Precios, Directamente De Fábrica, Importadores y Distribuidores de confianza</li>
-                       <li>Como empresa de comercio online, TopTus.com constantemente contacta y analiza a sus usuarios para que los vendedores cumplan con los precios y términos establecidos en sus anuncios.</li>
+                      
                        <li>Somos una empresa que busca que nuestros usuarios trabajen con la más alta calidad en su servicio.</li>
                        <li>Toptus se encarga de evaluar a sus vendedores para que trabajen bajo el reglamento de calidad, para así ser la única página de internet confiable en el mercado.</li>
                    </ul> </div></div>
             </div>
             <div class="col-md-3">
                 <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/clientes.png" /> Servicio De Atención al Cliente Profesional Y Cercano </h4></div>
-                <div class="row"><div class="col-md-12"><p class="text-justify">
-                     Toptus.com ofrece un servicio de atención al cliente excelente y completo durante todo el proceso en el sitio. Antes de contactanos, antes de adquirir cualquiera de nuestras dos membrecías  puede hacer preguntas en tiempo real a  nuestro correo electrónico dudas@toptus.com. Nuestros representantes del servicio de atención al cliente siempre estarán disponibles para responder preguntas a través de nuestro correo dudas@toptus.com 
-                  </p>
-                  <p class="text-justify">
-                     Ponte en contacto con nosotros si tienes alguna queja o duda. Estamos disponibles las 24 horas del día. Nuestro personal te lo agradecerá.
-                </p> </div></div>
+                    <img src="imagenes/iconos/clientes.png" /> Excelente atención. </h4></div>
+                <div class="row"><div class="col-md-12">
+                    <p class="text-justify">
+                        Toptus.com ofrece un servicio de atención al cliente excelente y completo durante todo el proceso en el sitio. Antes de contactarnos, puedes hacer preguntas en tiempo real a nuestro correo electrónico dudas@toptus.com. Nuestros representantes del servicio de atención al cliente siempre estarán disponibles. 
+                        Ponte en contacto con nosotros si tienes alguna queja o duda. Estamos disponibles las 24 horas del día. Nuestro personal te lo agradecerá.
+
+                          </p> </div></div>
             </div>
             <div class="col-md-3">
                 <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/vanguardia.png" /> Productos únicos y de vanguardia</h4></div>
+                    <img src="imagenes/iconos/vanguardia.png" /> Productos univanguardistas.</h4></div>
                 <div class="row"><div class="col-md-12"> <p class="text-justify">
                   En Toptus no solamente esperamos a que nuestros usuarios se registren, nuestro equipo se  encarga de visitar negocios dentro de la república para poder ofrecerles un espacio en nuestro sitio toptus.com
                    </p>

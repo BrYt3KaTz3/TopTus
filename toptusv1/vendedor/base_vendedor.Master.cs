@@ -46,11 +46,21 @@ namespace toptusv1
             var sesion = HttpContext.Current.Session["usuario"];
             DataTable usuario = (DataTable)sesion;
 
-            
-            string nombre = usuario.Rows[0]["nombre"].ToString();
-            string id_vendedor = usuario.Rows[0]["vendedor_id"].ToString();
-            usuario_id_master.Text = id_vendedor;
-            enlace_vendedor.InnerText = nombre;
+            if (usuario.Rows[0]["nick"].ToString() != "")
+            {
+                string nick = usuario.Rows[0]["nick"].ToString();
+                string id_vendedor = usuario.Rows[0]["vendedor_id"].ToString();
+                usuario_id_master.Text = id_vendedor;
+                enlace_vendedor.InnerText = nick;
+            }
+            else
+            {
+                string nombre = usuario.Rows[0]["nombre"].ToString();
+                string id_vendedor = usuario.Rows[0]["vendedor_id"].ToString();
+                usuario_id_master.Text = id_vendedor;
+                enlace_vendedor.InnerText = nombre;
+            }
+           
 
         }
     }

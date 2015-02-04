@@ -36,8 +36,16 @@ namespace toptusv1.productos
             productos_clase obj = new productos_clase();
             //se carga el repeater con los datos
             dtproductos= obj.productos_lista(cate,sub);
-            rptProductosList.DataSource = dtproductos;
-            rptProductosList.DataBind();
+            if (dtproductos.Rows.Count == 0)
+            {
+                no_hay_productos.Text = "<h2 class='text-danger'>Aún no hay productos para esta categoría</h2><br/>Se el primero entrando <a href='solicitud.aspx'>Aquí</a>";
+            }
+            else 
+            {
+                rptProductosList.DataSource = dtproductos;
+                rptProductosList.DataBind();
+            }
+           
           
         }
 

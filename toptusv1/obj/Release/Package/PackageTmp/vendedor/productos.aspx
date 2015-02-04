@@ -13,6 +13,8 @@
     <br />
     
     <a href="#" id="link_add_product" class="button-link">Agregar nuevo producto</a>
+
+    <asp:Panel ID="Panel1" runat="server" DefaultButton="btnAgregarProducto">
     <div id="add_product">
      <div class="row" >
        
@@ -51,6 +53,8 @@
         <asp:Button ID="btnAgregarProducto" ClientIDMode="Static" runat="server" CssClass="btn-lg"  Text="Agregar producto" OnClick="btnAgregarProducto_Click" />
         </div>
     </div>
+
+    </asp:Panel>
     <br/>
     <div class="container-pad" id="property-listings">
          <!-- REPEAETTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRR -->
