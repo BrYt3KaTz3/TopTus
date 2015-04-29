@@ -90,6 +90,22 @@ namespace toptusv1
             }
         }
 
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string busqueda = txtBuscar.Text;
+            if (busqueda == "")
+            {
+                txtBuscar.Text = "Por favor teclea la información a buscar";
+            }
+            else
+            { 
+            Response.Redirect("productlist.aspx?cat=0&sub=0&q="+txtBuscar.Text);
+            }
+            
+        }
+
+        
+
         
     }
 }

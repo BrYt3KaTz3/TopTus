@@ -83,8 +83,64 @@
     <Content Include="css\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="imagenes\ajax-loader.gif" />
+    <Content Include="imagenes\BienvenidoTopTus.png" />
     <Content Include="imagenes\calidad.jpg" />
+    <Content Include="imagenes\circulovacio\A1.png" />
+    <Content Include="imagenes\circulovacio\A2.png" />
+    <Content Include="imagenes\circulovacio\A3.png" />
+    <Content Include="imagenes\circulovacio\A4.png" />
+    <Content Include="imagenes\circulovacio\B1.png" />
+    <Content Include="imagenes\circulovacio\B2.png" />
+    <Content Include="imagenes\circulovacio\B3.png" />
+    <Content Include="imagenes\circulovacio\B4.png" />
+    <Content Include="imagenes\circulovacio\B5.png" />
+    <Content Include="imagenes\circulovacio\B6.png" />
+    <Content Include="imagenes\circulovacio\C1.png" />
+    <Content Include="imagenes\circulovacio\C2.png" />
+    <Content Include="imagenes\circulovacio\C3.png" />
+    <Content Include="imagenes\circulovacio\C4.png" />
+    <Content Include="imagenes\circulovacio\C5.png" />
+    <Content Include="imagenes\circulovacio\C6.png" />
+    <Content Include="imagenes\circulovacio\D1.png" />
+    <Content Include="imagenes\circulovacio\D2.png" />
+    <Content Include="imagenes\circulovacio\D3.png" />
+    <Content Include="imagenes\circulovacio\D4.png" />
+    <Content Include="imagenes\circulo\A1.png" />
+    <Content Include="imagenes\circulo\A2.png" />
+    <Content Include="imagenes\circulo\A3.png" />
+    <Content Include="imagenes\circulo\A4.png" />
+    <Content Include="imagenes\circulo\A5.png" />
+    <Content Include="imagenes\circulo\A6.png" />
+    <Content Include="imagenes\circulo\B1.png" />
+    <Content Include="imagenes\circulo\B2.png" />
+    <Content Include="imagenes\circulo\B3.png" />
+    <Content Include="imagenes\circulo\B4.png" />
+    <Content Include="imagenes\circulo\B5.png" />
+    <Content Include="imagenes\circulo\B6.png" />
+    <Content Include="imagenes\circulo\C1.png" />
+    <Content Include="imagenes\circulo\C2.png" />
+    <Content Include="imagenes\circulo\C3.png" />
+    <Content Include="imagenes\circulo\C4.png" />
+    <Content Include="imagenes\circulo\C5.png" />
+    <Content Include="imagenes\circulo\C6.png" />
+    <Content Include="imagenes\circulo\D1.png" />
+    <Content Include="imagenes\circulo\D2.png" />
+    <Content Include="imagenes\circulo\D3.png" />
+    <Content Include="imagenes\circulo\D4.png" />
+    <Content Include="imagenes\circulo\D5.png" />
+    <Content Include="imagenes\circulo\D6.png" />
+    <Content Include="imagenes\circulo\Home Web TT Ubicaciones.png" />
     <Content Include="imagenes\contacto.jpg" />
+    <Content Include="imagenes\deportes.png" />
+    <Content Include="imagenes\electronica.png" />
+    <Content Include="imagenes\hogar.png" />
+    <Content Include="imagenes\moda.png" />
+    <Content Include="imagenes\organico.png" />
+    <Content Include="imagenes\reciclaje.png" />
+    <Content Include="imagenes\todo.png" />
+    <Content Include="imagenes\TopTus1.png" />
+    <Content Include="imagenes\TopTus2.png" />
+    <Content Include="imagenes\TopTus3.png" />
     <Content Include="imagenes\icono.ico" />
     <Content Include="imagenes\icono.png" />
     <Content Include="imagenes\iconos\calidad.png" />
@@ -100,6 +156,8 @@
     <Content Include="imagenes\inova.jpg" />
     <Content Include="imagenes\logo.jpg" />
     <Content Include="imagenes\logo.png" />
+    <Content Include="imagenes\logotest.png" />
+    <Content Include="imagenes\lupa.png" />
     <Content Include="imagenes\opciones.png" />
     <Content Include="imagenes\prelogo.png" />
     <Content Include="images\1.jpg" />
@@ -165,6 +223,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="paquetes.aspx" />
     <Content Include="perfilvendedor.aspx" />
     <Content Include="productdetail.aspx" />
     <Content Include="productlist.aspx" />
@@ -185,6 +244,7 @@
     <Content Include="json\paises.json" />
     <Content Include="json\region.json" />
     <Content Include="json\subcategorias.json" />
+    <Content Include="imagenes\circulo\Thumbs.db" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -208,11 +268,17 @@
     <Content Include="vendedor\catprod.aspx" />
     <Content Include="vendedor\css\generales_vendedor.css" />
     <Content Include="vendedor\fotoperfil.aspx" />
+    <Content Include="vendedor\fotosprod.aspx" />
     <Content Include="vendedor\js\vendedor_generales.js" />
     <Content Include="vendedor\perfil\1.jpg" />
     <Content Include="vendedor\perfil\2.jpg" />
     <Content Include="vendedor\productos.aspx" />
-    <Content Include="vendedor\prod_fotos\2.jpg" />
+    <Content Include="vendedor\prod_fotos\1\17\17.jpg" />
+    <Content Include="vendedor\prod_fotos\1\17\18694566_1.jpg" />
+    <Content Include="vendedor\prod_fotos\1\17\4fan.jpg" />
+    <Content Include="vendedor\prod_fotos\1\17\alexgrinch.jpg" />
+    <Content Include="vendedor\prod_fotos\1\17\yamahapsre303.jpg" />
+    <Content Include="vendedor\prod_fotos\17.jpg" />
     <Content Include="vendedor\prod_fotos\default.png" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="solicitud.aspx" />
@@ -315,6 +381,13 @@
     <Compile Include="Login\login_vendedor.cs" />
     <Compile Include="paises_cl.cs" />
     <Compile Include="paises_json.cs" />
+    <Compile Include="paquetes.aspx.cs">
+      <DependentUpon>paquetes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paquetes.aspx.designer.cs">
+      <DependentUpon>paquetes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="perfilvendedor.aspx.cs">
       <DependentUpon>perfilvendedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -396,6 +469,13 @@
     </Compile>
     <Compile Include="vendedor\fotoperfil.aspx.designer.cs">
       <DependentUpon>fotoperfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendedor\fotosprod.aspx.cs">
+      <DependentUpon>fotosprod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\fotosprod.aspx.designer.cs">
+      <DependentUpon>fotosprod.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\productos.aspx.cs">
       <DependentUpon>productos.aspx</DependentUpon>

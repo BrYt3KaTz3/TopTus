@@ -65,7 +65,7 @@
            <div class="brdr bgc-fff pad-10 box-shad btm-mrg-20 property-listing">
                <asp:HiddenField runat="server" ID="hidden_product" Value='<%# Eval("producto_id") %>' ClientIDMode="Static" />
                         <div class="media">
-                            <a class="pull-left" href="#" target="_parent">
+                            <a class="pull-left"  href="fotosprod.aspx?prod=<%#  encriptar_url(Eval("producto_id").ToString()) %>"a href="fotosprod.aspx?prod=<%#  encriptar_url(Eval("producto_id").ToString()) %>"" target="_parent">
                             <img alt="image" class="img-responsive" src="<%# Eval("img_principal") %>"></a>
 
                             <div class="clearfix visible-sm visible-xs"></div>
@@ -74,7 +74,7 @@
                                 <a href="#" target="_parent"></a>
 
                                 <h4 class="media-heading">
-                                  <a href="#" target="_parent"><%# Eval("producto") %> <small class="pull-right">$<%# Eval("precio") %></small></a></h4>
+                                  <a href="fotosprod.aspx?prod=<%#  encriptar_url(Eval("producto_id").ToString()) %>" target="_parent"><%# Eval("producto") %> <small class="pull-right">$<%# Eval("precio") %></small></a></h4>
 
 
                                 <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">
@@ -95,6 +95,8 @@
                                 Evergreen</span>
                                 <br />
                                 <a href="catprod.aspx?prod=<%#  encriptar_url(Eval("producto_id").ToString()) %>"> <span class="pull-right">Agregar categorías</span></a>
+                                <br />
+                                <a href="fotosprod.aspx?prod=<%#  encriptar_url(Eval("producto_id").ToString()) %>"> <span class="pull-right">Agregar fotos</span></a>
                               
                                 
                             </div>

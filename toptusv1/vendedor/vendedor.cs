@@ -42,7 +42,7 @@ namespace toptusv1.vendedor
         }
 
         //insertar solicitud
-        public string insertar_solicitud(string nombre,  string apellidop,string apellidom, string email, DateTime fechasolicitud)
+        public string insertar_solicitud(string nombre,  string apellidop,string apellidom, string email, DateTime fechasolicitud,string pass)
         {
             try
             {
@@ -52,8 +52,8 @@ namespace toptusv1.vendedor
                 using (SqlConnection conn = new SqlConnection("Data Source=198.38.94.104;Initial Catalog=ferchoMF_TopTusDBuno;User ID=ferchoMF_fer;Password=ferchodc1"))
                 {
 
-                    string sql = @"insert into Vendedor (nombre, apellido_p,apellido_m,email, fecha_solicitud, tipovendedor_id) 
-						values (@nombre,@apellido_p,@apellido_m, @email, @fecha_solicitud, @id)";
+                    string sql = @"insert into Vendedor (nombre, apellido_p,apellido_m,email,pass, fecha_solicitud, tipovendedor_id,pais_id,estado_id) 
+						values (@nombre,@apellido_p,@apellido_m, @email,@pass, @fecha_solicitud, @id,1,1)";
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -61,8 +61,9 @@ namespace toptusv1.vendedor
                     cmd.Parameters.AddWithValue("@apellido_p", apellidop);
                     cmd.Parameters.AddWithValue("@apellido_m", apellidom);
                     cmd.Parameters.AddWithValue("@email", email);
+                    cmd.Parameters.AddWithValue("@pass", pass);
                     cmd.Parameters.AddWithValue("@fecha_solicitud", fechasolicitud);
-                    cmd.Parameters.AddWithValue("@id", 4);
+                    cmd.Parameters.AddWithValue("@id", 2);
 
                     cmd.ExecuteNonQuery();
                     conn.Close();

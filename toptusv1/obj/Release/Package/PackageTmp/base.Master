@@ -36,12 +36,14 @@
             <div id="log" class="">
                
             <div class="pull-right" id="capa_login" runat="server">
-            <a href="login.aspx" id="login"   runat="server">Login</a> | 
-            <a href="solicitud.aspx" >Register</a>
+            <a href="login.aspx" id="login"   runat="server">Entrar</a> | 
+            <a href="solicitud.aspx" >Registrarse</a>
             </div>
                 
             </div>
                     </div>
+
+        </div>
         <div id="header" class="container">
             <div class="row col-md-12">
                 <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
@@ -51,8 +53,9 @@
               
                    
                       <div class="input-group" id="buscador">
-                        <input type="text" class="form-control">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+                          <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"></asp:TextBox>
+                        
+                          <span class="input-group-addon" id="spanbuscar"><asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="" /></span>
                       </div>
                   </div>
                
@@ -61,7 +64,7 @@
 
         </div> <!--fin header-->
         <!--fin -->
-        </div>
+        
        
     <div class="container">
          <nav class="navbar navbar-default " id="menu_general" role="navigation">
@@ -164,7 +167,7 @@
                         <li> <a href="https://www.twitter.com/"  target="_blank"><img src="imagenes/iconos/twitter.png" /> <i class="fa fa-twitter">   </i> </a> </li>
                         <li> <a href="https://plus.google.com"  target="_blank"><img src="imagenes/iconos/google.png" /><i class="fa fa-google-plus">   </i> </a> </li>
                         <li> <a href="https://www.youtube.com/"  target="_blank"><img src="imagenes/iconos/youtube.png" /> <i class="fa fa-youtube">   </i> </a> </li>
-                        <li> <a href="https://www.linkedin.com/"  target="_blank"><img src="imagenes/iconos/linked.png" /> <i class="fa fa-linkedin">   </i> </a> </li>
+                        <li> <a href="https://www.instagram.com/toptusmex"  target="_blank"><img src="imagenes/iconos/instagram.png" /> <i class="fa fa-instagram">   </i> </a> </li>
                     </ul>
                 </div>
             </div>

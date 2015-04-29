@@ -3138,7 +3138,7 @@ tbody.collapse.in {
   font-size: 14px;
   text-align: left;
   list-style: none;
-  background-color: black;
+  background-color: #d2d3d5;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
   border: 1px solid #ccc;
@@ -3925,23 +3925,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-nav {
   margin: 7.5px -15px;
-  background-color:#CF3034;
+  background-color:#d2d3d5;
 }
 
 .navbar-nav {
   margin: 7.5px -15px;
-  background-color:#CF3034;
+  background-color:#d2d3d5;
 }
 
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
-  background-color:#CF3034;
+  background-color:#d2d3d5;
 }
 .navbar-nav > li:hover {
  
-  background-color:black;
+  background-color:#CF3034;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -4157,7 +4157,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: white;
-  background-color: black;
+  background-color: #CF3034;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {

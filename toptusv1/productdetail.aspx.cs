@@ -10,7 +10,7 @@ namespace toptusv1
     public partial class productdetail : System.Web.UI.Page
     {
         public string nombre_producto, precio, descripcion,nombre,nick,imagen;
-        public int id_vendedor;
+        public int id_vendedor,id_producto;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString.ToString() != "") // cuando si hay parámetros, sea 1 o 2
@@ -18,6 +18,7 @@ namespace toptusv1
 
                 int producto = int.Parse(Request.QueryString["prod"]);
                 cargar_detalles_producto(producto);
+                cargar_fotos_producto(producto);
              
                 DataBind();
 
@@ -38,6 +39,7 @@ namespace toptusv1
                 precio = datos.Rows[0]["precio"].ToString();
                 descripcion = datos.Rows[0]["producto_descr"].ToString();
                 id_vendedor = int.Parse(datos.Rows[0]["vendedor_id"].ToString());
+                id_producto =int.Parse(datos.Rows[0]["producto_id"].ToString());
                 cargar_datos_vendedor(id_vendedor);
             }
             else
@@ -62,6 +64,21 @@ namespace toptusv1
            
            
             
+        }
+
+        public void cargar_fotos_producto(int id)
+        { 
+            productos_clase obj =new productos_clase();
+            var fotos = obj.fotos_por_producto(id);
+            if (fotos.Rows.Count > 0)
+            {
+                rptFotosPorProducto.DataSource = fotos;
+                rptFotosPorProducto.DataBind();
+            }
+            else
+            {
+                nofotos.Text = "<h4>No hay fotos para este producto.</h4>";
+            }
         }
     }
 }

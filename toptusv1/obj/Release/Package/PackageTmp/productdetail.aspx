@@ -14,19 +14,20 @@
     <div class="row container-pad">
 
         <div class="col-md-4">
-           
-            <img src="vendedor/prod_fotos/2.jpg" class="img-responsive" />
+            <asp:Label ID="nofotos" runat="server" Text=""></asp:Label>
+            <img src="vendedor/prod_fotos/<%#id_producto %>.jpg" class="img-responsive" />
         </div>
         <div class="col-md-2">
-            <img class="pics" src="vendedor/prod_fotos/2.jpg" data-glisse-big="vendedor/prod_fotos/2.jpg" rel="group1"  />
+            <asp:Repeater ID="rptFotosPorProducto" runat="server">
+                <ItemTemplate>
+                     <img class="pics" src="<%#Eval("img_ruta") %>" style="padding-bottom:10px" data-glisse-big="<%#Eval("img_ruta") %>" title="<%#Eval("img_descr") %>" rel="group<%#Eval("producto_id") %>"  />
+                </ItemTemplate>
+            </asp:Repeater>
+
+
+           
          
-            <img class="pics" src="images/products/chamarra.jpg"  data-glisse-big="images/products/chamarra.jpg" rel="group1"  />
-   
-              <img class="pics" src="images/products/app.jpg"  data-glisse-big="images/products/app.jpg" rel="group1"  />
-      
-             <img class="pics" src="images/products/5.jpg"  data-glisse-big="images/products/5.jpg" rel="group1"  />
-      
-              <img class="pics" src="images/products/6.jpg"  data-glisse-big="images/products/6.jpg" rel="group1"  />
+            
        
         </div>
     

@@ -5,12 +5,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
-    <div class="row">
+    <div class="row" style="padding-top:80px; padding-bottom:80px;">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <h5 class="text-center">
-                       LOGIN</h5>
+                       ENTRAR</h5>
                     
                
                     <div class="form-group">
@@ -44,8 +44,8 @@
                        
                     </div>
                 </div>
-                <asp:Button ID="Button1" runat="server" CssClass="button-link btn btn-sm btn-primary btn-block" Text="SUBMIT" OnClick="Button1_Click" />
-              <a href="Index.aspx" class="btn-link pull-right">Regresa a TopTus.com</a>
+                <asp:Button ID="Button1" runat="server" CssClass="button-link btn btn-sm btn-danger btn-block" Text="INGRESAR" OnClick="Button1_Click" />
+              <a href="Index.aspx" class=" pull-right">Regresa a TopTus.com</a>
             </div>
         </div>
     </div>

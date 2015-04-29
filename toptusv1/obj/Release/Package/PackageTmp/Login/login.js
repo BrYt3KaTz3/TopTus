@@ -2,11 +2,11 @@
 
 function main() {
 
-    $("#menu_general").hide();
+   /* $("#menu_general").hide();
     $("#header").hide();
     $("#footer").hide();
     $(".footer-bottom").hide();
-    $("#logindiv").hide();
+    $("#logindiv").hide();*/
     validateForm();
 }
 
@@ -47,7 +47,7 @@ function validateForm() {
 }//fin funcion validar
 
 function wrong_user() {
-    $("#menu_general").hide();
+    /*$("#menu_general").hide();*/
     alert('wrong user/password');
 
 

@@ -64,13 +64,43 @@ namespace toptusv1.vendedor
         if (res!= "error")
         {
            string id_producto = encriptar_url(res);
-           Response.Redirect("catprod.aspx?prod="+id_producto);
+           string  carpeta =crear_carpeta(res);
+           if (carpeta == "ok")
+           { Response.Redirect("catprod.aspx?prod=" + id_producto); } //si crea ok la carpeta para las fotos, manda a las categorías
+           else
+           { ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar_foto('" + carpeta + "');", true); }
+          
         }
         else
         {
             ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar_foto('" + res + "');", true);
                            
         }
+    }
+
+    public string crear_carpeta (string id)
+    {
+        int usuario = id_usuario();
+        string ok="";
+        string folder_producto = Server.MapPath("prod_fotos/")+usuario+"/"+ id; //se asigna la dirección ya con el nuevo id para verificar después
+        bool existe_folder = System.IO.Directory.Exists(folder_producto); //se pregunta si existe el folder
+        if (!existe_folder) //si no existe el folder (lo más seguro) se crea dentro del if
+        {
+           
+            try
+            {
+                System.IO.Directory.CreateDirectory(folder_producto);
+                ok = "ok";
+                return ok;
+            }
+            catch (Exception e)
+            {
+                ok = "error al crear carpeta: "+e.Message;
+                return ok;
+            }
+                    
+        }
+        return ok;
     }
 
         

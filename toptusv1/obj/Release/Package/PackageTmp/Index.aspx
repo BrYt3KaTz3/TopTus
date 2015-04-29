@@ -1,15 +1,126 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="/base.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="toptusv1.Index" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="Scripts/index.js"></script>
-   <script src="jsgaleria/modernizr.custom.63321.js"></script>
+    <script src="jsgaleria/modernizr.custom.63321.js"></script>
     <script src="jsgaleria/pgwslider.js"></script>
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/pgwslider.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--<div class="col-md-12">
+        <img src="imagenes/circulo/Home%20Web%20TT%20Ubicaciones.png" / class="img-responsive">
+    </div>-->
+    <div class="col-md-12 padding_inicio" id="circulo">
 
-    
-    <div class="row top-buffer"> <!--galerias nuevas -->
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/A1.png" class="img-responsive " /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <a href="perfilvendedor.aspx?vendedor=1">
+                <img src="imagenes/circulo/A2.png" class="img-responsive " /></a> </div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <a href="perfilvendedor.aspx?vendedor=1">
+                <img src="imagenes/circulo/A3.png" class="img-responsive " /></a> </div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <a href="perfilvendedor.aspx?vendedor=1">
+                <img src="imagenes/circulo/A4.png" class="img-responsive " /></a> </div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <a href="perfilvendedor.aspx?vendedor=1">
+                <img src="imagenes/circulo/A5.png" class="img-responsive" /></a> </div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/A6.png" class="img-responsive" /></div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B1.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B2.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B3.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B4.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B5.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/B6.png" class="img-responsive" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C1.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C2.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C3.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C4.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C5.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/C6.png" class="img-responsive" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/d1.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/D2.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/D3.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/D4.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/D5.png" class="img-responsive" /></div>
+            <div class="col-md-2 col-xs-2 col-sm-2">
+                <img src="imagenes/circulo/D6.png" class="img-responsive" /></div>
+        </div>
+
+    </div>
+
+
+    <div class="row padding_inicio">
+        <div class="col-md-12">
+            <img src="imagenes/hogar.png" class="img-responsive" />
+        </div>
+        <asp:Repeater ID="rpthogar" runat="server">
+            <ItemTemplate>
+                 <div class="col-md-2 column productbox">
+            <img src="vendedor/<%#Eval("img_principal") %>" class="img-responsive">
+            <div class="producttitle"><%#Eval("producto") %></div>
+            <div class="productprice"><div class="pull-right"><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>" class="btn btn-danger btn-sm" role="button">Lo quiero</a></div><div class="pricetext">$ <%#Eval("precio") %></div></div>
+        </div>
+            </ItemTemplate>
+
+        </asp:Repeater>
+       
+         
+    </div>
+    <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/deportes.png" class="img-responsive"/>   </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/electronica.png" class="img-responsive"/>   </div>
+        
+    </div>
+     <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/reciclaje.png" class="img-responsive"/>   </div>
+        
+    </div>
+     <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/organico.png" class="img-responsive"/>   </div>
+        
+    </div>
+     <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/moda.png" class="img-responsive"/>   </div>
+        
+    </div>
+     <div class="row">
+        <div class="col-md-12 padding_inicio">   <img src="imagenes/todo.png" class="img-responsive"/>   </div>
+        
+    </div>
+
+    <!-- <div class="row top-buffer"> galerias nuevas 
              <div class="col-md-4">
 
                 <ul class="pgwSlider">
@@ -45,10 +156,11 @@
         </div>
 
 
-    </div> 
+    </div> -->
 
 
-         <div class="row top-buffer"> <!--galeria 
+    <div class="row top-buffer">
+        <!--galeria 
              <div class="col-md-12">
 
                 <ul class="pgwSlider">
@@ -60,9 +172,9 @@
                 </ul>
 
              </div> -->
-         </div> 
-            
-         <div class="row top-buffer ">
+    </div>
+
+    <!--<div class="row top-buffer ">
              <div class="col-md-6"><h3 class="text-center">Wanna Sell?</h3>
                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.
              </div>
@@ -109,13 +221,13 @@
 
              </div>
 
-         </div>
-         <br />
-         <br />
+         </div> -->
+    <br />
+    <br />
     <div class="row">
         <div class="col-md-12">
 
-            <h3 class="text-center">Slogan</h3>
+            <h3 class="text-center">Haz Más</h3>
         </div>
 
     </div>
@@ -123,54 +235,78 @@
     <div class="row">
         <div class="col-md-12 cuatro_puntos">
             <div class="col-md-3">
-                <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/porque.png" />Hazte miembro. </h4></div>
-                <div class="row"><div class="col-md-12"> 
-                    <p class="text-justify">
-                      Más Opciones para satisfacer tus necesidades y hacer crecer tu negocio.
-                     </p>
-                  
-                  <p class="text-justify">
-                     Toptus te ofrece los mejores artículos y servicios del mercado. Con solo un click podrás ponerte en contacto con empresarios y podrás ofrecer tu producto a millones de clientes.
-                  </p></div></div>
+                <div class="row">
+                    <h4 class="text-center">
+                        <img src="imagenes/iconos/porque.png" />Hazte miembro. </h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            Más Opciones para satisfacer tus necesidades y hacer crecer tu negocio.
+                        </p>
+
+                        <p class="text-justify">
+                            Toptus te ofrece los mejores artículos y servicios del mercado. Con solo un click podrás ponerte en contacto con empresarios y podrás ofrecer tu producto a millones de clientes.
+                        </p>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-3">
-                <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/calidad.png" />Alta Calidad. </h4></div><br/>
-                <div class="row"><div class="col-md-12"> 
-                    <ul>
-                      
-                       <li>Los Mejores Precios, Directamente De Fábrica, Importadores y Distribuidores de confianza</li>
-                      
-                       <li>Somos una empresa que busca que nuestros usuarios trabajen con la más alta calidad en su servicio.</li>
-                       <li>Toptus se encarga de evaluar a sus vendedores para que trabajen bajo el reglamento de calidad, para así ser la única página de internet confiable en el mercado.</li>
-                   </ul> </div></div>
+                <div class="row">
+                    <h4 class="text-center">
+                        <img src="imagenes/iconos/calidad.png" />Alta Calidad. </h4>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul>
+
+                            <li>Los Mejores Precios, Directamente De Fábrica, Importadores y Distribuidores de confianza</li>
+
+                            <li>Somos una empresa que busca que nuestros usuarios trabajen con la más alta calidad en su servicio.</li>
+                            <li>Toptus se encarga de evaluar a sus vendedores para que trabajen bajo el reglamento de calidad, para así ser la única página de internet confiable en el mercado.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3">
-                <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/clientes.png" /> Excelente atención. </h4></div>
-                <div class="row"><div class="col-md-12">
-                    <p class="text-justify">
-                        Toptus.com ofrece un servicio de atención al cliente excelente y completo durante todo el proceso en el sitio. Antes de contactarnos, puedes hacer preguntas en tiempo real a nuestro correo electrónico dudas@toptus.com. Nuestros representantes del servicio de atención al cliente siempre estarán disponibles. 
+                <div class="row">
+                    <h4 class="text-center">
+                        <img src="imagenes/iconos/clientes.png" />
+                        Excelente atención. </h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            Toptus.com ofrece un servicio de atención al cliente excelente y completo durante todo el proceso en el sitio. Antes de contactarnos, puedes hacer preguntas en tiempo real a nuestro correo electrónico dudas@toptus.com. Nuestros representantes del servicio de atención al cliente siempre estarán disponibles. 
                         Ponte en contacto con nosotros si tienes alguna queja o duda. Estamos disponibles las 24 horas del día. Nuestro personal te lo agradecerá.
 
-                          </p> </div></div>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3">
-                <div class="row"><h4 class="text-center">
-                    <img src="imagenes/iconos/vanguardia.png" /> Productos univanguardistas.</h4></div>
-                <div class="row"><div class="col-md-12"> <p class="text-justify">
-                  En Toptus no solamente esperamos a que nuestros usuarios se registren, nuestro equipo se  encarga de visitar negocios dentro de la república para poder ofrecerles un espacio en nuestro sitio toptus.com
-                   </p>
-                    <p class="text-justify">
-                     Toptus va mas allá de las fronteras invitando físicamente a todos los nuevos empresarios para invitarlos a la única pagina web más confiable del mercado.
-                     </p></div></div>
+                <div class="row">
+                    <h4 class="text-center">
+                        <img src="imagenes/iconos/vanguardia.png" />
+                        Productos univanguardistas.</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-justify">
+                            En Toptus no solamente esperamos a que nuestros usuarios se registren, nuestro equipo se  encarga de visitar negocios dentro de la república para poder ofrecerles un espacio en nuestro sitio toptus.com
+                        </p>
+                        <p class="text-justify">
+                            Toptus va mas allá de las fronteras invitando físicamente a todos los nuevos empresarios para invitarlos a la única pagina web más confiable del mercado.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
-<!--          <div class="table-bordered row">
+    <!--          <div class="table-bordered row">
                <div class="col-md-1">
              <img src="imagenes/opciones.png" / class="img-responsive">
          </div>
@@ -241,21 +377,39 @@
               
            </div><br />-->
 
-         <div class="row">
-             <div class="col-md-12">
-            
-          
-                 </div>
-         </div>
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
 
+
+    <script src="jsgaleria/jquery.catslider.js"></script>
+    <!--Slider de tennis-->
+    <script>
+        $(function () {
+
+            $('#mi-slider').catslider();
+
+        });
+    </script>
+
+    <!--javascript para zoom-->
+
+      <script>
          
-    <script src="jsgaleria/jquery.catslider.js"></script> <!--Slider de tennis-->
-		<script>
-		    $(function () {
+              $('.viewport').mouseenter(function (e) {
+                  var h = $(this).children('a').children('img').height();
+                  var w = $(this).children('a').children('img').width();
+                  console.log(h);
+                  
+                  $(this).children('a').children('img').animate({ height: h + 20, left: '0', top: '0', width: w + 20 }, 100);
+                  
+              }).mouseleave(function (e) {
+                  $(this).children('a').children('img').animate({ height: '100%', left: '0', top: '0', width: '100%' }, 100);
+                  
+              });
+         
+    </script>
 
-		        $('#mi-slider').catslider();
-
-		    });
-		</script>
 
 </asp:Content>
