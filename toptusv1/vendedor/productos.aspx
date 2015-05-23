@@ -6,10 +6,10 @@
        
        <div class="col-md-4 col-md-offset-4"><h3 class="text-center">Productos</h3></div>
          </div> 
-    <div class="row notas">
+   <!-- <div class="row notas">
         <h3 class="text-center"><span>Nota: Después de agregar un producto, asegurate de agregar sus categorías y sus fotografías, de otra manera no aparecerá publicado</span></h3>
  <br />
-    </div>
+    </div>-->
     <br />
     
     <a href="#" id="link_add_product" class="button-link">Agregar nuevo producto</a>
@@ -25,7 +25,7 @@
        <div class="col-md-offset-3">
                     <label for="prod_nombre" class="col-md-3 control-label">Nombre del producto:</label>
                     <div class="col-md-6">
-                      <asp:TextBox ID="prod_nombre" type="text" CssClass="form-control input_form"  placeholder="Producto" runat="server" ></asp:TextBox>
+                      <asp:TextBox ID="prod_nombre" type="text" CssClass="form-control input_form"  MaxLength="25" placeholder="Producto" runat="server" ></asp:TextBox>
                       
                     </div>
                 </div>

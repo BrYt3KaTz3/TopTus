@@ -29,7 +29,7 @@
                             <br />
                             <div class="row col-md-offset-4">
                             Si la imagen no carga correctamente presione "F5"<br />
-                            <asp:Button ID="btnUpload" ClientIDMode="Static" runat="server" Text="Subir Foto" OnClick="btnfoto_Click" /><br />
+                            <asp:Button ID="btnUpload" ClientIDMode="Static" runat="server" CssClass="btn-danger btn" Text="Subir Foto" OnClick="btnfoto_Click" /><br />
                                 </div>
                         </ContentTemplate>
                         <Triggers> <asp:PostBackTrigger ControlID="btnUpload" /> </Triggers>  

@@ -174,8 +174,10 @@ namespace toptusv1.vendedor
                 #region insertar
                 string res = obj.insert_prod_cat(id_prd, cat, sub);
                 if (res == "1")
+
                 {
-                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_insertar()", true);
+                    string id_producto = encriptar_url(id_prd.ToString());
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_insertar_categoria('" + id_producto + "')", true);
                     //Response.Redirect(Server.MapPath("vendedor_perfil.aspx"));
                 }
                 else
@@ -210,6 +212,12 @@ namespace toptusv1.vendedor
             DataTable usuario = (DataTable)sesion;
             int id_tipo_vendedor = int.Parse(usuario.Rows[0]["tipovendedor_id"].ToString());
             return id_tipo_vendedor;
+        }
+
+        public string encriptar_url(string id_producto)
+        {
+            string encriptado = seguridad.Encriptar(id_producto);
+            return encriptado;
         }
     }
 }

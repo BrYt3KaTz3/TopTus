@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     menu_class_change();
+    main();
     // Add slideDown animation to dropdown
     $('.dropdown').on('show.bs.dropdown', function (e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -47,3 +48,103 @@ function menu_class_change() //cambiar la clase activa del men+u al ser seleccio
     }*/
 }
 
+//envio de comentario
+
+
+
+function main() {
+
+    validateFormComentario();
+};
+
+
+
+// $("#form_solicitud").validate();
+
+function validateFormComentario() {
+
+    $("[id*='form1']").validate({ // se cambio el nombre delform, ya pertenece a la base
+        rules: {
+            ctl00$ContentPlaceHolder1$con_nombre:
+                {
+                    required: true
+                },
+            ctl00$ContentPlaceHolder1$con_empresa:
+                {
+                    required: true
+                },
+            ctl00$ContentPlaceHolder1$con_pais:
+               {
+                   required: true
+               },
+            ctl00$ContentPlaceHolder1$con_ciudad:
+               {
+                   required: true
+               },
+            ctl00$ContentPlaceHolder1$con_comentario:
+               {
+                   required: true
+               },
+            ctl00$ContentPlaceHolder1$con_mail:
+                {
+                    required: true,
+                    email: true
+                }
+        },//fin rules
+        messages: {
+            ctl00$ContentPlaceHolder1$con_nombre:
+                {
+                    required: 'Campo obligatorio'
+                },
+            ctl00$ContentPlaceHolder1$con_empresa:
+              {
+                  required: 'Campo obligatorio'
+              },
+            ctl00$ContentPlaceHolder1$con_pais:
+              {
+                  required: 'Campo obligatorio'
+              },
+            ctl00$ContentPlaceHolder1$con_ciudad:
+              {
+                  required: 'Campo obligatorio'
+              },
+            ctl00$ContentPlaceHolder1$con_comentario:
+              {
+                  required: 'Campo obligatorio'
+              },
+             ctl00$ContentPlaceHolder1$con_mail:
+                {
+                    required: 'Campo obligatorio',
+                    email: 'Favor de teclear un mail válido'
+                }
+        },//fin messages
+
+        submitHandler: function (form) { // esta estructura hace postback 
+            $("#loader").slideDown('1000');
+
+            form.submit();
+            return;
+        }
+    });
+
+
+}//fin funcion validar
+
+
+
+function confirmacion_comentario() {
+
+    $("#dialogcomentario").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                window.location.replace("Index.aspx");
+            }
+        }
+    });
+
+
+}
+function error_comentario() {
+    alert('Ha ocurrido un error, intenta nuevamente o escribe a soporte@toptus.com');
+}

@@ -40,7 +40,7 @@
                 <h1 class="text-warning"> $ <%#precio %></h1>
                 <p class="text-muted"> <%#descripcion %></p>
 
-                <h6>Cate y sub??</h6>
+               
                 <div class="row"> 
                 <div class="col-md-3 col-xs-8 col-sm-5">
                     Vendedor:<br /> <h5><a href="perfilvendedor.aspx?vendedor=<%# id_vendedor %>"><%# nick.ToString()== "" ? nombre : nick %></a></h5>

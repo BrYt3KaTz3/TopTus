@@ -39,7 +39,7 @@
 
 .menu_contenedor
 {
-    background-color: #d2d3d5;
+    background-color: #666666;
     padding-left: 0px;
 }
 
@@ -250,8 +250,8 @@
 
 .padding_inicio
 {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
@@ -269,7 +269,7 @@
 .producttitle {
     font-weight:bold;
 	padding:5px 0 5px 0;
-    height:120px;
+    height:60px;
 }
 
 .productprice {
@@ -280,4 +280,22 @@
 .pricetext {
 	font-weight:bold;
 	font-size:1.4em;
+}
+
+.rojo
+{
+    background-color:#cf3034;
+    padding-left:0px !important;
+   
+    
+}
+
+.gris
+{
+    background-color:#d2d3d5;
+}
+
+.hometitle
+{
+ color:#727376;
 }

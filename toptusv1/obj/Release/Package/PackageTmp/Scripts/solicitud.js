@@ -68,6 +68,9 @@ function confirmacion_solicitud()
     
 
 }
+
+
+
 function error_solicitud() {
     alert('error al procesar la solicitud');
 }

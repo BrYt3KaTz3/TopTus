@@ -8,11 +8,13 @@
      <link rel="shortcut icon" href="../imagenes/icono.ico">
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
-     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"/>
   
   <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>-->
+    <script src="js/jquery-ui.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet" />
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <script src="js/vendedor_generales.js"></script>
@@ -27,17 +29,29 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <div class="col-md-12">
-                <div class="col-md-3"> <a  href="../Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a></div>
-                <div class="col-md-9"> <div class="pull-rigth" id="logeado" style="margin-bottom: 25px;">
+            <asp:Panel ID="Panel1" runat="server" DefaultButton="btnBuscar">
+                  <div class="col-md-12"> <div class="pull-rigth" id="logeado" style="margin-bottom: 25px;">
                     <div class="pull-right">
-                        <p class="navbar-text" style="float: left" id="status_login_vendedor" runat="server">Hi, <a href="vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a></p>
-                        <asp:Button ID="cerrar_sesion" OnClick="cerrar_sesion_Click" runat="server" Text="Close sesion" CssClass="btn" />
+                        <p class="navbar-text" style="float: left" id="status_login_vendedor" runat="server">Hola, <a href="general_perfil.aspx" id="enlace_vendedor" runat="server"></a></p>
+                        <asp:Button ID="cerrar_sesion" OnClick="cerrar_sesion_Click" runat="server" Text="Cerrar Sesión" CssClass="btn" />
                     </div>
 
                 </div></div>
+            <div class="col-md-12">
+                <div class="col-md-2"> <a  href="../Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a></div>
+                <div class="col-md-10" id="div_buscador">
+              
+                   
+                      <div class="input-group" id="buscador">
+                          <asp:TextBox ID="txtBuscar" CssClass="form-control" runat="server"></asp:TextBox>
+                        
+                          <span class="input-group-addon" id="spanbuscar"><asp:Button ID="btnBuscar" OnClick="btnBuscar_Click" runat="server"  Text="" /></span>
+                      </div>
+                  </div>
+              
                
             </div>
+        </asp:Panel>
         </div>
         <div class="container">
             <div class="col-md-offset-3 col-md-9 row">
@@ -64,6 +78,7 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
+                                <li class="subcategoria"><a href="general_perfil.aspx">Información General</a></li>
                                 <li class="subcategoria"><a href="fotoperfil.aspx">Foto de Perfil</a></li>
                                 <li class="subcategoria"><a href="vendedor_perfil.aspx">Información Básica</a></li>
                                 <li class="subcategoria"><a href="socialmedia.aspx">Redes Sociales</a></li>
@@ -97,11 +112,11 @@
 
     <div id="dialog-message" title="Éxito" style="display:none;">
   <p>
-    <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0; "></span>
+    
     Información Guardada con éxito
   </p>
   <p>
-    <b>Presione "Ok" para continuar.</b>.
+    <b>Presione "Ok" para continuar.</b>
   </p>
 </div>
 </body>

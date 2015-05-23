@@ -22,25 +22,27 @@
         <div class="col-md-12">
 
 
-            <div class="col-md-6" style="border-right: 1px solid gray">
+            <div class="col-md-6 col-sm-6 col-xs-12" style="border-right: 1px solid gray">
                 <h4>Agrega el nombre y la descripción de cada foto de tu producto:</h4>
                 <div id="ContentPlaceHolder_Vendedor_UpdatePanel1">
-
+                    <div class="row">
                     <div class="form-group">
                         <label for="catprod_cat" class="col-md-4 control-label">Nombre de la foto:</label>
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <asp:TextBox ID="txtNombreFoto" runat="server"></asp:TextBox>
                         </div>
                     </div>
+                    </div>
+                        <br>
                     <br>
-                    <br>
+                    <div class="row">
                     <div class="form-group">
                         <label for="catprod_sub" class="col-md-4 control-label">Descripción de la foto:</label>
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <asp:TextBox ID="txtDescripcionFoto" runat="server"></asp:TextBox>
                         </div>
                     </div>
-
+                        </div>
                     <div class="form-group">
                          <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="conditional">
                         <ContentTemplate>
@@ -60,7 +62,7 @@
                 </div>
                 
             </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 col-xs-12">
 
            <h4>Fotos del producto:</h4>
             <br />

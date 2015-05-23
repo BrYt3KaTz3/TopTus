@@ -29,6 +29,9 @@
                         <i class="glyphicon glyphicon-globe"></i> <%#empresa %>
                         <br />
                         <i class="glyphicon glyphicon-gift"></i> Vendedor <%#tipov %>
+                         <br />
+                        <i class="glyphicon glyphicon-user"></i> Miembro desde: <%#ingreso %>
+                        
                     </p>
 
                 </div>
@@ -36,7 +39,7 @@
 
             <div class="col-md-5 col-sm-4 col-xs-12">
 
-                <h3>Tambien vende:</h3>
+                <h3>También vende:</h3>
 
                 <div class="col-sm-12 col-md-12">
                     <asp:Label runat="server" id="nohay"></asp:Label>

@@ -5,16 +5,30 @@
 }
 
 
-.input-group-addon
+.input-group-addon1
 {
-    background-color: #CF3034;
+  
     border-color: #CF3034;
     color: rgb(255, 255, 255);
+      padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+   width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: table-cell;
 }
+
+
 .form-control:focus
 {
     
     border-color: #CF3034;
-    color: rgb(255, 255, 255);
+    color: black;
 }
 .form-signup input[type="text"],.form-signup input[type="password"] { border: 1px solid rgb(50, 118, 177); }

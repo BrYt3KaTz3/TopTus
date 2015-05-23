@@ -35,7 +35,7 @@ namespace toptusv1.vendedor
                 {
 
                     string res = obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol,pass);
-                   // string res = "1";
+                   //string res = "1";
                    // Console.Write(res);
                     if (res == "1")
                     {
@@ -45,12 +45,12 @@ namespace toptusv1.vendedor
                             string para_solicitud = sol_email.Text;
                             string subject_solicitud = "Toptus Confirmación";
                             string copia_solicitud = "luisfernandomtv@hotmail.com";
-                            string mensaje_solicitud = "<table><tr><td><img src='http://demo.toptus.com/imagenes/BienvenidoTopTus.png' /></td></tr><tr><td>";
+                            string mensaje_solicitud = "<table ><tr><td><img src='http://demo.toptus.com/imagenes/BienvenidoTopTus.png' /></td></tr><tr><td style='font-size:24px;'>";
                             mensaje_solicitud += "Bienvenido a Toptus "+nombre;
                             mensaje_solicitud += "<br/> Ahora puedes acceder al sitio y subir tu<br/> información y productos.";
-                            mensaje_solicitud += "<br/> Te recomendamos que inicies sesión y llenes<br/> los datos de vendedor para hacer que nuestros <br/> usuarioste contacten más facilmente.";
+                            mensaje_solicitud += "<br/> Te recomendamos que inicies sesión y llenes<br/> los datos de vendedor para hacer que nuestros <br/> usuarios te contacten.";
                             mensaje_solicitud += "<br/> Usuario: "+email;
-                            mensaje_solicitud += "<br/> Pass: " + pass;
+                            
                             mensaje_solicitud += "<br/> <a href='http://demo.toptus.com/login.aspx' target='_blank'>Login </a>";
                             mensaje_solicitud+="</td></tr></table>";
                             string envio_solicitud = SendMail(para_solicitud, mensaje_solicitud, subject_solicitud, copia_solicitud);
@@ -118,7 +118,7 @@ namespace toptusv1.vendedor
 
                 //Configuracion del SMTP 
                 //SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com"); /7ok
-                SmtpClient SmtpServer = new SmtpClient("toptusmail.com");
+                SmtpClient SmtpServer = new SmtpClient("mail.servergrove.com");
                 //SmtpServer.Port = 587; //ok
                 SmtpServer.Port = 587; //Puerto que utiliza gmail, mocha es el 25
 

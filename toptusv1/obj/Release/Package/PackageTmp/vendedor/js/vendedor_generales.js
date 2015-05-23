@@ -74,3 +74,19 @@ function success_insertar_producto(producto) {
     });
 
 }
+
+function success_insertar_categoria(producto) {
+
+    $(function () {
+        $("#dialog-message").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace("fotosprod.aspx?prod=" + producto);
+                }
+            }
+        });
+    });
+
+}

@@ -9,7 +9,7 @@ namespace toptusv1
 {
     public partial class perfilvendedor : System.Web.UI.Page
     {
-        public string nombre, nick, imagen, empresa, pais, estado, email, tipov,fb,tw,lk,gg,ins;
+        public string nombre, nick, imagen, empresa, pais, estado, email, tipov,fb,tw,lk,gg,ins,ingreso;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString.ToString() != "") // cuando si hay parámetros, sea 1 o 2
@@ -42,6 +42,7 @@ namespace toptusv1
                 pais = datos.Rows[0]["pais"].ToString();
                 estado = datos.Rows[0]["estado"].ToString();
                 email = datos.Rows[0]["email"].ToString();
+                ingreso = DateTime.Parse(datos.Rows[0]["fecha_solicitud"].ToString()).ToShortDateString();
                 tipov = datos.Rows[0]["tipovendedor_descr"].ToString();
             }
             var redes = obj.redes_sociales(id);

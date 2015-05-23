@@ -17,16 +17,16 @@
             <div class="col-md-2 col-xs-2 col-sm-2">
                 <img src="imagenes/circulo/A1.png" class="img-responsive " /></div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=1">
+                <a href="perfilvendedor.aspx?vendedor=11">
                 <img src="imagenes/circulo/A2.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=1">
+                <a href="perfilvendedor.aspx?vendedor=11">
                 <img src="imagenes/circulo/A3.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=1">
+                <a href="perfilvendedor.aspx?vendedor=11">
                 <img src="imagenes/circulo/A4.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=1">
+                <a href="perfilvendedor.aspx?vendedor=11">
                 <img src="imagenes/circulo/A5.png" class="img-responsive" /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
                 <img src="imagenes/circulo/A6.png" class="img-responsive" /></div>
@@ -79,15 +79,16 @@
 
 
     <div class="row padding_inicio">
-        <div class="col-md-12">
-            <img src="imagenes/hogar.png" class="img-responsive" />
+        <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Hogar</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
         </div>
+      
         <asp:Repeater ID="rpthogar" runat="server">
             <ItemTemplate>
-                 <div class="col-md-2 column productbox">
+                 <div class="col-md-2 col-sm-4 col-xs-6 column productbox">
             <img src="vendedor/<%#Eval("img_principal") %>" class="img-responsive">
             <div class="producttitle"><%#Eval("producto") %></div>
-            <div class="productprice"><div class="pull-right"><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>" class="btn btn-danger btn-sm" role="button">Lo quiero</a></div><div class="pricetext">$ <%#Eval("precio") %></div></div>
+            <div class="productprice"><div class="pull-right"><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>" class="btn btn-danger btn-sm" role="button">Más detalles</a></div><div class="pricetext">$ <%#Eval("precio") %></div></div>
         </div>
             </ItemTemplate>
 
@@ -95,29 +96,36 @@
        
          
     </div>
+
     <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/deportes.png" class="img-responsive"/>   </div>
-        
+       <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Deportes</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div>
     </div>
     <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/electronica.png" class="img-responsive"/>   </div>
-        
+       <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Electrónica y Tecnología</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div>    
     </div>
      <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/reciclaje.png" class="img-responsive"/>   </div>
-        
+       <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Reciclaje</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div> 
     </div>
      <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/organico.png" class="img-responsive"/>   </div>
-        
+         <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Orgánico</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div> 
     </div>
      <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/moda.png" class="img-responsive"/>   </div>
-        
+         <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Moda</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div> 
     </div>
      <div class="row">
-        <div class="col-md-12 padding_inicio">   <img src="imagenes/todo.png" class="img-responsive"/>   </div>
-        
+        <div class="col-md-12 col-xs-12 col-sm-12 rojo padding_inicio">
+               <div class="col-md-11 col-xs-11 col-sm-11 gris"><h2 class="text-center hometitle">Todo lo demás</h2></div><div class="col-md-1 col-xs-1 col-sm-1"></div>         
+        </div> 
     </div>
 
     <!-- <div class="row top-buffer"> galerias nuevas 
@@ -237,7 +245,7 @@
             <div class="col-md-3">
                 <div class="row">
                     <h4 class="text-center">
-                        <img src="imagenes/iconos/porque.png" />Hazte miembro. </h4>
+                        <img src="imagenes/iconos/porque.png" />Regístrate. </h4>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -246,7 +254,9 @@
                         </p>
 
                         <p class="text-justify">
-                            Toptus te ofrece los mejores artículos y servicios del mercado. Con solo un click podrás ponerte en contacto con empresarios y podrás ofrecer tu producto a millones de clientes.
+                            Toptus te facilita la búsqueda de  los mejores productos y servicios del 
+                            mercado. Con solo un click podrás obtener la información completa de
+                             lo que estas buscando y podrás darte a conocer con muchos posibles clientes.
                         </p>
                     </div>
                 </div>
@@ -279,8 +289,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <p class="text-justify">
-                            Toptus.com ofrece un servicio de atención al cliente excelente y completo durante todo el proceso en el sitio. Antes de contactarnos, puedes hacer preguntas en tiempo real a nuestro correo electrónico dudas@toptus.com. Nuestros representantes del servicio de atención al cliente siempre estarán disponibles. 
-                        Ponte en contacto con nosotros si tienes alguna queja o duda. Estamos disponibles las 24 horas del día. Nuestro personal te lo agradecerá.
+                           Toptus ofrece un servicio de atención al cliente. Puedes hacer preguntas a nuestro correo 
+                            electrónico <a href="mailto:info@toptus.com">info@toptus.com</a> Nuestros representantes del servicio 
+                            de atención al cliente estarán atentos a cualquier inquietud por parte de los usuarios. 
 
                         </p>
                     </div>

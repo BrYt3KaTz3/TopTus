@@ -52,8 +52,8 @@ namespace toptusv1.vendedor
                 using (SqlConnection conn = new SqlConnection("Data Source=198.38.94.104;Initial Catalog=ferchoMF_TopTusDBuno;User ID=ferchoMF_fer;Password=ferchodc1"))
                 {
 
-                    string sql = @"insert into Vendedor (nombre, apellido_p,apellido_m,email,pass, fecha_solicitud, tipovendedor_id,pais_id,estado_id) 
-						values (@nombre,@apellido_p,@apellido_m, @email,@pass, @fecha_solicitud, @id,1,1)";
+                    string sql = @"insert into Vendedor (nombre, apellido_p,apellido_m,email,pass, fecha_solicitud, tipovendedor_id,pais_id,estado_id,imagen) 
+						values (@nombre,@apellido_p,@apellido_m, @email,@pass, @fecha_solicitud, @id,1,1,'defaultuser.jpg')";
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(sql, conn);
 

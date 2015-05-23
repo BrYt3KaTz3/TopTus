@@ -39,7 +39,7 @@
          </div>     
     </div>
     <div class="row col-md-offset-3 col-md-4">
-        <asp:Button ID="btnRedes" runat="server" Text="Guardar" OnClick="btnRedes_Click"  ClientIDMode="Static"/>
+        <asp:Button ID="btnRedes" runat="server" Text="Guardar" OnClick="btnRedes_Click" CssClass="btn-danger btn"  ClientIDMode="Static"/>
     </div>
 </asp:Panel>
 </asp:Content>

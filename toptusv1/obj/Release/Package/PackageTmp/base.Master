@@ -4,14 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="shortcut icon" href="imagenes/icono.ico">
+    <link rel="shortcut icon" href="imagenes/icono.ico" />
     <link href="css/cssgeneral.css" rel="stylesheet" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <script src="../Scripts/jquery-2.1.1.js"></script>
     <script src="../Scripts/jquery.validate.js"></script>
-     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link href="vendedor/css/jquery-ui.css" rel="stylesheet" />
     <link href="css/footer.css" rel="stylesheet" />
-  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="vendedor/js/jquery-ui.js"></script>
     <link href="../css/cssgeneral.css" rel="stylesheet" />
     <link href="../Content/bootstrap.css" rel="stylesheet" />
 
@@ -29,7 +30,7 @@
         <div class="container">
               <div class="pull-right col-md-12" id="logindiv"> 
           <div id="logeado" class="pull-right" runat="server">
-          <p  style="float:left" id="status_login_vendedor"  runat="server">Hola, <a href="vendedor/vendedor_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
+          <p  style="float:left" id="status_login_vendedor"  runat="server">Hola, <a href="~/vendedor/general_perfil.aspx" id="enlace_vendedor" runat="server"></a> </p>
           <asp:Button ID="cerrar_sesion" runat="server" Text="Cerrar sesión." CssClass="btn pull-right" OnClick="cerrar_sesion_Click" />
           </div>
             
@@ -37,13 +38,16 @@
                
             <div class="pull-right" id="capa_login" runat="server">
             <a href="login.aspx" id="login"   runat="server">Entrar</a> | 
-            <a href="solicitud.aspx" >Registrarse</a>
+            <a href="solicitud.aspx" >Regístrate</a>
             </div>
                 
             </div>
                     </div>
 
         </div>
+
+        <asp:Panel ID="Panel1" runat="server" DefaultButton="btnBuscar">
+
         <div id="header" class="container">
             <div class="row col-md-12">
                 <div class="col-md-2"><a  href="Index.aspx" id="logo_menu"><img class="img-responsive" src="../imagenes/logo.png"  /></a>
@@ -63,6 +67,8 @@
           </div><!--fin row -->
 
         </div> <!--fin header-->
+
+        </asp:Panel>
         <!--fin -->
         
        
@@ -86,7 +92,7 @@
        otro elemento que se pueda ocultar al minimizar la barra -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="subcategoria"><a href="Index.aspx">Home</a></li>
+      <li class="subcategoria"><a href="Index.aspx">Inicio</a></li>
      
      <!-- <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menú desplegable <span class="caret"></span></a>
@@ -137,19 +143,19 @@
                     <ul>
                         <li> <a href="acerca.aspx"> Acerca de TopTus  </a> </li>
                         <li> <a href="servicio.aspx"> Servicio TopTus </a> </li>
-                        <li> <a href="comentarios.aspx"> Comentarios </a> </li>
-                        <li> <a href="contacto.aspx"> Contacto </a> </li>
+                        
+                        <li> <a href="contacto.aspx"> Contáctanos </a> </li>
                     </ul>
                 </div>
                 <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                    <h3> Preguntas frecuentes  </h3>
+                  <!--  <h3> Preguntas frecuentes  </h3>
                     <ul>
                         <li> <a href="#"> ¿A qué tienen derecho los visitantes? </a> </li>
                         <li> <a href="#"> ¿Cómo obtengo la membrecía light y como funciona? </a> </li>
                         <li> <a href="#"> ¿Cómo obtengo la membrecía Premium y como funciona? </a> </li>
                         <li> <a href="#"> ¿Puedo pagar por publicidad en el sitio? </a> </li>
                         <li><a href="#">¿Tiene algún costo la membrecía light?</a></li>
-                    </ul>
+                    </ul>-->
                 </div>
                 
                 <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12 ">
@@ -163,11 +169,11 @@
                         </li>
                     </ul> -->
                     <ul class="social">
-                        <li> <a href="https://www.facebook.com/" target="_blank"><img src="imagenes/iconos/facebook.png" /> <i class=" fa fa-facebook">   </i> </a> </li>
-                        <li> <a href="https://www.twitter.com/"  target="_blank"><img src="imagenes/iconos/twitter.png" /> <i class="fa fa-twitter">   </i> </a> </li>
-                        <li> <a href="https://plus.google.com"  target="_blank"><img src="imagenes/iconos/google.png" /><i class="fa fa-google-plus">   </i> </a> </li>
-                        <li> <a href="https://www.youtube.com/"  target="_blank"><img src="imagenes/iconos/youtube.png" /> <i class="fa fa-youtube">   </i> </a> </li>
-                        <li> <a href="https://www.instagram.com/toptusmex"  target="_blank"><img src="imagenes/iconos/instagram.png" /> <i class="fa fa-instagram">   </i> </a> </li>
+                        <li> <a href="https://www.facebook.com/toptusmx" target="_blank"><img src="imagenes/iconos/facebook.png" />  </a> </li>
+                       <!-- <li> <a href="https://www.twitter.com/"  target="_blank"><img src="imagenes/iconos/twitter.png" />  </a> </li>
+                        <li> <a href="https://plus.google.com"  target="_blank"><img src="imagenes/iconos/google.png" /> </a> </li>
+                        <li> <a href="https://www.youtube.com/"  target="_blank"><img src="imagenes/iconos/youtube.png" />  </a> </li>
+                       --> <li> <a href="https://www.instagram.com/toptusmex"  target="_blank"><img src="imagenes/iconos/instagram.png" />  </a> </li>
                     </ul>
                 </div>
             </div>
@@ -176,16 +182,16 @@
         <!--/.container--> 
     </div>
     <!--/.footer-->
-    <br />
+    
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © TopTus 2015. All right reserved. </p>
+            <p class="pull-left"> Copyright © TopTus 2015. All rights reserved. </p>
             <div class="pull-right">
                 <ul class="nav nav-pills payments">
                 	  <!--/.footer<li><i class="fa fa-cc-visa"></i></li>
                     <li><i class="fa fa-cc-mastercard"></i></li>
-                    <li><i class="fa fa-cc-amex"></i></li>-->
-                    <li><i class="fa fa-cc-paypal"></i></li>
+                    <li><i class="fa fa-cc-amex"></i></li>
+                    <li><i class="fa fa-cc-paypal"></i></li>-->
                 </ul> 
             </div>
         </div>

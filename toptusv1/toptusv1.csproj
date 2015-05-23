@@ -137,6 +137,7 @@
     <Content Include="imagenes\moda.png" />
     <Content Include="imagenes\organico.png" />
     <Content Include="imagenes\reciclaje.png" />
+    <Content Include="imagenes\recuperado.jpg" />
     <Content Include="imagenes\todo.png" />
     <Content Include="imagenes\TopTus1.png" />
     <Content Include="imagenes\TopTus2.png" />
@@ -230,6 +231,7 @@
     <Content Include="productos\css\app.css" />
     <Content Include="productos\css\glisse.css" />
     <Content Include="productos\js\glisse.js" />
+    <Content Include="recuperarpass.aspx" />
     <Content Include="Scripts\generales.js" />
     <Content Include="Scripts\index.js" />
     <Content Include="servicio.aspx" />
@@ -267,11 +269,40 @@
     <Content Include="Scripts\solicitud.js" />
     <Content Include="vendedor\catprod.aspx" />
     <Content Include="vendedor\css\generales_vendedor.css" />
+    <Content Include="vendedor\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="vendedor\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="vendedor\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="vendedor\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="vendedor\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="vendedor\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="vendedor\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="vendedor\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="vendedor\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="vendedor\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="vendedor\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="vendedor\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="vendedor\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="vendedor\css\images\ui-icons_ffffff_256x240.png" />
     <Content Include="vendedor\fotoperfil.aspx" />
     <Content Include="vendedor\fotosprod.aspx" />
+    <Content Include="vendedor\css\jquery-ui.css" />
+    <Content Include="vendedor\general_perfil.aspx" />
+    <Content Include="vendedor\imagenes\iconos\calidad.png" />
+    <Content Include="vendedor\imagenes\iconos\clientes.png" />
+    <Content Include="vendedor\imagenes\iconos\facebook.png" />
+    <Content Include="vendedor\imagenes\iconos\google.png" />
+    <Content Include="vendedor\imagenes\iconos\instagram.png" />
+    <Content Include="vendedor\imagenes\iconos\linked.png" />
+    <Content Include="vendedor\imagenes\iconos\porque.png" />
+    <Content Include="vendedor\imagenes\iconos\twitter.png" />
+    <Content Include="vendedor\imagenes\iconos\vanguardia.png" />
+    <Content Include="vendedor\imagenes\iconos\youtube.png" />
+    <Content Include="vendedor\js\jquery-ui.js" />
     <Content Include="vendedor\js\vendedor_generales.js" />
-    <Content Include="vendedor\perfil\1.jpg" />
+    <Content Include="vendedor\perfil\11.jpg" />
     <Content Include="vendedor\perfil\2.jpg" />
+    <Content Include="vendedor\perfil\11.png" />
+    <Content Include="vendedor\perfil\defaultuser.jpg" />
     <Content Include="vendedor\productos.aspx" />
     <Content Include="vendedor\prod_fotos\1\17\17.jpg" />
     <Content Include="vendedor\prod_fotos\1\17\18694566_1.jpg" />
@@ -411,6 +442,13 @@
     </Compile>
     <Compile Include="productos_clase.cs" />
     <Compile Include="prueba_json.cs" />
+    <Compile Include="recuperarpass.aspx.cs">
+      <DependentUpon>recuperarpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recuperarpass.aspx.designer.cs">
+      <DependentUpon>recuperarpass.aspx</DependentUpon>
+    </Compile>
     <Compile Include="servicio.aspx.cs">
       <DependentUpon>servicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -476,6 +514,13 @@
     </Compile>
     <Compile Include="vendedor\fotosprod.aspx.designer.cs">
       <DependentUpon>fotosprod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vendedor\general_perfil.aspx.cs">
+      <DependentUpon>general_perfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\general_perfil.aspx.designer.cs">
+      <DependentUpon>general_perfil.aspx</DependentUpon>
     </Compile>
     <Compile Include="vendedor\productos.aspx.cs">
       <DependentUpon>productos.aspx</DependentUpon>

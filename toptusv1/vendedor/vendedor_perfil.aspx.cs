@@ -84,7 +84,7 @@ namespace toptusv1.vendedor
             string apellido_m = usuario.Rows[0]["apellido_m"].ToString();
             string apellido_p = usuario.Rows[0]["apellido_p"].ToString();
             string email = usuario.Rows[0]["email"].ToString();
-            string fecha_ingreso = usuario.Rows[0]["fecha_ingreso"].ToString();
+            string fecha_ingreso =DateTime.Parse(usuario.Rows[0]["fecha_solicitud"].ToString()).ToShortDateString();
             string empresa = usuario.Rows[0]["empresa"].ToString();
             string RFC = usuario.Rows[0]["RFC"].ToString();
             string ciudad = usuario.Rows[0]["ciudad"].ToString();

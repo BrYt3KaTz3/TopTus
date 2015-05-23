@@ -17,7 +17,7 @@
      <div class="row" >
             <div class="col-md-10 col-md-offset-2" id="formulario_vendedor_basico">
                 <div class="form-group">
-                    <label for="ven_nombre" class="col-lg-2 control-label">Nickname:</label>
+                    <label for="ven_nombre" class="col-lg-2 control-label">*Nombre de Usuario:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_nick" type="text" CssClass="form-control input_form"  placeholder="Nickname" runat="server" ></asp:TextBox>
                       
@@ -26,7 +26,7 @@
                 <br />
 
                 <div class="form-group">
-                    <label for="ven_nombre" class="col-lg-2 control-label">Nombre(s):</label>
+                    <label for="ven_nombre" class="col-lg-2 control-label">*Nombre(s):</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_nombre" type="text" CssClass="form-control input_form"  placeholder="Nombre(s)" runat="server" ></asp:TextBox>
                       
@@ -34,7 +34,7 @@
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="ven_apellidop" class="col-lg-2 control-label">Apellido Paterno:</label>
+                    <label for="ven_apellidop" class="col-lg-2 control-label">*Apellido Paterno:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_apellidop" type="text" CssClass="form-control"  placeholder="Apellido Paterno" runat="server"></asp:TextBox>
                       
@@ -50,7 +50,7 @@
                 </div>
                 <br />
                   <div class="form-group">
-                    <label for="ven_email" class="col-lg-2 control-label">Email:</label>
+                    <label for="ven_email" class="col-lg-2 control-label">*Email:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_email"  type="email" CssClass ="form-control"  placeholder="Email " runat="server" Enabled="False"></asp:TextBox>
                       
@@ -84,7 +84,7 @@
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
                         <div class="form-group">
-                        <label for="ven_pais" class="col-lg-2 control-label">País:</label>
+                        <label for="ven_pais" class="col-lg-2 control-label">*País:</label>
                         <div class="col-lg-6">
                           <asp:DropDownList ID="ddlpais"  runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlpais_SelectedIndexChanged"></asp:DropDownList>
                         </div>
@@ -92,7 +92,7 @@
                          <br />
                          <br /> 
                         <div class="form-group">
-                        <label for="ven_estado" class="col-lg-2 control-label">Estado:</label>
+                        <label for="ven_estado" class="col-lg-2 control-label">*Estado:</label>
                         <div class="col-lg-6">
                           <asp:DropDownList ID="ddlestado" runat="server" AutoPostBack="True"></asp:DropDownList>
                         </div>
@@ -103,7 +103,7 @@
                 </asp:UpdatePanel>
                 <br />
                   <div class="form-group">
-                    <label for="ven_email" class="col-lg-2 control-label">Ciudad:</label>
+                    <label for="ven_email" class="col-lg-2 control-label">*Ciudad:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_ciudad"   CssClass ="form-control"  placeholder="Ciudad" runat="server" ></asp:TextBox>
                       
@@ -147,25 +147,40 @@
                  <br /> 
                   <div class="form-group">
                       <div class="row">
-                      <label for="ven_email" class="col-md-2 control-label">Lada País:</label>
-                      <label for="ven_email" class="col-md-2 control-label">Lada Ciudad:</label>
-                      <label for="ven_email" class="col-md-2 control-label">Teléfono:</label>
-                      <label for="ven_email" class="col-md-2 control-label">Extensión:</label>
-                      </div>
-                      
-                      <div class="row">
-                      <div class="col-md-2">
+                      <label for="ven_email" class="col-md-2  control-label">Lada País:</label>
+                      <div class="col-md-6 ">
                       <asp:TextBox ID="ven_lada_pais"   CssClass ="form-control"  placeholder="Lada País" runat="server" ></asp:TextBox>
                       </div>
-                           <div class="col-md-2">
+                      </div> 
+                      
+                      <div class="row">
+                       <label for="ven_email" class="col-md-2 control-label">Lada Ciudad:</label>
+                      <div class="col-md-6 ">
                       <asp:TextBox ID="ven_lada_ciudad"   CssClass ="form-control"  placeholder="Lada Ciudad. " runat="server" ></asp:TextBox>
+                      </div></div>
+
+                      <div class="row">
+                          <label for="ven_email" class="col-md-2 control-label">Teléfono:</label>
+                           <div class="col-md-6 ">
+                      <asp:TextBox ID="ven_telefono"   CssClass ="form-control"  placeholder="Teléfono." runat="server" ></asp:TextBox>
                       </div>
-                     <div class="col-md-2">
-                      <asp:TextBox ID="ven_telefono"   CssClass ="form-control"  placeholder="Teléfono. " runat="server" ></asp:TextBox>
                       </div>
-                     <div class="col-md-2">
+                     
+                      <div class="row">
+                           <label for="ven_email" class="col-md-2 control-label">Extensión:</label>
+                       <div class="col-md-6 ">
                       <asp:TextBox ID="ven_extension"   CssClass ="form-control"  placeholder="Extensión. " runat="server" ></asp:TextBox>
                       </div>
+                         </div> 
+                    
+                      
+                      </div>
+                         
+                      
+                      
+                     
+                           
+                   
                     
                       </div>
                 </div>
@@ -175,14 +190,13 @@
                   <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                       
-                            <asp:Button  ClientIDMode="Static" ID="btn_actualizar_vendedor_basico" CssClass="btn btn-default" runat="server" Text="Actualizar Información" OnClick="btn_actualizar_vendedor_basico_Click" />
+                            <asp:Button  ClientIDMode="Static" ID="btn_actualizar_vendedor_basico" CssClass="btn-danger btn" runat="server" Text="Actualizar Información" OnClick="btn_actualizar_vendedor_basico_Click" />
                         
                         
                     </div>
                   </div>
 
-            </div>
-        </div>
+           
 
 </asp:Panel>
 
