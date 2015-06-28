@@ -31,63 +31,81 @@ namespace toptusv1.vendedor
                 string pass = sol_pass.Text;
                 var existe = obj.existe_vendedor(email);//verifica si hay un email registrado
                 DateTime fechasol = DateTime.Today;
-                if (existe.Rows.Count == 0)
-                {
+                if (cbTerminos.Checked == false)
+                {//if terminos
+                    string terminos = "Tienes que aceptar los términos y condiciones del sitio.";
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud('" + terminos + "')", true);
+                } //ifedn terminos
+                else { //else terminos
 
-                    string res = obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol,pass);
-                   //string res = "1";
-                   // Console.Write(res);
-                    if (res == "1")
+                    if (existe.Rows.Count == 0)
                     {
-                        try
-                        {
-                            //para el que solicita
-                            string para_solicitud = sol_email.Text;
-                            string subject_solicitud = "Toptus Confirmación";
-                            string copia_solicitud = "luisfernandomtv@hotmail.com";
-                            string mensaje_solicitud = "<table ><tr><td><img src='http://demo.toptus.com/imagenes/BienvenidoTopTus.png' /></td></tr><tr><td style='font-size:24px;'>";
-                            mensaje_solicitud += "Bienvenido a Toptus "+nombre;
-                            mensaje_solicitud += "<br/> Ahora puedes acceder al sitio y subir tu<br/> información y productos.";
-                            mensaje_solicitud += "<br/> Te recomendamos que inicies sesión y llenes<br/> los datos de vendedor para hacer que nuestros <br/> usuarios te contacten.";
-                            mensaje_solicitud += "<br/> Usuario: "+email;
-                            
-                            mensaje_solicitud += "<br/> <a href='http://demo.toptus.com/login.aspx' target='_blank'>Login </a>";
-                            mensaje_solicitud+="</td></tr></table>";
-                            string envio_solicitud = SendMail(para_solicitud, mensaje_solicitud, subject_solicitud, copia_solicitud);
-                            //para los admins
-                            string para_admin = "ferchomorado@gmail.com";
-                            string subject_admin = "Toptus Alerta de Inscripción";
-                            string copia_admin = "luisfernandomtv@hotmail.com";
-                            string mensaje_admin = "Se ha unido a TopTus el usuario con correo: "+sol_email.Text;
-                            mensaje_admin += "<br/>Sigue el siguiente enlace y teclea tus credenciales para aprobar o rechazar la solicitud";
-                            mensaje_admin += "<br/><a href='http://demo.toptus.com/admin/a_solicitud.aspx'>Solicitudes</a>";
-                            string envio_admin = SendMail(para_admin, mensaje_admin, subject_admin, copia_admin);
-                            
-                            if (envio_solicitud == "1" && envio_admin == "1")
-                            {
-                                ClientScript.RegisterStartupScript(GetType(), "mensaje", "confirmacion_solicitud()", true);
-                            }
-                            else
-                            {
-                                ClientScript.RegisterStartupScript(GetType(), "mensaje", "alert('Te has dado de alta correctamente, solo lamentamos informarte que el correo de bienvenida no fue posible de enviar. Ingresa a toptus y entra con tus datos de la solicitud."+envio_admin+"')", true);
-                            }
-                        }
-                        catch (Exception)
-                        {
 
-                            ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud()", true);
+                        string res = obj.insertar_solicitud(nombre, apellidop, apellidom, email, fechasol, pass);
+                        //string res = "1";
+                        // Console.Write(res);
+                        if (res == "1")
+                        {
+                            try
+                            {
+                                //para el que solicita
+                                string para_solicitud = sol_email.Text;
+                                string subject_solicitud = "Toptus Confirmación";
+                                string copia_solicitud = "debug@toptusmail.com";
+                                string mensaje_solicitud = "<table ><tr><td><img src='http://demo.toptus.com/imagenes/BienvenidoTopTus.png' /></td></tr><tr><td style='font-size:24px;'>";
+                                mensaje_solicitud += "Bienvenido a Toptus " + nombre;
+                                mensaje_solicitud += "<br/> Por favor accede al siguiente link para poder activar tu cuenta";
+                                mensaje_solicitud += "<br/> Hecho esto , te recomendamos que inicies sesión y llenes<br/> los datos de vendedor para hacer que nuestros <br/> usuarios te contacten.";
+                               
+                                string correo_activacion = encriptar_url(email);
+                                mensaje_solicitud += "<br/> <a href='http://demo.toptus.com/activacion.aspx?usr=" + correo_activacion + "' target='_blank'>Activar mi cuenta </a>";
+                                mensaje_solicitud += "</td></tr></table>";
+                                string envio_solicitud = SendMail(para_solicitud, mensaje_solicitud, subject_solicitud, copia_solicitud);
+                                //para los admins
+                                string para_admin = "ferchomorado@gmail.com";
+                                string subject_admin = "Toptus Alerta de Inscripción";
+                                string copia_admin = "debug@toptusmail.com";
+                                string mensaje_admin = "Se ha unido a TopTus el usuario con correo: " + sol_email.Text;
+                                
+                                
+                                string envio_admin = SendMail(para_admin, mensaje_admin, subject_admin, copia_admin);
+
+                                if (envio_solicitud == "1" && envio_admin == "1")
+                                {
+                                    //enviar a confirmación, si se envió mail
+                                    string correo = encriptar_url(email);
+                                   
+                                    Response.Redirect("confirmacion.aspx?status=1&usr=" + correo);
+                                }
+                                else
+                                {
+                                    //solicitud enviada pero correo no
+                                    //string mensaje = "Te has dado de alta correctamente, solo lamentamos informarte que el correo de bienvenida no fue posible de enviar. Ingresa a toptus y entra con tus datos de la solicitud.";
+                                    string correo = encriptar_url(email);
+                                    Response.Redirect("confirmacion.aspx?status=2&usr=" + correo);
+                                   // ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud('"+mensaje+"')", true);
+                                }
+                            }
+                            catch (Exception)
+                            {
+
+                                ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud('Error:"+res+"')", true);
+                            }
+
                         }
-                        
-                    }
-                    else //if res
+                        else //if res
+                        {
+                            ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud('Error:" + res + "')", true);
+                        }
+                    } //if existe
+                    else
                     {
-                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud()", true);
+                        string yaexiste = "Ya existe el correo: "+email+ " dado de alta.";
+                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_solicitud('"+yaexiste+"')", true);
                     }
-                } //if existe
-                else
-                {
-                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "mail_ya_registrado()", true);
-                }
+
+                } //fin terminos
+                
 
             }
             catch (Exception error)
@@ -95,6 +113,13 @@ namespace toptusv1.vendedor
 
                 throw error;
             }
+        }
+
+
+        public string encriptar_url(string id_producto)
+        {
+            string encriptado = seguridad.Encriptar(id_producto);
+            return encriptado;
         }
 
         public static String SendMail(string para, string mensaje, string subject, string copia)

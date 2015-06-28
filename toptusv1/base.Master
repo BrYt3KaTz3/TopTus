@@ -145,17 +145,15 @@
                         <li> <a href="servicio.aspx"> Servicio TopTus </a> </li>
                         
                         <li> <a href="contacto.aspx"> Contáctanos </a> </li>
+                        <li><a href="TerminosCondiciones.pdf" target="_blank">Términos y Condiciones Toptus</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                  <!--  <h3> Preguntas frecuentes  </h3>
+                   <h3> SÍGUENOS </h3>
                     <ul>
-                        <li> <a href="#"> ¿A qué tienen derecho los visitantes? </a> </li>
-                        <li> <a href="#"> ¿Cómo obtengo la membrecía light y como funciona? </a> </li>
-                        <li> <a href="#"> ¿Cómo obtengo la membrecía Premium y como funciona? </a> </li>
-                        <li> <a href="#"> ¿Puedo pagar por publicidad en el sitio? </a> </li>
-                        <li><a href="#">¿Tiene algún costo la membrecía light?</a></li>
-                    </ul>-->
+                        <li><div class="fb-like" data-href="https://www.facebook.com/toptusmx" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div> </li>
+                        
+                    </ul>
                 </div>
                 
                 <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12 ">
@@ -185,26 +183,35 @@
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © TopTus 2015. All rights reserved. </p>
+            <p class="pull-left">Copyright © TopTus 2015. All rights reserved. </p>
             <div class="pull-right">
-                <ul class="nav nav-pills payments">
-                	  <!--/.footer<li><i class="fa fa-cc-visa"></i></li>
-                    <li><i class="fa fa-cc-mastercard"></i></li>
-                    <li><i class="fa fa-cc-amex"></i></li>
-                    <li><i class="fa fa-cc-paypal"></i></li>-->
-                </ul> 
+                ¿Necesitas ayuda? escríbenos a<br /> <a href="mailto:soporte@toptus.com" class="text-info">soporte@toptus.com</a>
             </div>
         </div>
     </div>
     <!--/.footer-bottom--> 
+   
 </footer>
 
 
     </form>
+
+     <div class="col-md-12" style="display:none;">
+        <img src="imagenes/logo.jpg" />
+    </div>
      <div id="loader">
         <label>Cargando...</label>
     <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>
         </div>
      <script src="../Scripts/bootstrap.js"></script>
+    <div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
+

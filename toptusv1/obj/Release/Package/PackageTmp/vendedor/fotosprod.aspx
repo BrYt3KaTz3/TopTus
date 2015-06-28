@@ -15,7 +15,9 @@
     </div>
     <div class="row">
         <div class="col-md-4 col-md-offset-4"><h3 class="text-center"><%#producto %></h3></div>
+        
     </div>
+    <div class="row"><h4 class="text-center"><a href="modificar_producto.aspx?prod=<%#  encriptar_url(id_prodd.ToString()) %>" class="text-info" target="_parent">(editar información)</a></h4></div>
 
     <div class="row">
 
@@ -71,8 +73,12 @@
                 <ItemTemplate>
                     <div class="col-md-6 col-md-offset-3">
                      <img class="img-responsive" src="../<%#Eval("img_ruta") %>" style="padding-bottom:10px"   />
-                       
+                        <asp:LinkButton ID="btnEliminarFoto" runat="server" CssClass="text-center" CommandArgument='<%#Eval("img_prod_detail_id")  + ";" +Eval("img_ruta")%>' CommandName="eliminar_foto" OnCommand="btnEliminarFoto_Command"  OnClientClick='return confirm("¿Estás seguro de querer borrar esta foto?")'>Eliminar</asp:LinkButton>
+                        
+                        <br />
+                    <br />
                     </div>
+                   
                      <br />
                 </ItemTemplate>
 
@@ -81,4 +87,14 @@
         </div>
 
     </div>
+
+      <div id="dialog-message-eliminarfoto" title="Éxito" style="display:none;">
+  <p>
+    
+   Foto eliminada correctamente
+  </p>
+  <p>
+    <b>Presione OK para continuar.</b>
+  </p>
+</div>
 </asp:Content>

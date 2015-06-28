@@ -13,6 +13,15 @@ namespace toptusv1 {
     public partial class perfilvendedor {
         
         /// <summary>
+        /// Control hdid.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdid;
+        
+        /// <summary>
         /// Control nohay.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,23 @@ namespace toptusv1 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rpt_mas_productos;
+        
+        /// <summary>
+        /// Control ratings.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ratings;
+        
+        /// <summary>
+        /// Control btnCalificar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCalificar;
     }
 }

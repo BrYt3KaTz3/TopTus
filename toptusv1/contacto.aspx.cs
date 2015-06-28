@@ -37,8 +37,8 @@ namespace toptusv1
                 mensaje_comentario += "<tr><td>Mail:</td><td>" + mail + "</td></tr>";
                 mensaje_comentario += "<tr><td>Comentario:</td><td>" + comentario + "</td></tr>";
                 mensaje_comentario += "</table>";
-                
-                string envio_comentario = SendMail("info@toptus.com", mensaje_comentario, "Comentario recibido en toptus.com", "luisfernandomtv@hotmail.com");
+
+                string envio_comentario = SendMail("info@toptus.com", mensaje_comentario, "Comentario recibido en toptus.com", "debug@toptusmail.com");
                 //string envio_comentario = "0";
 
                 if (envio_comentario == "1")

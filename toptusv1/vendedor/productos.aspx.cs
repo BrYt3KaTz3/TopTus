@@ -12,6 +12,7 @@ namespace toptusv1.vendedor
 {
     public partial class products : System.Web.UI.Page
     {
+        public string ruta_principal;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -139,6 +140,24 @@ namespace toptusv1.vendedor
         r.Close();
         return sub_json;
         //termina lectura de json
+    }
+
+    public string ruta(int prod)
+    {
+
+
+        productos_clase obj = new productos_clase(); //
+        var datos = obj.fotos_principal_producto_lista(prod);
+        if (datos.Rows.Count == 0)
+        {
+            ruta_principal = "prod_fotos/default.png";
+        }
+        else
+        {
+            ruta_principal ="../"+ datos.Rows[0]["img_ruta"].ToString();
+        }
+        return ruta_principal;
+
     }
 
     }

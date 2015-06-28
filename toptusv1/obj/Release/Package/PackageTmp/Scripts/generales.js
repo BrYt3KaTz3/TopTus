@@ -1,6 +1,35 @@
 ﻿$(document).ready(function () {
     menu_class_change();
     main();
+    
+
+    /*evitar apostrofes en todas las cajas
+    $("input , textarea").keydown(function (event) {
+        console.log(event.keyCode);
+        if (event.shiftKey) {
+            event.preventDefault();
+        }
+
+        if (event.keyCode == 46 || event.keyCode == 8 || event.keyCode == 192 || event.keyCode == 13 || event.keyCode == 32 || event.keyCode == 16 || event.keyCode == 190 || event.keyCode == 188) {
+        }
+        else {
+            if (event.keyCode < 95) {
+                if (event.keyCode < 48 || event.keyCode > 90) {
+                    event.preventDefault();
+                }
+            }
+            else {
+                if ( event.keyCode > 105) {
+                    event.preventDefault();
+                }
+            }
+        }
+    });
+    */
+    
+   
+      
+   
     // Add slideDown animation to dropdown
     $('.dropdown').on('show.bs.dropdown', function (e) {
         $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
@@ -16,7 +45,8 @@
     $('.subcategoria').click(function () {
         $("#loader").slideDown('1000');
     });
-
+    //mostrar caja de comentarios
+   
 
     // código para active en los li de bootstrap
     var url = window.location;
@@ -55,6 +85,7 @@ function menu_class_change() //cambiar la clase activa del men+u al ser seleccio
 function main() {
 
     validateFormComentario();
+    
 };
 
 
@@ -147,4 +178,100 @@ function confirmacion_comentario() {
 }
 function error_comentario() {
     alert('Ha ocurrido un error, intenta nuevamente o escribe a soporte@toptus.com');
+}
+
+function error_comentario_producto(error) {
+    alert('Error:' + error);
+}
+
+function confirmacion_comentario_producto()
+{
+    $("#dialog-message-comentario-ok").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                var url = window.location.href;
+                window.location.replace(url);
+               
+            }
+        }
+    });
+}
+
+function confirmacion_comentario_producto_nomail() {
+    $("#dialog-comentario-ok-nomail").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                var url = window.location.href;
+                window.location.replace(url);
+
+            }
+        }
+    });
+}
+
+function log_error_comentario_producto(mensaje)
+{
+    $("#mensaje_error").text(mensaje);
+    $("#dialog-message-no").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                var url = window.location.href;
+                window.location.replace(url);
+
+            }
+        }
+    });
+}
+
+function caracter_nopermitido(mensaje) {
+    $("#mensaje_error").text(mensaje);
+    $("#dialog-message-no").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                $("#dialog-message-no").dialog("close");
+
+            }
+        }
+    });
+}
+
+function mostrar_caja_respuesta(comentario,vendedor) { //vendedor a responder y comentario a responder
+   
+        
+    $("#add-respuesta" + comentario).toggle("slow");
+    $("#hdcomentario").val(comentario);
+    $("#hdusuario").val(vendedor);
+       
+}
+
+function mensaje_general(mensaje) {
+    $("#mensaje").text(mensaje);
+    $("#dialog-message").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                var url = window.location.href;
+                window.location.replace(url);
+
+            }
+        }
+    });
+}
+
+function mensaje_activacion(mensaje,url) {
+    $("#mensaje").text(mensaje);
+    $("#dialog-message-activacion").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                
+                window.location.replace(url);
+
+            }
+        }
+    });
 }

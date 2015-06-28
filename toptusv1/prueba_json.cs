@@ -9,6 +9,7 @@ namespace toptusv1
     {
         public int categoria_id { get; set; }
         public string categoria_descr { get; set; }
+        public int orden { get; set; }
     }
 
     public class sub_json

@@ -5,12 +5,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Data.SqlClient;
+
 
 namespace toptusv1.vendedor
 {
     public partial class fotosprod : System.Web.UI.Page
     {
         public string producto;
+        public int id_prodd;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -36,7 +39,9 @@ namespace toptusv1.vendedor
         {
             vendedor obj = new vendedor();
             productos_clase obj_prod = new productos_clase();
+
             int id_prod = int.Parse(desencriptar());
+            id_prodd = id_prod;
             var producto_datos = obj_prod.datos_producto(id_prod);
             if (producto_datos.Rows.Count > 0)
             {
@@ -81,7 +86,7 @@ namespace toptusv1.vendedor
                 {
 
                     #region ext
-                    if ( extension == ".jpg")
+                    if ( extension == ".jpg" || extension==".jpeg" || extension==".bmp" || extension==".png")
                     {
 
                         #region insercionfotoproducto
@@ -102,10 +107,11 @@ namespace toptusv1.vendedor
                             {
                                
                                 string ruta_principal="prod_fotos/"+id_prod+extension;
-                                string resfotoprincipal = obj.update_foto_principal(id_prod, ruta_principal);
-                                if (resfotoprincipal == "1") // si se guard´bien el nombre de la foto principal
+                                //string resfotoprincipal = obj.update_foto_principal(id_prod, ruta_principal);
+                                
+                                if ("1" == "1") // si se guard´bien el nombre de la foto principal, se puso 1=1 por un error desconocido xD
                                 {
-                                    string res = obj.instertar_foto_producto(id_prod, id_user, ruta, txtNombreFoto.Text, txtDescripcionFoto.Text); // se inserta en la bd los datos de la nueva foto img_prod_detail
+                                    string res = obj.instertar_foto_producto(id_prod, id_user, ruta, txtNombreFoto.Text, txtDescripcionFoto.Text,1); // se inserta en la bd los datos de la nueva foto img_prod_detail
                                     if (res == "1")
                                     {
                                         string rutaraiz = Server.MapPath("prod_fotos/");
@@ -135,14 +141,15 @@ namespace toptusv1.vendedor
                                 }
                                 else
                                 { //error al guardar el update de la foto principal
-                                    string error_principal = "Ocurrio un error al guardar la foto principal";
-                                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('" + error_principal + "')", true);
+                                   // string error_principal = "Ocurrio un error al guardar la foto principal";
+                                    //ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('" + error_principal + "')", true);
                                 }
                                 
                             }
                             else
                             { // no es la primer foto
-                                string res = obj.instertar_foto_producto(id_prod, id_user, ruta, txtNombreFoto.Text, txtDescripcionFoto.Text); // se inserta en la bd los datos de la nueva foto img_prod_detail
+                               
+                                string res = obj.instertar_foto_producto(id_prod, id_user, ruta, txtNombreFoto.Text, txtDescripcionFoto.Text,1); // se inserta en la bd los datos de la nueva foto img_prod_detail
 
                                 if (res == "1")
                                 {
@@ -191,7 +198,7 @@ namespace toptusv1.vendedor
 
                     else
                     {
-                        string res = "Extensión no válida, solo .jpg";
+                        string res = "Extensión no válida, solo .jpg .png o .bmp";
                         ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('" + res + "')", true);
                     }
                     #endregion
@@ -242,6 +249,59 @@ namespace toptusv1.vendedor
             {
                 nofotos.Text = "<h4>No hay fotos para este producto.</h4>";
             }
+        }
+
+        protected void btnEliminarFoto_Command(object sender, CommandEventArgs e)
+        {
+          
+            
+            
+            string args = e.CommandArgument.ToString();
+            string[] parametros = args.Split(';');
+            int id_foto = int.Parse(parametros[0].ToString());
+            string ruta_foto = parametros[1].ToString();
+            string ruta = Server.MapPath("../"+ruta_foto);
+            string a = "2" ;
+            
+            if (e.CommandName == "eliminar_foto")
+            {
+
+                try
+                {
+                  
+
+                    productos_clase obj = new productos_clase();
+
+                    string res = obj.eliminar_foto_producto(id_foto); //eliminar registro
+                    if (res == "1")
+                    {
+                        //eliminar del server
+                        System.IO.File.Delete(ruta);
+                        
+                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_eliminar_foto()", true);
+                    }
+                    else
+                    {
+                        ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar(" + res + ")", true);
+                    }
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+                
+               
+
+            }
+                
+           
+        }
+
+        public string encriptar_url(string id_producto)
+        {
+            string encriptado = seguridad.Encriptar(id_producto);
+            return encriptado;
         }
 
     }

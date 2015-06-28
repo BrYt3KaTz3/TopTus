@@ -200,7 +200,7 @@ namespace toptusv1.vendedor
                 }
                 else
                 {
-                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('Ocurrio un error al insertar, consule al administrador del sistema')", true);
+                    ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar('" + res + "')", true);
                 }
             } //if verificar nick
             else 

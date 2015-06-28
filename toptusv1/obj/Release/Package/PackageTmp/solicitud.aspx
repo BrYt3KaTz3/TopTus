@@ -64,7 +64,8 @@
                     <label for="sol_email" class="col-lg-2 control-label">Contraseña:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="sol_pass" type="password" CssClass ="form-control"  placeholder="Contraseña " runat="server"></asp:TextBox>
-                      
+                      <br />
+                        <asp:CheckBox ID="cbTerminos" Checked="true" runat="server" /> He leído y acepto los <a href="TerminosCondiciones.pdf" target="_blank"> Términos y condiciones de uso.</a> 
                     </div>
                 </div>
 
@@ -109,6 +110,11 @@
     <div id="dialog" title="Confirmación" style="display:none">
   <p> La solicitud ha sido procesada correctamente, se ha enviado un email al correo registrado</p>
 </div>
+
+    <div id="dialog_error" title="Advertencia" style="display:none">
+  <p id="error_dialog"> </p>
+</div>
+
     <div id="loader">
         <label>Procesando solicitud</label>
     <img src="../imagenes/ajax-loader.gif" alt="loading"/><br/>

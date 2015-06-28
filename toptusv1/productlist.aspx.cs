@@ -14,6 +14,7 @@ namespace toptusv1.productos
     public partial class productlist : System.Web.UI.Page
     {
         DataTable dtproductos = new DataTable();
+        public string ruta_principal;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Request.QueryString.ToString() != "") // cuando si hay parámetros cat 
@@ -51,6 +52,7 @@ namespace toptusv1.productos
             }
             else 
             {
+                
                 rptProductosList.DataSource = dtproductos;
                 rptProductosList.DataBind();
             }
@@ -86,22 +88,49 @@ namespace toptusv1.productos
                 li_subcategoria.InnerText = dtproductos.Rows[0]["subcategoria_descr"].ToString();
             }
         }
-        protected void rptProductosList_ItemDataBound(object sender, RepeaterItemEventArgs e)
+
+        public string ruta(int prod)
+        {
+
+            
+            productos_clase obj = new productos_clase(); //
+            var datos = obj.fotos_principal_producto_lista(prod);
+            if (datos.Rows.Count == 0)
+            {
+                ruta_principal = "vendedor/prod_fotos/default.png";
+            }
+            else
+            {
+                ruta_principal = datos.Rows[0]["img_ruta"].ToString();
+            }
+            return ruta_principal;
+        
+        }
+        protected void rptProductosList_ItemDataBound(object sender, RepeaterItemEventArgs e) //ruta principal de la imagen
         {
             var hidden = e.Item.FindControl("hidden_product") as HiddenField;
-            var subc = lecturasub(HttpContext.Current.Server.MapPath("~/json/subcategorias.json"));
-            Repeater r = e.Item.FindControl("rptcatsub") as Repeater;
+            //var subc = lecturasub(HttpContext.Current.Server.MapPath("~/json/subcategorias.json"));
+            //Repeater r = e.Item.FindControl("rptcatsub") as Repeater;
 
             int id_prod = int.Parse(hidden.Value);
-            vendedor.vendedor obj = new vendedor.vendedor(); //está en la carpeta por eso el punto
-            if (r != null)
+            productos_clase obj = new productos_clase(); //
+            var datos = obj.fotos_principal_producto_lista(id_prod);
+            if (datos.Rows.Count == 0)
             {
-                var listacatsub = obj.prod_cat_produco(id_prod);
-                r.DataSource = listacatsub;
-                r.DataBind();
-
-
+                ruta_principal = "vendedor/prod_fotos/default.png";
             }
+            else
+            {
+                ruta_principal = datos.Rows[0]["img_ruta"].ToString();
+            }
+           // if (r != null)
+            //{
+              //  var listacatsub = obj.prod_cat_produco(id_prod);
+               // r.DataSource = listacatsub;
+                //r.DataBind();
+
+
+           // }
         }
 
         //leer json de subcat

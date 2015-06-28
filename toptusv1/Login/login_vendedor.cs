@@ -26,7 +26,12 @@ namespace toptusv1.Login
             try
             {
                 conexion.Open();
-                dt_login = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where email='" + usuario + "' and pass='"+pass+"'").Tables[0];
+                conexion.BeginTransaction();
+                conexion.CreateParameters(3);
+                conexion.AddParameters(0, "@mail", usuario);
+                conexion.AddParameters(1,"@pass",pass);
+                conexion.AddParameters(2, "@tipo", 2);
+                dt_login = conexion.ExecuteDataSet(CommandType.Text, "select * from Vendedor where tipovendedor_id=@tipo and email=@mail and pass=@pass").Tables[0];
                 string a;
                 conexion.Close();
                 return dt_login;

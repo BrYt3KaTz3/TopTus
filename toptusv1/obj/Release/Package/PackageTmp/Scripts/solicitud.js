@@ -71,9 +71,14 @@ function confirmacion_solicitud()
 
 
 
-function error_solicitud() {
-    alert('error al procesar la solicitud');
-}
-function mail_ya_registrado() {
-    alert('Este correo ya está dado de alta');
+function error_solicitud(mensaje) {
+    $("#error_dialog").text(mensaje);
+    $("#dialog_error").dialog({
+        modal: true,
+        buttons: {
+            Ok: function () {
+                window.location.replace("solicitud.aspx");
+            }
+        }
+    });
 }

@@ -21,7 +21,7 @@
                <asp:HiddenField runat="server" ID="hidden_product" Value='<%# Eval("producto_id") %>' ClientIDMode="Static" />
                         <div class="media">
                             <a class="pull-left" href="productdetail.aspx?prod=<%# Eval("producto_id") %>" target="_parent">
-                            <img alt="image" class="img-responsive max_fotos_list" src="vendedor/<%# Eval("img_principal") %>"></a>
+                            <img alt="image" class="img-responsive max_fotos_list" src="<%# ruta(int.Parse(Eval("producto_id").ToString())) %>"></a>
 
                             <div class="clearfix visible-sm visible-xs"></div>
                             
@@ -29,7 +29,7 @@
                                 <a href="#" target="_parent"></a>
 
                                 <h4 class="media-heading">
-                                  <a href="productdetail.aspx?prod=<%# Eval("producto_id") %>" target="_parent"><%#Eval("producto") %> <small class="pull-right">$<%# Eval("precio") %></small></a></h4>
+                                  <a href="productdetail.aspx?prod=<%# Eval("producto_id") %>" target="_parent"><%#Eval("producto") %> <h3 class="pull-right" style="color:black;">$<%# Eval("precio") %></h3></a></h4>
                                                                                                                 
 
                                 <ul class="list-inline mrg-0 btm-mrg-10 clr-535353">

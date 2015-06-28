@@ -6,6 +6,7 @@
     <script src="jsgaleria/pgwslider.js"></script>
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/pgwslider.css" rel="stylesheet" />
+    <meta property="og:image" content="http://demo.toptus.com/imagenes/logo.jpg"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--<div class="col-md-12">
@@ -20,13 +21,13 @@
                 <a href="perfilvendedor.aspx?vendedor=11">
                 <img src="imagenes/circulo/A2.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=11">
+                <a href="perfilvendedor.aspx?vendedor=17">
                 <img src="imagenes/circulo/A3.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=11">
+                <a href="perfilvendedor.aspx?vendedor=20">
                 <img src="imagenes/circulo/A4.png" class="img-responsive " /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
-                <a href="perfilvendedor.aspx?vendedor=11">
+                <a href="perfilvendedor.aspx?vendedor=19">
                 <img src="imagenes/circulo/A5.png" class="img-responsive" /></a> </div>
             <div class="col-md-2 col-xs-2 col-sm-2">
                 <img src="imagenes/circulo/A6.png" class="img-responsive" /></div>
@@ -88,7 +89,8 @@
                  <div class="col-md-2 col-sm-4 col-xs-6 column productbox">
             <img src="vendedor/<%#Eval("img_principal") %>" class="img-responsive">
             <div class="producttitle"><%#Eval("producto") %></div>
-            <div class="productprice"><div class="pull-right"><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>" class="btn btn-danger btn-sm" role="button">Más detalles</a></div><div class="pricetext">$ <%#Eval("precio") %></div></div>
+            <div class="productprice"><div class="pricetext pull-right">$ <%#Eval("precio") %></div></div>
+                     <div class="pull-right"><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>" class="btn btn-danger btn-sm" role="button">Más detalles</a></div>
         </div>
             </ItemTemplate>
 
@@ -267,15 +269,16 @@
                     <h4 class="text-center">
                         <img src="imagenes/iconos/calidad.png" />Alta Calidad. </h4>
                 </div>
-                <br />
+               
                 <div class="row">
                     <div class="col-md-12">
+
                         <ul>
 
-                            <li>Los Mejores Precios, Directamente De Fábrica, Importadores y Distribuidores de confianza</li>
+                            <li> <p class="text-justify">Los Mejores Precios, Directamente De Fábrica, Importadores y Distribuidores de confianza</p></li>
 
-                            <li>Somos una empresa que busca que nuestros usuarios trabajen con la más alta calidad en su servicio.</li>
-                            <li>Toptus se encarga de evaluar a sus vendedores para que trabajen bajo el reglamento de calidad, para así ser la única página de internet confiable en el mercado.</li>
+                            <li> <p class="text-justify">Somos una empresa que busca que nuestros usuarios trabajen con la más alta calidad en su servicio.</p></li>
+                            <li> <p class="text-justify">Toptus se encarga de evaluar a sus vendedores para que trabajen bajo el reglamento de calidad, para así ser la única página de internet confiable en el mercado.</p></li>
                         </ul>
                     </div>
                 </div>
@@ -309,7 +312,7 @@
                             En Toptus no solamente esperamos a que nuestros usuarios se registren, nuestro equipo se  encarga de visitar negocios dentro de la república para poder ofrecerles un espacio en nuestro sitio toptus.com
                         </p>
                         <p class="text-justify">
-                            Toptus va mas allá de las fronteras invitando físicamente a todos los nuevos empresarios para invitarlos a la única pagina web más confiable del mercado.
+                           Toptus va mas allá de las fronteras invitando físicamente a todos los nuevos empresarios a ser parte del sitio  web más confiable de México. 
                         </p>
                     </div>
                 </div>

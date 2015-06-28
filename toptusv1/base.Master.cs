@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Newtonsoft.Json; // para el json
+using System.IO;  //para el streamreader
 
 
 namespace toptusv1
@@ -55,7 +57,7 @@ namespace toptusv1
         
             
         }
-        public DataTable cargar_categorias()
+       /* public DataTable cargar_categorias()
         {
             categorias_menu obj = new categorias_menu();
             dtcategorias= obj.categorias();
@@ -63,6 +65,78 @@ namespace toptusv1
             repeater_categorias.DataBind();
             return dtcategorias;
             
+        }*/
+
+        public void cargar_categorias()
+        {
+            string jsoncate = HttpContext.Current.Server.MapPath("json/categorias.json"); //ruta
+            string jsonsub = HttpContext.Current.Server.MapPath("json/subcategorias.json"); //ruta
+            if (File.Exists(jsoncate) && File.Exists(jsonsub))
+            {
+                var listacat = lectura(jsoncate); //lee cates
+                var listasub = lecturasub(jsonsub); //lee sub
+            }
+            else
+            {
+                creacion_json(jsoncate, jsonsub); // crea los 2 json's
+            }
+
+            string filejson = HttpContext.Current.Server.MapPath("json/categorias.json"); //ruta
+            var listcategorias = lectura(filejson).OrderBy(x=>x.orden); //lee cates
+            
+            repeater_categorias.DataSource = listcategorias;
+            repeater_categorias.DataBind();
+
+        }
+
+
+        public List<prueba_json> lectura(string path) //categorias
+        {
+            //pa leer desde archivo
+            StreamReader r = new StreamReader(path);
+
+            string file = r.ReadToEnd();
+            List<prueba_json> categorias_json_data = JsonConvert.DeserializeObject<List<prueba_json>>(file);
+           
+            r.Close();
+            
+            return categorias_json_data;
+            //termina lectura de json
+        }
+
+        public List<sub_json> lecturasub(string path) //estados
+        {
+            //pa leer desde archivo
+            StreamReader r = new StreamReader(path);
+
+            string file = r.ReadToEnd();
+            List<sub_json> sub_json = JsonConvert.DeserializeObject<List<sub_json>>(file);
+
+            r.Close();
+            return sub_json;
+            //termina lectura de json
+        }
+
+        public void creacion_json(string path, string sub) //cuando no existe, lo crea , lo cierra y escribe en el
+        {
+            categorias_menu obj = new categorias_menu();
+            var categorias = obj.categorias();
+            var json = JsonConvert.SerializeObject(categorias);
+            StreamWriter files = File.CreateText(path);
+            files.Close();
+            File.WriteAllText(path, json);
+
+            //string cat=lectura(path);
+
+            categorias_menu objs = new categorias_menu();
+            var subcategorias = objs.subcategoriasjson();
+            var jsonsub = JsonConvert.SerializeObject(subcategorias);
+            StreamWriter filesub = File.CreateText(sub);
+            filesub.Close();
+            File.WriteAllText(sub, jsonsub);
+
+            //  p.InnerText = cat+" creacion";
+            files.Close();
         }
 
         protected void cerrar_sesion_Click(object sender, EventArgs e)
@@ -72,7 +146,7 @@ namespace toptusv1
             Response.Redirect("Index.aspx");
         }
 
-        protected void repeater_categorias_ItemDataBound(object sender, RepeaterItemEventArgs e)
+      /*  protected void repeater_categorias_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
              categorias_menu obj = new categorias_menu();
             Repeater r = e.Item.FindControl("repeater_subcategorias") as Repeater;
@@ -88,18 +162,47 @@ namespace toptusv1
                
              
             }
+        }*/
+
+        protected void repeater_categorias_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            categorias_menu obj = new categorias_menu();
+            Repeater r = e.Item.FindControl("repeater_subcategorias") as Repeater;
+
+            var hidden = e.Item.FindControl("hidden_categoria") as HiddenField;
+            int id_cat = int.Parse(hidden.Value);
+
+            if (r != null)
+            {
+                var subc = lecturasub(HttpContext.Current.Server.MapPath("json/subcategorias.json"));
+                var listasubs = subc.Where(subcs => subcs.categoria_id == id_cat);
+                r.DataSource = listasubs;
+                r.DataBind();
+
+            }
         }
 
+
+        /* */
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
             string busqueda = txtBuscar.Text;
-            if (busqueda == "")
+            if (busqueda.Length >1)
             {
-                txtBuscar.Text = "Por favor teclea la información a buscar";
+                if (busqueda[0].ToString() != " ")
+                { Response.Redirect("productlist.aspx?cat=0&sub=0&q=" + txtBuscar.Text); }
+                else
+                {
+                    string res = "La búsqueda no puede empezar con espacios.";
+                    this.Page.ClientScript.RegisterStartupScript(GetType(), "mensaje", "alert('" + res + "')", true);
+                }
+                
+               
             }
             else
-            { 
-            Response.Redirect("productlist.aspx?cat=0&sub=0&q="+txtBuscar.Text);
+            {
+                string res = "Teclea una búsqueda válida.";
+                this.Page.ClientScript.RegisterStartupScript(GetType(), "mensaje", "alert('" + res + "')", true);
             }
             
         }

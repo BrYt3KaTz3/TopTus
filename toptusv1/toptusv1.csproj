@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="acerca.aspx" />
+    <Content Include="activacion.aspx" />
     <Content Include="admin\admin_generales.js" />
     <Content Include="admin\a_info.aspx" />
     <Content Include="admin\a_login.js" />
@@ -73,6 +74,7 @@
     <Content Include="bin\toptusv1.dll" />
     <Content Include="bin\toptusv1.pdb" />
     <Content Include="comentarios.aspx" />
+    <Content Include="confirmacion.aspx" />
     <Content Include="contacto.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -123,6 +125,12 @@
     <Content Include="imagenes\circulo\C4.png" />
     <Content Include="imagenes\circulo\C5.png" />
     <Content Include="imagenes\circulo\C6.png" />
+    <Content Include="imagenes\circulo\clientes\dipasa.jpg" />
+    <Content Include="imagenes\circulo\clientes\dipasa.png" />
+    <Content Include="imagenes\circulo\clientes\inver.jpg" />
+    <Content Include="imagenes\circulo\clientes\inversolar.png" />
+    <Content Include="imagenes\circulo\clientes\kweb.png" />
+    <Content Include="imagenes\circulo\clientes\promarsa.png" />
     <Content Include="imagenes\circulo\D1.png" />
     <Content Include="imagenes\circulo\D2.png" />
     <Content Include="imagenes\circulo\D3.png" />
@@ -130,9 +138,35 @@
     <Content Include="imagenes\circulo\D5.png" />
     <Content Include="imagenes\circulo\D6.png" />
     <Content Include="imagenes\circulo\Home Web TT Ubicaciones.png" />
+    <Content Include="imagenes\circulo\original\A1.png" />
+    <Content Include="imagenes\circulo\original\A2.png" />
+    <Content Include="imagenes\circulo\original\A3.png" />
+    <Content Include="imagenes\circulo\original\A4.png" />
+    <Content Include="imagenes\circulo\original\B1.png" />
+    <Content Include="imagenes\circulo\original\B2.png" />
+    <Content Include="imagenes\circulo\original\B3.png" />
+    <Content Include="imagenes\circulo\original\B4.png" />
+    <Content Include="imagenes\circulo\original\B5.png" />
+    <Content Include="imagenes\circulo\original\B6.png" />
+    <Content Include="imagenes\circulo\original\C1.png" />
+    <Content Include="imagenes\circulo\original\C2.png" />
+    <Content Include="imagenes\circulo\original\C3.png" />
+    <Content Include="imagenes\circulo\original\C4.png" />
+    <Content Include="imagenes\circulo\original\C5.png" />
+    <Content Include="imagenes\circulo\original\C6.png" />
+    <Content Include="imagenes\circulo\original\D1.png" />
+    <Content Include="imagenes\circulo\original\D2.png" />
+    <Content Include="imagenes\circulo\original\D3.png" />
+    <Content Include="imagenes\circulo\original\D4.png" />
     <Content Include="imagenes\contacto.jpg" />
     <Content Include="imagenes\deportes.png" />
     <Content Include="imagenes\electronica.png" />
+    <Content Include="imagenes\estrellas0.png" />
+    <Content Include="imagenes\estrellas100.png" />
+    <Content Include="imagenes\estrellas20.png" />
+    <Content Include="imagenes\estrellas40.png" />
+    <Content Include="imagenes\estrellas60.png" />
+    <Content Include="imagenes\estrellas80.png" />
     <Content Include="imagenes\hogar.png" />
     <Content Include="imagenes\moda.png" />
     <Content Include="imagenes\organico.png" />
@@ -241,12 +275,11 @@
     <Content Include="comprador\base_comprador.Master" />
     <Content Include="admin\admin.Master" />
     <Content Include="images\.DS_Store" />
-    <Content Include="json\categorias.json" />
-    <Content Include="json\subcategorias_.json" />
     <Content Include="json\paises.json" />
     <Content Include="json\region.json" />
-    <Content Include="json\subcategorias.json" />
     <Content Include="imagenes\circulo\Thumbs.db" />
+    <Content Include="json\subcategorias.json" />
+    <Content Include="json\categorias.json" />
     <None Include="Properties\PublishProfiles\toptus.pubxml" />
     <None Include="productos\js\productosjson.json" />
     <Content Include="Properties\Settings.settings">
@@ -299,11 +332,16 @@
     <Content Include="vendedor\imagenes\iconos\youtube.png" />
     <Content Include="vendedor\js\jquery-ui.js" />
     <Content Include="vendedor\js\vendedor_generales.js" />
+    <Content Include="vendedor\js\vendedor_perfil.js" />
+    <Content Include="vendedor\modificar_producto.aspx" />
     <Content Include="vendedor\perfil\11.jpg" />
     <Content Include="vendedor\perfil\2.jpg" />
     <Content Include="vendedor\perfil\11.png" />
     <Content Include="vendedor\perfil\defaultuser.jpg" />
     <Content Include="vendedor\productos.aspx" />
+    <Content Include="vendedor\prod_fotos\11\63\sitio-web.jpg" />
+    <Content Include="vendedor\prod_fotos\11\63\website.jpg" />
+    <Content Include="vendedor\prod_fotos\11\63\explorer.jpg" />
     <Content Include="vendedor\prod_fotos\1\17\17.jpg" />
     <Content Include="vendedor\prod_fotos\1\17\18694566_1.jpg" />
     <Content Include="vendedor\prod_fotos\1\17\4fan.jpg" />
@@ -311,6 +349,7 @@
     <Content Include="vendedor\prod_fotos\1\17\yamahapsre303.jpg" />
     <Content Include="vendedor\prod_fotos\17.jpg" />
     <Content Include="vendedor\prod_fotos\default.png" />
+    <Content Include="vendedor\prod_fotos\63.jpg" />
     <Content Include="vendedor\socialmedia.aspx" />
     <Content Include="solicitud.aspx" />
     <Content Include="vendedor\vendedor_perfil.aspx" />
@@ -326,6 +365,13 @@
     </Compile>
     <Compile Include="acerca.aspx.designer.cs">
       <DependentUpon>acerca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="activacion.aspx.cs">
+      <DependentUpon>activacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="activacion.aspx.designer.cs">
+      <DependentUpon>activacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\admin.Master.cs">
       <DependentUpon>admin.Master</DependentUpon>
@@ -386,6 +432,13 @@
     <Compile Include="comprador\base_comprador.Master.designer.cs">
       <DependentUpon>base_comprador.Master</DependentUpon>
     </Compile>
+    <Compile Include="confirmacion.aspx.cs">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="confirmacion.aspx.designer.cs">
+      <DependentUpon>confirmacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contacto.aspx.cs">
       <DependentUpon>contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -395,6 +448,7 @@
     </Compile>
     <Compile Include="Datatable.cs" />
     <Compile Include="Datatable_2.cs" />
+    <Compile Include="datatable_3.cs" />
     <Compile Include="json.aspx.cs">
       <DependentUpon>json.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -522,6 +576,13 @@
     <Compile Include="vendedor\general_perfil.aspx.designer.cs">
       <DependentUpon>general_perfil.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vendedor\modificar_producto.aspx.cs">
+      <DependentUpon>modificar_producto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vendedor\modificar_producto.aspx.designer.cs">
+      <DependentUpon>modificar_producto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vendedor\productos.aspx.cs">
       <DependentUpon>productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -555,6 +616,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
+    <Content Include="TerminosCondiciones.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

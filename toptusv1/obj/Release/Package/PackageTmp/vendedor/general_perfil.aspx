@@ -29,8 +29,7 @@
                         <i class="glyphicon glyphicon-envelope"></i> <%#email %>
                         <br />
                         <i class="glyphicon glyphicon-globe"></i> <%#empresa %>
-                        <br />
-                        <i class="glyphicon glyphicon-gift"></i> Vendedor <%#tipov %>
+                       
                          <br />
                         <i class="glyphicon glyphicon-user"></i> Miembro desde: <%#ingreso %>
                     </p>
@@ -48,7 +47,7 @@
                     <ul>
                         <asp:Repeater ID="rpt_mas_productos" runat="server">
                             <ItemTemplate>
-                                <li><a href="productdetail.aspx?prod=<%#Eval("producto_id") %>"><%#Eval("producto") %></a></li>
+                                <li><a href="../productdetail.aspx?prod=<%#Eval("producto_id") %>"><%#Eval("producto") %></a></li>
                             </ItemTemplate>
                         </asp:Repeater>
                     </ul>

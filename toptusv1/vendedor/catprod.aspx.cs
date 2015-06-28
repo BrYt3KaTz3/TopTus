@@ -12,6 +12,7 @@ namespace toptusv1.vendedor
 {
     public partial class catprod : System.Web.UI.Page
     {
+        public string producton, id_prods;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -78,12 +79,21 @@ namespace toptusv1.vendedor
 
             //cargar repeater con las cateogorías y subcategorias del producto
             DataTable existe_cate = obj.prod_cat_produco(id_prod);
+            productos_clase probj = new productos_clase();
+            DataTable producto = probj.datos_producto(id_prod);
+            if (producto.Rows.Count != 0)
+            {
+                producton = producto.Rows[0]["producto"].ToString();
+                id_prods = producto.Rows[0]["producto_id"].ToString();
+                DataBind();
+            }
             if (existe_cate.Rows.Count == 0)
             {
                repeater_status.Text="Aún no has agregado categoría para este producto";
             }
             else
-            { 
+            {
+                
                 rptCategorias_Subcategorias.DataSource=existe_cate;
                 rptCategorias_Subcategorias.DataBind();
 
@@ -218,6 +228,40 @@ namespace toptusv1.vendedor
         {
             string encriptado = seguridad.Encriptar(id_producto);
             return encriptado;
+        }
+
+        protected void delete_cat_Click(object sender, CommandEventArgs e)
+        {
+            int id_prod = int.Parse(desencriptar());
+            string redirect = encriptar_url(id_prod.ToString());
+            if (e.CommandName == "eliminar")
+            {
+              
+                string args = e.CommandArgument.ToString();
+                string [] parametros  = args.Split(';');
+                int cat = int.Parse(parametros[0].ToString());
+                int sub = int.Parse(parametros[1].ToString());
+
+                vendedor obj = new vendedor();
+                try
+                {
+                   string res= obj.eliminar_categoria(cat, sub,id_prod);
+                   if (res == "1")
+                   {
+                       ClientScript.RegisterStartupScript(GetType(), "mensaje", "success_eliminar_categoria("+id_prod+")", true);
+                   }
+                   else
+                   {
+                       ClientScript.RegisterStartupScript(GetType(), "mensaje", "error_insertar("+res+")", true);
+                   }
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+                
+            }
         }
     }
 }

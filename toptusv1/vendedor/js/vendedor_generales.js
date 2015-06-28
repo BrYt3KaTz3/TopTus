@@ -4,9 +4,7 @@
         $("#loader").slideDown('1000');
     });
     
-    $("#btn_actualizar_vendedor_basico").click(function () {
-        $("#loader").slideDown('1000');
-    });
+   
     $("#btnRedes").click(function () {
         $("#loader").slideDown('1000');
     });
@@ -75,6 +73,40 @@ function success_insertar_producto(producto) {
 
 }
 
+function success_eliminar_categoria(producto) {
+
+    $(function () {
+        $("#dialog-message-eliminarcategoria").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace(url);
+                }
+            }
+        });
+    });
+
+}
+
+function success_modificar_producto() {
+
+    $(function () {
+        $("#dialog-message-modificar").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace("productos.aspx");
+                }
+            }
+        });
+    });
+
+}
+
+
+
 function success_insertar_categoria(producto) {
 
     $(function () {
@@ -84,6 +116,58 @@ function success_insertar_categoria(producto) {
                 Ok: function () {
                     var url = window.location.href;
                     window.location.replace("fotosprod.aspx?prod=" + producto);
+                }
+            }
+        });
+    });
+
+}
+
+function confirmacion() {
+   
+
+    $('#dialog-delete').dialog({
+        resizable: false,
+        height: 200,
+        autoOpen: false,
+        modal: true,
+        buttons: {
+            "Delete": function () {
+                __doPostBack("delete", "");
+                $(this).dialog("close");
+            },
+            Cancel: function () {
+                $(this).dialog("close");
+            }
+        }
+    });
+}
+
+function success_eliminar_foto() {
+
+    $(function () {
+        $("#dialog-message-eliminarfoto").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace(url);
+                }
+            }
+        });
+    });
+
+}
+
+function success_eliminar_producto() {
+
+    $(function () {
+        $("#dialog-message-eliminarproducto").dialog({
+            modal: true,
+            buttons: {
+                Ok: function () {
+                    var url = window.location.href;
+                    window.location.replace("productos.aspx");
                 }
             }
         });

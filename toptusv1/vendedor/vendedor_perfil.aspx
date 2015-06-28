@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vendedor/base_vendedor.Master" AutoEventWireup="true" CodeBehind="vendedor_perfil.aspx.cs" Inherits="toptusv1.vendedor.vendedor_perfil" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    
+    <script src="js/vendedor_perfil.js"></script>
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Vendedor" runat="server">
@@ -66,7 +66,7 @@
                 </div>
                  <br />
                 <div class="form-group">
-                    <label for="ven_email" class="col-lg-2 control-label">Nombre de su Empresa:</label>
+                    <label for="ven_email" class="col-lg-2 control-label">*Nombre de su Empresa:</label>
                     <div class="col-lg-6">
                       <asp:TextBox ID="ven_empresa"   CssClass ="form-control"  placeholder="Empresa " runat="server" ></asp:TextBox>
                       
